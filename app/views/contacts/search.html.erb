@@ -1,0 +1,15 @@
+<% title "Find Contact" %>
+
+<%= form_tag( :controller => 'contacts', :action => 'search' ) %>
+
+<%= text_field_tag :q, params[:q] %>
+
+<p>
+  <%= submit_tag "Search" %>
+</p>
+
+<% if @results %>
+  <div id="browse_table">
+    <%= render :partial => "contact_list" %>
+  </div>
+<% end %>

@@ -1,0 +1,125 @@
+<h1>Edit Contact</h1>
+<br />
+
+<%= error_messages_for 'contact' %>
+
+<%= form_tag( :controller => 'contacts', :action => 'edit' ) %>
+
+<h3>Name</h3>
+<table>
+  <tr>
+    <td>Title</td>
+    <td>First Name*</td>
+    <td>Middle Name</td>
+    <td>Last Name*</td>
+    <td>Suffix</td>
+    <td>Gender</td>
+  </tr>
+  <tr>
+    <td><%= select :contact, :title, %w(Mr. Ms. Mrs. Dr.), :include_blank => true %></td>
+    <td><%= text_field :contact, :first_name, :size => '30' %></td>
+    <td><%= text_field :contact, :middle_name, :size => '30' %></td>
+    <td><%= text_field :contact, :last_name, :size => '30' %></td>
+    <td><%= select :contact, :suffix, %w(Jr. Sr. I II III IV V), :include_blank => true %></td>
+    <td><%= select :contact, :gender, %w(Male Female), :include_blank => true %></td>
+  </tr>
+</table>
+<br />
+
+<h3>Home Address</h3>
+<table>
+  <tr>
+    <td>Street #</td>
+    <td>Street Name</td>
+    <td>City</td>
+    <td>State</td>
+    <td>Zip Code</td>
+    <td>Building</td>
+    <td>Floor</td>
+    <td>Unit #</td>
+    <td>P.O. Box</td>
+  </tr>
+  <tr>
+    <td><%= text_field :contact, :ha_street_number, :size => '2' %></td>
+    <td><%= text_field :contact, :ha_street_name, :size => '31' %></td>
+    <td><%= text_field :contact, :ha_city, :size => '22' %></td>
+    <td><%= select :contact, :ha_state, %w(CA AL AK AS AZ AR CO CT DE DC FM FL GA GU HI ID IL IN IA KS KY LA ME MH MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND MP OH OK OR PW PA PR RI SC SD TN TX UT VT VI VA WA WV WI WY) %></td>
+    <td><%= text_field :contact, :ha_zip, :size => '8' %></td>
+    <td><%= text_field :contact, :ha_building, :size => '2' %></td>
+    <td><%= text_field :contact, :ha_floor, :size => '2' %></td>
+    <td><%= text_field :contact, :ha_unit, :size => '2' %></td>
+    <td><%= text_field :contact, :ha_po_box, :size => '8' %></td>
+  </tr>
+</table>
+<br />
+
+<h3>Companies</h3>
+<table>
+  <tr>
+    <td>Job Title</td>
+    <td>Company</td>
+    <td>Address</td>
+  </tr>
+  <tr>
+    <td><%= text_field :contact, :job_title, :size => '40' %></td>
+    <td><%= text_field :contact, :company_name, :size => '40' %></td>
+    <td><%= text_field :contact, :company_address, :size => '42' %></td>
+  </tr>
+</table>
+<br />
+
+<h3>Contact</h3>
+<table>
+  <tr>
+    <td>Email</td>
+    <td>Alternate Email</td>
+  </tr>
+  <tr>
+    <td><%= text_field :contact, :email, :size => '33' %></td>
+    <td><%= text_field :contact, :email_alternate, :size => '33' %></td>
+  </tr>
+  <tr>
+    <td>Website</td>
+    <td>Preferred Method of Contact</td>
+  </tr>
+  <tr>
+    <td><%= text_field :contact, :website, :size => '33' %></td>
+    <td><%= select :contact, :preferred_method, options_for_select(["Home Phone", "Work Phone", "Cell Phone", "Email", "Fax"]), :include_blank => true %></td>
+  </tr>
+</table>
+<br />
+
+<h3>Phonebook</h3>
+<table>
+  <tr>
+    <td>Type</td>
+    <td>Number</td>
+    <td>Alternate</td>
+  </tr>
+  <tr>
+    <td>Home</td>
+    <td><%= text_field :contact, :home_phone %></td>
+    <td><%= text_field :contact, :home_phone_alternate %></td>
+  </tr>
+  <tr>
+    <td>Work</td>
+    <td><%= text_field :contact, :work_phone %></td>
+    <td><%= text_field :contact, :work_phone_alternate %></td>
+  </tr>
+  <tr>
+    <td>Cell</td>
+    <td><%= text_field :contact, :cell_phone %></td>
+    <td><%= text_field :contact, :cell_phone_alternate %></td>
+  </tr>
+  <tr>
+    <td>Fax</td>
+    <td><%= text_field :contact, :fax %></td>
+    <td><%= text_field :contact, :fax_alternate %></td>
+  </tr>
+</table>
+<br />
+
+<p>
+  <%= submit_tag %>
+</p>
+

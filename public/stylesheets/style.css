@@ -1,0 +1,164 @@
+html {
+    background: #8C8681;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: .8em;
+}
+
+#content {
+    width: 1142px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    background: white;
+    padding: 20px;
+}
+
+.valign_top {
+    vertical-align: top;
+}
+
+
+
+#title a {
+    font-size: 2.1em;
+    color: #2F3540;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+a, a:visited, a:active {
+    color: black;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+#notification {
+    border: 3px solid black;
+    background: #cfc;
+    margin: 40px;
+    padding: 20px;
+}
+
+.fieldWithErrors input {
+    border: 2px solid red;
+}
+
+#browse_table table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+#browse_table td {
+    border: 0px dotted black;
+    padding-right: 15px;
+    margin: 0px;
+    
+}
+
+#browse_table tr.odd {
+    background: #cccccc;
+    width: 100%;
+}
+
+#browse_table td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#browse_table td.noborder {
+    border: 0px dashed black;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#browse_table th {
+    text-align: left;
+    padding-right: 10px;
+    background: #666A73;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+
+#browse_table th a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: white;
+}
+
+#property_edit {
+    width: 100%
+}
+
+#property_edit td {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#property_edit td td {
+    padding-right: 5px;
+}
+
+.comment_listing {
+    border: 1px solid black;
+    margin-bottom: -1px;
+    padding: 12px 10px 0px 5px;
+}
+
+.Accounting {
+    background-color: #ffff99;
+}
+
+.Code_Violations {
+    background-color: #ffccff;
+}
+
+.Escrow {
+    background-color: #99cc99;
+}
+
+.Repairs {
+    background-color: #6699ff;
+}
+
+.Admin {
+    background-color: #cc6666;
+}
+
+th.sortup a {
+    background: url("../images/up-arrow.gif") center right no-repeat;
+    padding-right: 25px;
+}
+
+th.sortdown a {
+    background: url("../images/down-arrow.gif") center right no-repeat;
+    padding-right: 25px;
+}

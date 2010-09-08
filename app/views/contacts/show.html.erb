@@ -1,0 +1,76 @@
+<% title "#{@contact.first_name} #{@contact.last_name}" %>
+
+<%= error_messages_for 'contact' %>
+
+<h3>Personal</h3>
+<table>
+  <tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+  </tr>
+  <tr>
+    <td><%= edit_in_place(@contact, :first_name) %></td>
+    <td><%= edit_in_place(@contact, :last_name) %></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>Address</td>
+  </tr>
+  <tr>
+    <td><%= edit_in_place(@contact, :home_address) %></td>
+  </tr>
+</table>
+<br />
+
+<h3>Company</h3>
+<table>
+  <tr>
+    <td>Job Title</td>
+    <td>Company</td>
+  </tr>
+  <tr>
+    <td><%= edit_in_place(@contact, :job_title) %></td>
+    <td><%= edit_in_place(@contact, :company_name) %></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>Company Address</td>
+  </tr>
+  <tr>
+    <td><%= edit_in_place(@contact, :company_address) %></td>
+  </tr>
+</table>
+<br />
+
+<h3>Contact</h3>
+<table>
+  <tr>
+    <td>Preferred Method of Contact</td>
+    <td>Cell Phone</td>
+  </tr>
+  <tr>
+    <td><%= @contact.preferred_method %></td>
+    <td><%= edit_in_place(@contact, :cell_phone) %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td>Work Phone</td>
+  </tr>
+  <tr>
+    <td><%= edit_in_place(@contact, :email) %></td>
+    <td><%= edit_in_place(@contact, :work_phone) %></td>
+  </tr>
+  <tr>
+    <td>Fax</td>
+    <td>Home Phone</td>
+  </tr>
+  <tr>
+    <td><%= edit_in_place(@contact, :fax) %></td>
+    <td><%= edit_in_place(@contact, :home_phone) %></td>
+  </tr>
+</table>
+<br />
+
+

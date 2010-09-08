@@ -1,0 +1,3 @@
+page.replace_html :comments, :partial => 'comment', :collection => @comments
+page.insert_html :top, :comments, "#{link_to_remote "Sort by Oldest", :url => property_comments_path(@property, :type => @type, :order => 'ASC'), :method => :get}<br /><br />"
+page.insert_html :top, :comments, "#{link_to_remote "Sort by Most Recent", :url => property_comments_path(@property, :type => @type, :order => 'DESC'), :method => :get}<br />"

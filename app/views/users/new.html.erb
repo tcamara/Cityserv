@@ -1,0 +1,39 @@
+<% title "Add User" %>
+
+<%= error_messages_for 'user' %>
+
+<% form_for @user do |f| %>
+
+<table>
+  <tr>
+    <td>Username</td>
+    <td><%= text_field :user, :username, :size => '30' %></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><%= password_field :user, :password, :size => '30' %></td>
+  </tr>
+  <tr>
+    <td>First Name</td>
+    <td><%= text_field :user, :first_name, :size => '30' %></td>
+  </tr>
+  <tr>
+    <td>Last Name</td>
+    <td><%= text_field :user, :last_name, :size => '30' %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><%= text_field :user, :email, :size => '30' %></td>
+  </tr>
+  <tr>
+    <td>Department</td>
+    <td><%= select :user, :level, %w(Admin Accounting BPO Buyers Cash_For_Keys Code_Violations Escrows IT NAWRB Offers Repairs) %></td>
+  </tr>
+</table>
+<br />
+
+<p>
+  <%= submit_tag %>
+</p>
+
+<% end %>

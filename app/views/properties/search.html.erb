@@ -1,0 +1,15 @@
+<% title "Find Property" %>
+
+<%= form_tag( :controller => 'properties', :action => 'search' ) %>
+
+<%= text_field_tag :q, params[:q] %>
+
+<p>
+  <%= submit_tag "Search" %>
+</p>
+
+<% if @results %>
+  <div id="browse_table">
+    <%= render :partial => "property_list" %>
+  </div>
+<% end %>

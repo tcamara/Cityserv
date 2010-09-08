@@ -1,0 +1,67 @@
+<table cellpadding="0" cellspacing="0">
+    <tr>
+      <th></th>
+      <th <%= sort_td_class_helper "street_num" %>>
+        <%= sort_link_helper "#", "street_num" %>
+      </th>
+      <th <%= sort_td_class_helper "address" %>>
+        <%= sort_link_helper "Address", "address" %>
+      </th>
+      <th <%= sort_td_class_helper "city" %>>
+        <%= sort_link_helper "City", "city" %>
+      </th>
+      <th <%= sort_td_class_helper "state" %>>
+        <%= sort_link_helper "St", "state" %>
+      </th>
+      <th <%= sort_td_class_helper "zip_code" %>>
+        <%= sort_link_helper "Zip", "zip_code" %>
+      </th>
+      <th <%= sort_td_class_helper "status" %>>
+        <%= sort_link_helper "Status", "status" %>
+      </th>
+      <th <%= sort_td_class_helper "seller" %>>
+        <%= sort_link_helper "Seller", "seller" %>
+      </th>
+      <th <%= sort_td_class_helper "list_price" %>>
+        <%= sort_link_helper "List Price", "list_price" %>
+      </th>
+      <th <%= sort_td_class_helper "listing_date" %>>
+        <%= sort_link_helper "List Date", "listing_date" %>
+      </th>
+      <th <%= sort_td_class_helper "closing_date" %>>
+        <%= sort_link_helper "Closing", "closing_date" %>
+      </th>
+      <th <%= sort_td_class_helper "mls" %>>
+        <%= sort_link_helper "MLS #", "mls" %>
+      </th>
+      <th <%= sort_td_class_helper "reo" %>>
+        <%= sort_link_helper "REO #", "reo" %>
+      </th>
+      <th <%= sort_td_class_helper "esc" %>>
+        <%= sort_link_helper "Escrow #", "esc" %>
+      </th>
+    </tr>
+    <% @sorted_properties.each do |i| %>
+    <tr class="<%= cycle("even","odd") %>">
+      <td class="noborder"><%= link_to 'View', property_path(i.id) %></td>
+      <td><%= i.street_num %></td>
+      <td><%= i.street %></td>
+      <td><%= i.city %></td>
+      <td><%= i.state %></td>
+      <td><%= i.zip %></td>
+      <td><%= i.status %></td>
+      <td><%= i.primary_seller %></td>
+      <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
+      <td><%= i.listing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.closing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.mls %></td>
+      <td><%= i.reo %></td>
+      <td><%= i.esc %></td>
+    </tr>
+    <% end %>
+</table>
+
+<div class="center">
+  <br /><br />
+  <%= will_paginate @sorted_properties %>
+</div>

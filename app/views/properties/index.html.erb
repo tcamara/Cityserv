@@ -1,0 +1,85 @@
+<% title "Properties Home" %>
+
+Properties: <%= @total %><br />
+Active Properties: <%= @active_total %>
+
+<div id="">
+<table>
+  <caption>Recently Updated Properties</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Address</th>
+      <th>Status</th>
+      <th>Seller</th>
+      <th>List Price</th>
+      <th>List Date</th>
+      <th>Closing</th>
+      <th>MLS #</th>
+      <th>REO #</th>
+      <th>Escrow #</th>
+      <th>Updated</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recently_updated.each do |i| %>
+    <tr class="<%= cycle("even","odd") %>">
+      <td class="noborder"><%= link_to 'View', edit_property_path(i.id) %></td>
+      <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
+      <td><%= i.status %></td>
+      <td><%= i.primary_seller %></td>
+      <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
+      <td><%= i.listing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.closing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.mls %></td>
+      <td><%= i.reo %></td>
+      <td><%= i.esc %></td>
+      <td><%= i.updated_at.strftime('%m.%d.%y') %></td>
+      <td><%= i.created_at.strftime('%m.%d.%y') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+<br />
+
+<table>
+  <caption>Recently Added Properties</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Address</th>
+      <th>Status</th>
+      <th>Seller</th>
+      <th>List Price</th>
+      <th>List Date</th>
+      <th>Closing</th>
+      <th>MLS #</th>
+      <th>REO #</th>
+      <th>Escrow #</th>
+      <th>Updated</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recently_created.each do |i| %>
+    <tr class="<%= cycle("even","odd") %>">
+      <td class="noborder"><%= link_to 'View', edit_property_path(i.id) %></td>
+      <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
+      <td><%= i.status %></td>
+      <td><%= i.primary_seller %></td>
+      <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
+      <td><%= i.listing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.closing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.mls %></td>
+      <td><%= i.reo %></td>
+      <td><%= i.esc %></td>
+      <td><%= i.updated_at.strftime('%m.%d.%y') %></td>
+      <td><%= i.created_at.strftime('%m.%d.%y') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

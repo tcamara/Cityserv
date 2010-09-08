@@ -1,0 +1,133 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mls: MyString
+  occupancy: MyString
+  prop_type: MyString
+  prop_style: MyString
+  street_num: MyString
+  street: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  floor: MyString
+  unit: MyString
+  building: MyString
+  primary_seller: MyString
+  status: MyString
+  list_price: 
+  commission: 
+  listing_date: 2010-07-26 11:12:58
+  listing_term: 
+  closing_date: 2010-07-26 11:12:58
+  year_built: 
+  prop_id: MyString
+  last_sold: 2010-07-26 11:12:58
+  area: MyString
+  zoning: MyString
+  feat_lot_size: MyString
+  feat_sq_ft: MyString
+  feat_floors: 
+  feat_num_bedrooms: 
+  feat_num_bathrooms: 
+  feat_flooring: MyString
+  feat_heating: MyString
+  feat_a_c: MyString
+  feat_fireplace: MyString
+  feat_basement: MyString
+  feat_parking: MyString
+  feat_view: MyString
+  mat_construction: MyString
+  mat_exterior: MyString
+  mat_roof: MyString
+  mat_sewer: MyString
+  mat_water: MyString
+  fin_taxes: 
+  fin_tax_year: 
+  fin_tax_assessment: 
+  fin_land_assessment: 
+  fin_tax_roll_num: MyString
+  fin_building_improvement: 
+  fin_financial: MyString
+  price_range_low: 
+  price_range_high: 
+  sale_price: 
+  description: MyText
+  hoa_name: MyString
+  hoa_contact_person: MyString
+  hoa_phone: MyString
+  hoa_address: MyString
+  hoa_monthly_fee: 
+  hoa_last_payment: 2010-07-26 11:12:58
+  hoa_payments_due: 
+  hoa_services_included: MyString
+  hoa_supplements: MyString
+  hoa_code_violations: MyString
+  hoa_sign_complications: MyString
+  hoa_gate_code: MyString
+
+two:
+  mls: MyString
+  occupancy: MyString
+  prop_type: MyString
+  prop_style: MyString
+  street_num: MyString
+  street: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  floor: MyString
+  unit: MyString
+  building: MyString
+  primary_seller: MyString
+  status: MyString
+  list_price: 
+  commission: 
+  listing_date: 2010-07-26 11:12:58
+  listing_term: 
+  closing_date: 2010-07-26 11:12:58
+  year_built: 
+  prop_id: MyString
+  last_sold: 2010-07-26 11:12:58
+  area: MyString
+  zoning: MyString
+  feat_lot_size: MyString
+  feat_sq_ft: MyString
+  feat_floors: 
+  feat_num_bedrooms: 
+  feat_num_bathrooms: 
+  feat_flooring: MyString
+  feat_heating: MyString
+  feat_a_c: MyString
+  feat_fireplace: MyString
+  feat_basement: MyString
+  feat_parking: MyString
+  feat_view: MyString
+  mat_construction: MyString
+  mat_exterior: MyString
+  mat_roof: MyString
+  mat_sewer: MyString
+  mat_water: MyString
+  fin_taxes: 
+  fin_tax_year: 
+  fin_tax_assessment: 
+  fin_land_assessment: 
+  fin_tax_roll_num: MyString
+  fin_building_improvement: 
+  fin_financial: MyString
+  price_range_low: 
+  price_range_high: 
+  sale_price: 
+  description: MyText
+  hoa_name: MyString
+  hoa_contact_person: MyString
+  hoa_phone: MyString
+  hoa_address: MyString
+  hoa_monthly_fee: 
+  hoa_last_payment: 2010-07-26 11:12:58
+  hoa_payments_due: 
+  hoa_services_included: MyString
+  hoa_supplements: MyString
+  hoa_code_violations: MyString
+  hoa_sign_complications: MyString
+  hoa_gate_code: MyString

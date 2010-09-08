@@ -1,0 +1,31 @@
+<%= render :partial => "/properties/tab_header", :layout => false %>
+
+<br /><br />
+
+<%= link_to_remote "All Comments", :url => property_comments_path(@property, :type => 'All'), :method => :get %><br />
+<%= link_to_remote "Accounting Comments", :url => property_comments_path(@property, :type => 'Accounting'), :method => :get %><br />
+<%= link_to_remote "Admin Comments", :url => property_comments_path(@property, :type => 'Admin'), :method => :get %><br />
+<%= link_to_remote "Code Violations Comments", :url => property_comments_path(@property, :type => 'Code_Violations'), :method => :get %><br />
+<%= link_to_remote "Escrow Comments", :url => property_comments_path(@property, :type => 'Escrow'), :method => :get %><br />
+<%= link_to_remote "Evictions Comments", :url => property_comments_path(@property, :type => 'Evictions'), :method => :get %><br />
+<%= link_to_remote "Offers Comments", :url => property_comments_path(@property, :type => 'Offers'), :method => :get %><br />
+<%= link_to_remote "Repairs Comments", :url => property_comments_path(@property, :type => 'Repairs'), :method => :get %><br />
+<%= link_to_remote "Utilities Comments", :url => property_comments_path(@property, :type => 'Utilities'), :method => :get %><br />
+
+<br /><br />
+
+<% form_remote_for :comment, :url => property_comments_path(@property), :html => { :id => 'comment_form' } do |f| %>
+  <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Evictions Offers Repairs Utilities) %><br />
+  <%= f.text_area :text, :rows => 5, :cols => 139 %><br />
+  <%= f.hidden_field :user_id, :value => @current_user.id %>
+  <%= f.hidden_field :property_id, :value => @property.id %>
+  <%= submit_tag 'Comment' %>
+<% end %>
+
+<br /><br />
+
+<div id="comments">
+  <%= link_to_remote "Sort by Most Recent", :url => property_comments_path(@property, :type => @type, :order => 'DESC'), :method => :get %><br />
+  <%= link_to_remote "Sort by Oldest", :url => property_comments_path(@property, :type => @type, :order => 'ASC'), :method => :get %><br /><br />
+  <%= render :partial => 'comment', :collection => @comments %>
+</div>

@@ -1,0 +1,6 @@
+<div class="comment_listing <%= comment.level %>">
+  <span class="bold"><%= comment.updated_at.strftime('%m.%d.%y - %I:%M%p') %></span><br />
+  <span class="italic">in <%= comment.level %><br />
+  by <%= User.find(comment.user_id).first_name %></span>
+  <p><%= comment.text %></p>
+</div>

@@ -5,6 +5,7 @@ set :password, '0dysseus4'
 set :domain, 'cityserv.org'
 set :deploy_to, '/home/cityserv/public_html/cityserv.org/'
 set :use_sudo, false
+set :port, 100
 
 default_run_options[:pty] = true
 

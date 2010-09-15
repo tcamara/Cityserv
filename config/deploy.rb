@@ -1,5 +1,6 @@
 set :application, "cityserv"
 set :repository,  "git@github.com:tcamara/Cityserv.git"
+set :branch, 'master'
 set :user, 'root'
 set :password, '0dysseus4'
 set :domain, 'cityserv.org'

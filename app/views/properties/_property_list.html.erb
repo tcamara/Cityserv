@@ -52,8 +52,8 @@
       <td><%= i.status %></td>
       <td><%= i.primary_seller %></td>
       <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
-      <td><%= i.listing_date %></td>
-      <td><%= i.closing_date %></td>
+      <td><%= i.listing_date.strftime('%m.%d.%y') %></td>
+      <td><%= i.closing_date.strftime('%m.%d.%y') %></td>
       <td><%= i.mls %></td>
       <td><%= i.reo %></td>
       <td><%= i.esc %></td>
@@ -65,5 +65,3 @@
   <br /><br />
   <%= will_paginate @sorted_properties %>
 </div>
-
-<% #.strftime('%m.%d.%y') %>

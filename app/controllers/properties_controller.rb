@@ -56,7 +56,7 @@ class PropertiesController < ApplicationController
     @query = params[:q]
     @results = Property.search(@query)
     sort = Property.parse_it(params['sort'])
-    @sorted_properties = Property.paginate :conditions => ["street_num LIKE ? or street LIKE ? or city LIKE ? or state LIKE ?", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%"], :page => params[:page], :order => sort
+    @sorted_properties = Property.paginate :conditions => ["street_num LIKE ? or street LIKE ? or city LIKE ? or state LIKE ? or zip LIKE ? or status LIKE ? or primary_seller LIKE ? or list_price LIKE ? or listing_date LIKE ? or closing_date LIKE ? or mls LIKE ? or reo LIKE ? or esc LIKE ?", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%"], :page => params[:page], :order => sort
   end
 
   

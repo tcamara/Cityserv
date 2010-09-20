@@ -9,25 +9,21 @@
   </head>
   <body>
     <div id="content">
-      <div class="float_right">
+      <div id="login_area" class="float_right">
         <% if @current_user %>
-          Logged in as: <%= @current_user.first_name %> <%= @current_user.last_name %>
-          <%= link_to "(Logout)", session_path, :method => :delete %>
+          Welcome, <%= @current_user.first_name %> <%= @current_user.last_name %> <%= link_to "(Logout)", session_path, :method => :delete %>
         <% else %>
           <%= link_to 'Login', new_session_path %>
         <% end %>
       </div>
-      <h1 class="center" id="title"><%= link_to '{!--CityServ--}', properties_path %></h1>
+      <h1 class="center" id="title"><%= link_to image_tag("logo.png", :border => 0), properties_path %></h1>
 
-      <div class="center">
-        <%= link_to 'Browse Properties', :controller => 'properties', :action => 'list' %>
-        <%= link_to 'Find Property', :controller => 'properties', :action => 'search' %>
-        <%= link_to 'Add Property', new_property_path %>
-      </div>
-
-      <div class="center">
-        <%= link_to 'Browse Contacts', contacts_path %>
-        <%= link_to 'Find Contact', :controller => 'contacts', :action => 'search' %>
+      <div id="nav" class="center">
+        <%= link_to 'Browse Properties', :controller => 'properties', :action => 'list' %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Find Property', :controller => 'properties', :action => 'search' %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Add Property', new_property_path %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Browse Contacts', contacts_path %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Find Contact', :controller => 'contacts', :action => 'search' %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <%= link_to 'Add Contact', new_contact_path %>
       </div>
       <div class="center">

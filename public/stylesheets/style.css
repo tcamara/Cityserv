@@ -17,11 +17,32 @@ html {
     vertical-align: top;
 }
 
-
+#title {
+    clear: both;
+}
 
 #title a {
     font-size: 2.1em;
     color: #2F3540;
+}
+
+#nav {
+    padding: 12px;
+    margin-bottom: 30px;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+}
+
+#nav a{
+    text-decoration: none;
+}
+
+#login_area {
+    text-align: right;
+}
+
+#login_area a {
+    text-decoration: none;
 }
 
 h2 {
@@ -161,4 +182,9 @@ th.sortup a {
 th.sortdown a {
     background: url("../images/down-arrow.gif") center right no-repeat;
     padding-right: 25px;
+}
+
+input {
+    margin-left: auto;
+    margin-right: auto;
 }

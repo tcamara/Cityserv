@@ -1,12 +1,12 @@
 <% title "Find Contact" %>
 
-<%= form_tag( :controller => 'contacts', :action => 'search' ) %>
+<%= form_tag( {:controller => 'contacts', :action => 'search'}, :method => 'get' ) %>
 
 <%= text_field_tag :q, params[:q] %>
 
-<p>
-  <%= submit_tag "Search" %>
-</p>
+&nbsp;&nbsp;<%= submit_tag "Search" %>
+
+<br /><br />
 
 <% if @results %>
   <div id="browse_table">

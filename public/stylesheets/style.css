@@ -1,5 +1,12 @@
+/* Green - #517e3a */
+/* Brown - #9f904f */
+/* BG Grey - #8C8681 */
+/* Grey Stripes - #ccdcdc */
+/* Grey Header - #666A73 */
+
+
 html {
-    background: #8C8681;
+    background: #737373;
     font-family: Verdana, Geneva, sans-serif;
     font-size: .8em;
 }
@@ -106,7 +113,7 @@ h1 a {
 }
 
 #browse_table tr.odd {
-    background: #cccccc;
+    background: #ccdcdc;
     width: 100%;
 }
 
@@ -116,7 +123,6 @@ h1 a {
 }
 
 #browse_table td.noborder {
-    border: 0px dashed black;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -124,7 +130,7 @@ h1 a {
 #browse_table th {
     text-align: left;
     padding-right: 10px;
-    background: #666A73;
+    background: #517e3a;
     padding-bottom: 3px;
     padding-top: 2px;
 }

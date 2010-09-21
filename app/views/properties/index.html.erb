@@ -1,9 +1,9 @@
 <% title "Properties Home" %>
 
-Properties: <%= @total %><br />
+Total Properties: <%= @total %><br />
 Active Properties: <%= @active_total %>
 
-<div id="">
+<div id="browse_table">
 <table>
   <caption>Recently Updated Properties</caption>
   <thead>
@@ -12,12 +12,9 @@ Active Properties: <%= @active_total %>
       <th>Address</th>
       <th>Status</th>
       <th>Seller</th>
-      <th>List Price</th>
       <th>List Date</th>
       <th>Closing</th>
       <th>MLS #</th>
-      <th>REO #</th>
-      <th>Escrow #</th>
       <th>Updated</th>
       <th>Created</th>
     </tr>
@@ -25,18 +22,15 @@ Active Properties: <%= @active_total %>
   <tbody>
     <% @recently_updated.each do |i| %>
     <tr class="<%= cycle("even","odd") %>">
-      <td class="noborder"><%= link_to 'View', edit_property_path(i.id) %></td>
+      <td class="noborder"><%= link_to 'View', property_path(i.id) %></td>
       <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
       <td><%= i.status %></td>
       <td><%= i.primary_seller %></td>
-      <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
       <td><%= if i.listing_date
                  i.listing_date.strftime('%m.%d.%y') end %></td>
       <td><%= if i.closing_date
                  i.closing_date.strftime('%m.%d.%y') end %></td>
       <td><%= i.mls %></td>
-      <td><%= i.reo %></td>
-      <td><%= i.esc %></td>
       <td><%= i.updated_at.strftime('%m.%d.%y') %></td>
       <td><%= i.created_at.strftime('%m.%d.%y') %></td>
     </tr>
@@ -55,12 +49,9 @@ Active Properties: <%= @active_total %>
       <th>Address</th>
       <th>Status</th>
       <th>Seller</th>
-      <th>List Price</th>
       <th>List Date</th>
       <th>Closing</th>
       <th>MLS #</th>
-      <th>REO #</th>
-      <th>Escrow #</th>
       <th>Updated</th>
       <th>Created</th>
     </tr>
@@ -72,14 +63,11 @@ Active Properties: <%= @active_total %>
       <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
       <td><%= i.status %></td>
       <td><%= i.primary_seller %></td>
-      <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
       <td><%= if i.listing_date
                 i.listing_date.strftime('%m.%d.%y') end %></td>
       <td><%= if i.closing_date
                 i.closing_date.strftime('%m.%d.%y') end %></td>
       <td><%= i.mls %></td>
-      <td><%= i.reo %></td>
-      <td><%= i.esc %></td>
       <td><%= i.updated_at.strftime('%m.%d.%y') %></td>
       <td><%= i.created_at.strftime('%m.%d.%y') %></td>
     </tr>

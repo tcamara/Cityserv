@@ -85,7 +85,7 @@ namespace :db do
       contact.first_name = Faker::Name.first_name
       contact.last_name = Faker::Name.last_name
       contact.company_name = Faker::Company.name
-      contact.job_title = Faker::Company.catch_phrase
+      contact.job_title = ['Broker', 'Agent', 'Seller', 'Contractor', 'Field Inspector', 'Realtor', 'Buyer']
       contact.company_address = Faker::Address.street_address()
       contact.home_address = Faker::Address.street_address(false)
       contact.home_phone = Faker::PhoneNumber.phone_number

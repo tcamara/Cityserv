@@ -40,8 +40,25 @@ html {
     border-bottom: 1px dotted black;
 }
 
+#sub_nav {
+    padding: 12px;
+    margin-bottom: 30px;
+}
+
+#sub_nav a {
+    text-decoration: none;
+}
+
+#sub_nav a:hover {
+    text-decoration: underline;
+}
+
 #nav a{
     text-decoration: none;
+}
+
+#nav a:hover {
+    text-decoration: underline;
 }
 
 #login_area {
@@ -50,6 +67,10 @@ html {
 
 #login_area a {
     text-decoration: none;
+}
+
+#login_area a:hover {
+    text-decoration: underline;
 }
 
 h2 {
@@ -99,10 +120,15 @@ h1 a {
     border: 2px solid red;
 }
 
-#browse_table table{
+#browse_table table {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid black;
+}
+
+#browse_table caption {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 #browse_table td {
@@ -113,7 +139,7 @@ h1 a {
 }
 
 #browse_table tr.odd {
-    background: #ccdcdc;
+    background: #dcdfdc;
     width: 100%;
 }
 
@@ -133,11 +159,13 @@ h1 a {
     background: #517e3a;
     padding-bottom: 3px;
     padding-top: 2px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: white;
 }
 
 #browse_table th a {
     text-decoration: none;
-    font-size: 1.1em;
     color: white;
 }
 

@@ -6,18 +6,14 @@
 <table>
   <tr>
     <td>First Name</td>
-    <td>Last Name</td>
+    <td><%= edit_in_place(@contact, :first_name) %></td>
   </tr>
   <tr>
-    <td><%= edit_in_place(@contact, :first_name) %></td>
+    <td>Last Name</td>
     <td><%= edit_in_place(@contact, :last_name) %></td>
   </tr>
-</table>
-<table>
   <tr>
     <td>Address</td>
-  </tr>
-  <tr>
     <td><%= edit_in_place(@contact, :home_address) %></td>
   </tr>
 </table>
@@ -27,18 +23,14 @@
 <table>
   <tr>
     <td>Job Title</td>
-    <td>Company</td>
+    <td><%= edit_in_place(@contact, :job_title) %></td>
   </tr>
   <tr>
-    <td><%= edit_in_place(@contact, :job_title) %></td>
+    <td>Company</td>
     <td><%= edit_in_place(@contact, :company_name) %></td>
   </tr>
-</table>
-<table>
   <tr>
     <td>Company Address</td>
-  </tr>
-  <tr>
     <td><%= edit_in_place(@contact, :company_address) %></td>
   </tr>
 </table>
@@ -48,26 +40,26 @@
 <table>
   <tr>
     <td>Preferred Method of Contact</td>
-    <td>Cell Phone</td>
+    <td><%= @contact.preferred_method %></td>
   </tr>
   <tr>
-    <td><%= @contact.preferred_method %></td>
+    <td>Cell Phone</td>
     <td><%= edit_in_place(@contact, :cell_phone) %></td>
   </tr>
   <tr>
     <td>Email</td>
-    <td>Work Phone</td>
+    <td><%= edit_in_place(@contact, :email) %></td>
   </tr>
   <tr>
-    <td><%= edit_in_place(@contact, :email) %></td>
+    <td>Work Phone</td>
     <td><%= edit_in_place(@contact, :work_phone) %></td>
   </tr>
   <tr>
     <td>Fax</td>
-    <td>Home Phone</td>
+    <td><%= edit_in_place(@contact, :fax) %></td>
   </tr>
   <tr>
-    <td><%= edit_in_place(@contact, :fax) %></td>
+    <td>Home Phone</td>
     <td><%= edit_in_place(@contact, :home_phone) %></td>
   </tr>
 </table>

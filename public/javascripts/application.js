@@ -5,3 +5,9 @@
 document.observe('dom:loaded', function(event) {
   Editable.setupAll();
 });
+
+//document.delegators('click', {
+//    '.editable': function(element) {
+//        element.editable();
+//    }
+//});

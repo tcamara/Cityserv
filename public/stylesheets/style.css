@@ -34,10 +34,33 @@ html {
 }
 
 #nav {
-    padding: 12px;
-    margin-bottom: 30px;
-    border-top: 1px dotted black;
-    border-bottom: 1px dotted black;
+    background: #517e3a;
+    background-image: url("../images/nav_gradient.png");
+    background-repeat: repeat-x;
+    *padding-top: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -2px;
+}
+
+#nav_span {
+    padding-left: 20px;
+}
+
+#nav_span img {
+    padding-left: 18px;
+    padding-right: 83px;
+    padding-top: 6px;
+    border-left: 1px solid #1a390a;
+    margin-bottom: -3px;
+}
+
+#nav_span a {
+    
+}
+
+#nav_span a:last-child img {
+    border-right: 1px solid #1a390a;
 }
 
 #sub_nav {
@@ -124,6 +147,8 @@ h1 a {
 #property_div h3 {
     width: 558px;
     background-color: #517e3a;
+    background-image: url("../images/nav_gradient.png");
+    background-position: bottom;
     color: white;
     margin-bottom: 0px;
     padding: 3px 0px;
@@ -150,6 +175,24 @@ h1 a {
 
 #property_div td:last-child {
     border-right: 1px solid black;
+}
+
+#form_bottom h3 {
+    clear: both;
+    background-color: #517e3a;
+    background-image: url("../images/nav_gradient.png");
+    background-position: bottom;
+    color: white;
+    margin-bottom: 0px;
+    padding: 3px 0px;
+    border: 1px solid black;
+    border-bottom: 0px;
+}
+
+#form_bottom textarea {
+    border: 1px solid black;
+    margin: 0px;
+    width: 1136px;
 }
 
 #notification {
@@ -199,7 +242,8 @@ h1 a {
 #browse_table th {
     text-align: left;
     padding-right: 10px;
-    background: #517e3a;
+    background-image: url("../images/nav_gradient.png");
+    background-position: bottom;
     padding-bottom: 3px;
     padding-top: 2px;
     text-decoration: none;
@@ -224,6 +268,8 @@ h1 a {
 #property_edit td td {
     padding-right: 5px;
 }
+
+
 
 .comment_listing {
     border: 1px solid black;

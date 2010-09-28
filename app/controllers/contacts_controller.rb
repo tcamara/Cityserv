@@ -17,7 +17,10 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(params[:contact])
-    Property.find(@pid).contacts.push(@contact)
+    if params[:pid] != ''
+      @pid = params[:pid]
+      Property.find(@pid).contacts.push(@contact)
+    end
     if @contact.save
       flash[:notice] = "Submission Accepted"
       redirect_to contacts_path

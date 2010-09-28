@@ -19,16 +19,15 @@
       </div>
       <h1 class="center" id="title"><%= link_to image_tag("logo.png", :border => 0), properties_path %></h1>
 
-      <div id="nav" class="center">
-        <%= link_to 'Browse Properties', :controller => 'properties', :action => 'list' %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Find Property', :controller => 'properties', :action => 'search' %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Add Property', new_property_path %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Browse Contacts', contacts_path %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Find Contact', :controller => 'contacts', :action => 'search' %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Add Contact', new_contact_path %>
-      </div>
-      <div class="center">
-        <%# link_to 'Add User', new_user_path %>
+      <div id="nav">
+        <div id="nav_span">
+          <%= link_to image_tag('browse_properties.png', :border => 0), :controller => 'properties', :action => 'list' %>
+          <%= link_to image_tag('find_properties.png', :border => 0), :controller => 'properties', :action => 'search' %>
+          <%= link_to image_tag('add_properties.png', :border => 0), new_property_path %>
+          <%= link_to image_tag('browse_contacts.png', :border => 0), contacts_path %>
+          <%= link_to image_tag('find_contacts.png', :border => 0), :controller => 'contacts', :action => 'search' %>
+          <%= link_to image_tag('add_contacts.png', :border => 0), new_contact_path %>
+        </div>
       </div>
 
       <% unless flash[:notice].blank? %>

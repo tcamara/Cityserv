@@ -3,5 +3,5 @@
 <%= link_to 'Add Associated Contact', new_contact_path({ :pid => @property.id }) %>
 <br /><br /><br />
 <div id="browse_table">
-  <%= render :partial => "contacts/contact_list", :layout => false %>
+  <%= render :partial => "contacts/contact_list_short", :layout => false %>
 </div>

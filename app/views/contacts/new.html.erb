@@ -4,78 +4,74 @@
 
 <% form_for @contact do |f| %>
 
-<h3>Personal</h3>
-<table>
-  <tr>
-    <td>First Name*</td>
-    <td>Last Name*</td>
-  </tr>
-  <tr>
-    <td><%= text_field :contact, :first_name, :size => '40' %></td>
-    <td><%= text_field :contact, :last_name, :size => '40' %></td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td>Address</td>
-  </tr>
-  <tr>
-    <td><%= text_field :contact, :home_address, :size => '87' %></td>
-  </tr>
-</table>
-<br />
 
-<h3>Company</h3>
-<table>
-  <tr>
-    <td>Job Title</td>
-    <td>Company</td>
-  </tr>
-  <tr>
-    <td><%= text_field :contact, :job_title, :size => '40' %></td>
-    <td><%= text_field :contact, :company_name, :size => '40' %></td>
-  </tr>
-</table>
-<table>
-  <tr>
-    <td>Company Address</td>
-  </tr>
-  <tr>
-    <td><%= text_field :contact, :company_address, :size => '87' %></td>
-  </tr>
-</table>
-<br />
+<div id="property_div">
+  <h3>Personal</h3>
+  <table>
+    <tr>
+      <td>First Name</td>
+      <td><%= text_field :contact, :first_name, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><%= text_field :contact, :last_name, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><%= text_field :contact, :home_address, :size => '57' %></td>
+    </tr>
+  </table>
+  <br />
 
-<h3>Contact</h3>
-<table>
-  <tr>
-    <td>Preferred Method of Contact</td>
-    <td>Cell Phone</td>
-  </tr>
-  <tr>
-    <td><%= select :contact, :preferred_method, %w(Email Cell Work Home Fax) %></td>
-    <td><%= text_field :contact, :cell_phone, :size => '40' %></td>
-  </tr>
-  <tr>
-    <td>Email</td>
-    <td>Work Phone</td>
-  </tr>
-  <tr>
-    <td><%= text_field :contact, :email, :size => '40' %></td>
-    <td><%= text_field :contact, :work_phone, :size => '40' %></td>
-  </tr>
-  <tr>
-    <td>Fax</td>
-    <td>Home Phone</td>
-  </tr>
-  <tr>
-    <td><%= text_field :contact, :fax, :size => '40' %></td>
-    <td><%= text_field :contact, :home_phone, :size => '40' %></td>
-  </tr>
-</table>
-<br />
+  <h3>Company</h3>
+  <table>
+    <tr>
+      <td>Job Title</td>
+      <td><%= text_field :contact, :job_title, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Company</td>
+      <td><%= text_field :contact, :company_name, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Company Address</td>
+      <td><%= text_field :contact, :company_address, :size => '57' %></td>
+    </tr>
+  </table>
+  <br />
 
-<%# hidden_field :contact, :pid %>
+  <h3>Contact</h3>
+  <table>
+    <tr>
+      <td>Preferred Method</td>
+      <td><%= select :contact, :preferred_method, %w(Email Cell Work Home Fax) %></td>
+    </tr>
+    <tr>
+      <td>Cell Phone</td>
+      <td><%= text_field :contact, :cell_phone, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><%= text_field :contact, :email, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Work Phone</td>
+      <td><%= text_field :contact, :work_phone, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Fax</td>
+      <td><%= text_field :contact, :fax, :size => '57' %></td>
+    </tr>
+    <tr>
+      <td>Home Phone</td>
+      <td><%= text_field :contact, :home_phone, :size => '57' %></td>
+    </tr>
+  </table>
+  <br />
+</div>
+
+
+<%= hidden_field_tag 'pid', params[:pid] %>
 <p>
   <%= submit_tag 'Add' %>
 </p>

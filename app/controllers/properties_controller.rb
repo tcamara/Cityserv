@@ -1,5 +1,76 @@
 class PropertiesController < ApplicationController
 
+  in_place_edit_for :property, :street_num
+  in_place_edit_for :property, :mls
+  in_place_edit_for :property, :reo
+  in_place_edit_for :property, :esc
+  in_place_edit_for :property, :occupancy
+  in_place_edit_for :property, :prop_type
+  in_place_edit_for :property, :prop_style
+  in_place_edit_for :property, :street_num
+  in_place_edit_for :property, :street
+  in_place_edit_for :property, :city
+  in_place_edit_for :property, :state
+  in_place_edit_for :property, :zip
+  in_place_edit_for :property, :floor
+  in_place_edit_for :property, :unit
+  in_place_edit_for :property, :building
+  in_place_edit_for :property, :primary_seller
+  in_place_edit_for :property, :status
+  in_place_edit_for :property, :list_price
+  in_place_edit_for :property, :commission
+  in_place_edit_for :property, :listing_date
+  in_place_edit_for :property, :listing_term
+  in_place_edit_for :property, :closing_date
+  in_place_edit_for :property, :year_built
+  in_place_edit_for :property, :prop_id
+  in_place_edit_for :property, :last_sold
+  in_place_edit_for :property, :area
+  in_place_edit_for :property, :zoning
+  in_place_edit_for :property, :feat_lot_size
+  in_place_edit_for :property, :feat_sq_ft
+  in_place_edit_for :property, :feat_floors
+  in_place_edit_for :property, :feat_num_bedrooms
+  in_place_edit_for :property, :feat_num_bathrooms
+  in_place_edit_for :property, :feat_flooring
+  in_place_edit_for :property, :feat_heating
+  in_place_edit_for :property, :feat_a_c
+  in_place_edit_for :property, :feat_fireplace
+  in_place_edit_for :property, :feat_basement
+  in_place_edit_for :property, :feat_parking
+  in_place_edit_for :property, :feat_view
+  in_place_edit_for :property, :mat_construction
+  in_place_edit_for :property, :mat_exterior
+  in_place_edit_for :property, :mat_roof
+  in_place_edit_for :property, :mat_sewer
+  in_place_edit_for :property, :mat_water
+  in_place_edit_for :property, :mat_septic
+  in_place_edit_for :property, :fin_taxes
+  in_place_edit_for :property, :fin_tax_year
+  in_place_edit_for :property, :fin_tax_assessment
+  in_place_edit_for :property, :fin_land_assessment
+  in_place_edit_for :property, :fin_tax_roll_num
+  in_place_edit_for :property, :fin_building_improvement
+  in_place_edit_for :property, :fin_financial
+  in_place_edit_for :property, :price_range_low
+  in_place_edit_for :property, :price_range_high
+  in_place_edit_for :property, :sale_price
+  in_place_edit_for :property, :description
+  in_place_edit_for :property, :hoa_name
+  in_place_edit_for :property, :hoa_contact_person
+  in_place_edit_for :property, :hoa_phone
+  in_place_edit_for :property, :hoa_address
+  in_place_edit_for :property, :hoa_monthly_fee
+  in_place_edit_for :property, :hoa_last_payment
+  in_place_edit_for :property, :hoa_payments_due
+  in_place_edit_for :property, :hoa_services_included
+  in_place_edit_for :property, :hoa_supplements
+  in_place_edit_for :property, :hoa_code_violations
+  in_place_edit_for :property, :hoa_sign_complications
+  in_place_edit_for :property, :hoa_gate_code
+  in_place_edit_for :property, :created_at
+  in_place_edit_for :property, :updated_at
+
   def index
     @recently_updated = Property.find(:all, :order => 'updated_at DESC', :limit => 10)
     @recently_created = Property.find(:all, :order => 'created_at DESC', :limit => 10)
@@ -62,14 +133,24 @@ class PropertiesController < ApplicationController
   
   def update
     @property = Property.find(params[:id])
-    @property.update_attributes(params[:property])
-
-    respond_to do |format|
-      format.html {@property.update_attributes(params[:property])}
-      format.js {render :partial => "edit_property", :layout => false}
-      format.json { render :json => @property }
-    end
+    @property.street_num = params[:value]
+    @property.save
+    @property.reload
+    render :text => @property.street_num
   end
+
+
+#  def update
+#    @property = Property.find(params[:id])
+#    @property.update_attributes(params[:property])
+#
+#    respond_to do |format|
+#      format.html {@property.update_attributes(params[:property])}
+#      format.js {render :partial => "edit_property", :layout => false}
+#      format.json { render :json => @property }
+#    end
+#  end
+
 
   def contacts
     @property = Property.find(params[:id])

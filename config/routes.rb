@@ -50,6 +50,7 @@ ActionController::Routing::Routes.draw do |map|
     
   end
   map.resource :session
-  #map.connect ':controller/:id/:action'
-  #map.connect ':controller/:action/:id.:format'
+  #
+  map.connect ':controller/:id/:action'
+  map.connect ':controller/:action/:id.:format'
 end

@@ -45,4 +45,12 @@ class Property < ActiveRecord::Base
     end
   end
 
+  def self.eip(model, field, id, val)
+    puts
+    "<span id=\"" + field + "\">" + val + "</span>" +
+    "<img alt=\"Edit\" border=\"0\" id=\"" + field + "_edit\" src=\"/images/edit_icon.png\" />" +
+    "<script type=\"text/javascript\"> new Ajax.InPlaceEditor('" + field + "', '/" + model.pluralize + "/" + id + "/set_" + model + "_" + field + "', { okControl:'button', cancelControl:'button', okText:'Submit', cancelText:'Cancel', savingText:'Saving', clickToEditText:'Click here to edit this field', externalControl:'" + field + "_edit', cols:'40', highlightColor:'#FFFFFF', highlightEndColor:'#FFFFFF', formClassName:'eip_form'}); </script>"
+
+  end
+
 end

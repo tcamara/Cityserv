@@ -55,10 +55,6 @@ html {
     margin-bottom: -3px;
 }
 
-#nav_span a {
-    
-}
-
 #nav_span a:last-child img {
     border-right: 1px solid #1a390a;
 }
@@ -175,6 +171,11 @@ h1 a {
 
 #property_div td:last-child {
     border-right: 1px solid black;
+}
+
+#property_div td img {
+    float: right;
+    margin-right: 10px;
 }
 
 #form_bottom h3 {
@@ -310,4 +311,8 @@ th.sortdown a {
 input {
     margin-left: auto;
     margin-right: auto;
+}
+
+.required td {
+    background-color: #91be7a;
 }

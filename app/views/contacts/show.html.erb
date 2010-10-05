@@ -8,15 +8,15 @@
   <table>
     <tr>
       <td>First Name</td>
-      <td><%= edit_in_place(@contact, :first_name) %></td>
+      <td><%= eip({:model => 'contact', :field => 'first_name', :id => @contact.id.to_s, :val => @contact.first_name.to_s}) %></td>
     </tr>
     <tr>
       <td>Last Name</td>
-      <td><%= edit_in_place(@contact, :last_name) %></td>
+      <td><%= eip({:model => 'contact', :field => 'last_name', :id => @contact.id.to_s, :val => @contact.last_name.to_s}) %></td>
     </tr>
     <tr>
       <td>Address</td>
-      <td><%= edit_in_place(@contact, :home_address) %></td>
+      <td><%= eip({:model => 'contact', :field => 'home_address', :id => @contact.id.to_s, :val => @contact.home_address.to_s}) %></td>
     </tr>
   </table>
   <br />
@@ -25,15 +25,15 @@
   <table>
     <tr>
       <td>Job Title</td>
-      <td><%= edit_in_place(@contact, :job_title) %></td>
+      <td><%= eip({:model => 'contact', :field => 'job_title', :id => @contact.id.to_s, :val => @contact.job_title.to_s}) %></td>
     </tr>
     <tr>
       <td>Company</td>
-      <td><%= edit_in_place(@contact, :company_name) %></td>
+      <td><%= eip({:model => 'contact', :field => 'company_name', :id => @contact.id.to_s, :val => @contact.company_name.to_s}) %></td>
     </tr>
     <tr>
       <td>Company Address</td>
-      <td><%= edit_in_place(@contact, :company_address) %></td>
+      <td><%= eip({:model => 'contact', :field => 'company_address', :id => @contact.id.to_s, :val => @contact.company_address.to_s}) %></td>
     </tr>
   </table>
   <br />
@@ -46,23 +46,23 @@
     </tr>
     <tr>
       <td>Cell Phone</td>
-      <td><%= edit_in_place(@contact, :cell_phone) %></td>
+      <td><%= eip({:model => 'contact', :field => 'cell_phone', :id => @contact.id.to_s, :val => @contact.cell_phone.to_s}) %></td>
     </tr>
     <tr>
       <td>Email</td>
-      <td><%= edit_in_place(@contact, :email) %></td>
+      <td><%= eip({:model => 'contact', :field => 'email', :id => @contact.id.to_s, :val => @contact.email.to_s}) %></td>
     </tr>
     <tr>
       <td>Work Phone</td>
-      <td><%= edit_in_place(@contact, :work_phone) %></td>
+      <td><%= eip({:model => 'contact', :field => 'work_phone', :id => @contact.id.to_s, :val => @contact.work_phone.to_s}) %></td>
     </tr>
     <tr>
       <td>Fax</td>
-      <td><%= edit_in_place(@contact, :fax) %></td>
+      <td><%= eip({:model => 'contact', :field => 'fax', :id => @contact.id.to_s, :val => @contact.fax.to_s}) %></td>
     </tr>
     <tr>
       <td>Home Phone</td>
-      <td><%= edit_in_place(@contact, :home_phone) %></td>
+      <td><%= eip({:model => 'contact', :field => 'home_phone', :id => @contact.id.to_s, :val => @contact.home_phone.to_s}) %></td>
     </tr>
   </table>
   <br />

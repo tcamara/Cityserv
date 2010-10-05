@@ -1,4 +1,19 @@
 class ContactsController < ApplicationController
+
+  in_place_edit_for :contact, :street_num
+  in_place_edit_for :contact, :first_name
+  in_place_edit_for :contact, :last_name
+  in_place_edit_for :contact, :company_name
+  in_place_edit_for :contact, :job_title
+  in_place_edit_for :contact, :company_address
+  in_place_edit_for :contact, :home_address
+  in_place_edit_for :contact, :home_phone
+  in_place_edit_for :contact, :work_phone
+  in_place_edit_for :contact, :cell_phone
+  in_place_edit_for :contact, :fax
+  in_place_edit_for :contact, :email
+  in_place_edit_for :contact, :preferred_method
+
   def index
     sort = Contact.parse_it(params['sort'])
     @sorted_contacts = Contact.paginate :page => params[:page], :order => sort

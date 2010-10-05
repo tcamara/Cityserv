@@ -7,35 +7,35 @@
       <table>
         <tr>
           <td>#</td>
-          <td><%= Property.eip('property', 'street_num', @property.id.to_s, @property.street_num.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'street_num', :id => @property.id.to_s, :val => @property.street_num.to_s}) %></td>
         </tr>
         <tr>
           <td>Street Name</td>
-          <td><%= Property.eip('property', 'street', @property.id.to_s, @property.street.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'street', :id => @property.id.to_s, :val => @property.street.to_s}) %></td>
         </tr>
         <tr>
           <td>City</td>
-          <td><%= Property.eip('property', 'city', @property.id.to_s, @property.city.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'city', :id => @property.id.to_s, :val => @property.city.to_s}) %></td>
         </tr>
         <tr>
           <td>State</td>
-          <td><%= select :property, :state, %w(CA AL AK AS AZ AR CO CT DE DC FM FL GA GU HI ID IL IN IA KS KY LA ME MH MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND MP OH OK OR PW PA PR RI SC SD TN TX UT VT VI VA WA WV WI WY) %></td>
+          <td><%= eip_select({:model => 'property', :field => 'state', :id => @property.id.to_s, :val => @property.state.to_s, :collection => "['CA ', 'AL ', 'AK ', 'AS ', 'AZ ', 'AR ', 'CO ', 'CT ', 'DE ', 'DC ', 'FM ', 'FL ', 'GA ', 'GU ', 'HI ', 'ID ', 'IL ', 'IN ', 'IA ', 'KS ', 'KY ', 'LA ', 'ME ', 'MH ', 'MD ', 'MA ', 'MI ', 'MN ', 'MS ', 'MO ', 'MT ', 'NE ', 'NV ', 'NH ', 'NJ ', 'NM ', 'NY ', 'NC ', 'ND ', 'MP ', 'OH ', 'OK ', 'OR ', 'PW ', 'PA ', 'PR ', 'RI ', 'SC ', 'SD ', 'TN ', 'TX ', 'UT ', 'VT ', 'VI ', 'VA ', 'WA ', 'WV ', 'WI ', 'WY ']"}) %></td>
         </tr>
         <tr>
           <td>Zip</td>
-          <td><%= Property.eip('property', 'zip', @property.id.to_s, @property.zip.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'zip', :id => @property.id.to_s, :val => @property.zip.to_s}) %></td>
         </tr>
         <tr>
           <td>Unit</td>
-          <td><%= Property.eip('property', 'unit', @property.id.to_s, @property.unit.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'unit', :id => @property.id.to_s, :val => @property.unit.to_s}) %></td>
         </tr>
         <tr>
           <td>Floor</td>
-          <td><%= Property.eip('property', 'floor', @property.id.to_s, @property.floor.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'floor', :id => @property.id.to_s, :val => @property.floor.to_s}) %></td>
         </tr>
         <tr>
           <td>Building</td>
-          <td><%= Property.eip('property', 'building', @property.id.to_s, @property.building.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'building', :id => @property.id.to_s, :val => @property.building.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -44,19 +44,19 @@
       <table>
         <tr>
           <td>List Price</td>
-          <td><%= Property.eip('property', 'list_price', @property.id.to_s, @property.list_price.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'list_price', :id => @property.id.to_s, :val => @property.list_price.to_s}) %></td>
         </tr>
         <tr>
           <td>Sale Price</td>
-          <td><%= Property.eip('property', 'sale_price', @property.id.to_s, @property.sale_price.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'sale_price', :id => @property.id.to_s, :val => @property.sale_price.to_s}) %></td>
         </tr>
         <tr>
           <td>Price Range</td>
-          <td><%= Property.eip('property', 'price_range_low', @property.id.to_s, @property.price_range_low.to_s) %>-<%= Property.eip('property', 'price_range_high', @property.id.to_s, @property.price_range_high.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'price_range_low', :id => @property.id.to_s, :val => @property.price_range_low.to_s}) %>-<%= eip({:model => 'property', :field => 'price_range_high', :id => @property.id.to_s, :val => @property.price_range_high.to_s}) %></td>
         </tr>
         <tr>
           <td>Commission</td>
-          <td><%= Property.eip('property', 'commission', @property.id.to_s, @property.commission.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'commission', :id => @property.id.to_s, :val => @property.commission.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -65,31 +65,31 @@
       <table>
         <tr>
           <td>Tax Roll #</td>
-          <td><%= Property.eip('property', 'fin_tax_roll_num', @property.id.to_s, @property.fin_tax_roll_num.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_tax_roll_num', :id => @property.id.to_s, :val => @property.fin_tax_roll_num.to_s}) %></td>
         </tr>
         <tr>
           <td>Taxes</td>
-          <td><%= Property.eip('property', 'fin_taxes', @property.id.to_s, @property.fin_taxes.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_taxes', :id => @property.id.to_s, :val => @property.fin_taxes.to_s}) %></td>
         </tr>
         <tr>
           <td>Tax Year</td>
-          <td><%= Property.eip('property', 'fin_tax_year', @property.id.to_s, @property.fin_tax_year.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_tax_year', :id => @property.id.to_s, :val => @property.fin_tax_year.to_s}) %></td>
         </tr>
         <tr>
           <td>Tax Assessment</td>
-          <td><%= Property.eip('property', 'fin_tax_assessment', @property.id.to_s, @property.fin_tax_assessment.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_tax_assessment', :id => @property.id.to_s, :val => @property.fin_tax_assessment.to_s}) %></td>
         </tr>
         <tr>
           <td>Land Assessment</td>
-          <td><%= Property.eip('property', 'fin_land_assessment', @property.id.to_s, @property.fin_land_assessment.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_land_assessment', :id => @property.id.to_s, :val => @property.fin_land_assessment.to_s}) %></td>
         </tr>
         <tr>
           <td>Building Improvement</td>
-          <td><%= Property.eip('property', 'fin_building_improvement', @property.id.to_s, @property.fin_building_improvement.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_building_improvement', :id => @property.id.to_s, :val => @property.fin_building_improvement.to_s}) %></td>
         </tr>
         <tr>
           <td>Financing</td>
-          <td><%= Property.eip('property', 'fin_financial', @property.id.to_s, @property.fin_financial.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'fin_financial', :id => @property.id.to_s, :val => @property.fin_financial.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -98,51 +98,51 @@
       <table>
         <tr>
           <td>HOA Name</td>
-          <td><%= Property.eip('property', 'hoa_name', @property.id.to_s, @property.hoa_name.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_name', :id => @property.id.to_s, :val => @property.hoa_name.to_s}) %></td>
         </tr>
         <tr>
           <td>Contact Person</td>
-          <td><%= Property.eip('property', 'hoa_contact_person', @property.id.to_s, @property.hoa_contact_person.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_contact_person', :id => @property.id.to_s, :val => @property.hoa_contact_person.to_s}) %></td>
         </tr>
         <tr>
           <td>Phone Number</td>
-          <td><%= Property.eip('property', 'hoa_phone', @property.id.to_s, @property.hoa_phone.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_phone', :id => @property.id.to_s, :val => @property.hoa_phone.to_s}) %></td>
         </tr>
         <tr>
           <td>Address</td>
-          <td><%= Property.eip('property', 'hoa_address', @property.id.to_s, @property.hoa_address.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_address', :id => @property.id.to_s, :val => @property.hoa_address.to_s}) %></td>
         </tr>
         <tr>
           <td>Monthly Fee</td>
-          <td><%= Property.eip('property', 'hoa_monthly_fee', @property.id.to_s, @property.hoa_monthly_fee.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_monthly_fee', :id => @property.id.to_s, :val => @property.hoa_monthly_fee.to_s}) %></td>
         </tr>
         <tr>
           <td>Last Payment</td>
-          <td><%= Property.eip('property', 'hoa_last_payment', @property.id.to_s, @property.hoa_last_payment.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_last_payment', :id => @property.id.to_s, :val => @property.hoa_last_payment.to_s}) %></td>
         </tr>
         <tr>
           <td>Payments Due</td>
-          <td><%= Property.eip('property', 'hoa_payments_due', @property.id.to_s, @property.hoa_payments_due.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_payments_due', :id => @property.id.to_s, :val => @property.hoa_payments_due.to_s}) %></td>
         </tr>
         <tr>
           <td>Services Included</td>
-          <td><%= Property.eip('property', 'hoa_services_included', @property.id.to_s, @property.hoa_services_included.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_services_included', :id => @property.id.to_s, :val => @property.hoa_services_included.to_s}) %></td>
         </tr>
         <tr>
           <td>Supplements</td>
-          <td><%= Property.eip('property', 'hoa_supplements', @property.id.to_s, @property.hoa_supplements.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_supplements', :id => @property.id.to_s, :val => @property.hoa_supplements.to_s}) %></td>
         </tr>
         <tr>
           <td>HOA Code Violations</td>
-          <td><%= Property.eip('property', 'hoa_code_violations', @property.id.to_s, @property.hoa_code_violations.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_code_violations', :id => @property.id.to_s, :val => @property.hoa_code_violations.to_s}) %></td>
         </tr>
         <tr>
           <td>Sign Complications</td>
-          <td><%= Property.eip('property', 'hoa_sign_complications', @property.id.to_s, @property.hoa_sign_complications.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_sign_complications', :id => @property.id.to_s, :val => @property.hoa_sign_complications.to_s}) %></td>
         </tr>
         <tr>
           <td>Gate Code</td>
-          <td><%= Property.eip('property', 'hoa_gate_code', @property.id.to_s, @property.hoa_gate_code.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'hoa_gate_code', :id => @property.id.to_s, :val => @property.hoa_gate_code.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -161,40 +161,40 @@
       <table>
         <tr>
           <td>MLS Number</td>
-          <td><%= Property.eip('property', 'mls', @property.id.to_s, @property.mls.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mls', :id => @property.id.to_s, :val => @property.mls.to_s}) %></td>
         </tr>
         <tr>
           <td>REO Number</td>
-          <td><%= Property.eip('property', 'reo', @property.id.to_s, @property.reo.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'reo', :id => @property.id.to_s, :val => @property.reo.to_s}) %></td>
         </tr>
         <tr>
           <td>Escrow Number</td>
-          <td><%= Property.eip('property', 'esc', @property.id.to_s, @property.esc.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'esc', :id => @property.id.to_s, :val => @property.esc.to_s}) %></td>
         </tr>
         <tr>
           <td>Status</td>
-          <td><%= select :property, :status, %w(Active Closed Pending) %></td>
+          <td><%= eip_select({:model => 'property', :field => 'status', :id => @property.id.to_s, :val => @property.status.to_s, :collection => "['Active', 'Closed', 'Pending', 'Rented']"}) %></td>
         </tr>
         <tr>
           <td>Occupancy</td>
-          <td><%= select :property, :occupancy, %w(Occupied Vacant) %></td>
+          <td><%= eip_select({:model => 'property', :field => 'occupancy', :id => @property.id.to_s, :val => @property.occupancy.to_s, :collection => "['Occupied', 'Personal Property', 'Vacant']"}) %></td>
         </tr>
         <tr>
           <td>Primary Seller</td>
-          <td><%= select :property, :primary_seller, %w(Seller1 Seller2 Seller3) %></td>
+          <td><%= eip({:model => 'property', :field => 'primary_seller', :id => @property.id.to_s, :val => @property.primary_seller.to_s}) %></td>
         </tr>
         <tr>
           <td>Listing Date</td>
           <td><%= calendar_date_select_tag "listing_date" %></td>
-          <!--<td><%= edit_in_place(@property, :listing_date) %></td>-->
+          <!--<td><%# edit_in_place(@property, :listing_date) %></td>-->
         </tr>
         <tr>
           <td>Listing Term</td>
-          <td><%= Property.eip('property', 'listing_term', @property.id.to_s, @property.listing_term.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'listing_term', :id => @property.id.to_s, :val => @property.listing_term.to_s}) %></td>
         </tr>
         <tr>
           <td>Closing Date</td>
-          <td><%= Property.eip('property', 'closing_date', @property.id.to_s, @property.closing_date.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'closing_date', :id => @property.id.to_s, :val => @property.closing_date.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -203,35 +203,35 @@
       <table>
         <tr>
           <td>Sq. Ft.</td>
-          <td><%= Property.eip('property', 'feat_sq_ft', @property.id.to_s, @property.feat_sq_ft.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_sq_ft', :id => @property.id.to_s, :val => @property.feat_sq_ft.to_s}) %></td>
         </tr>
         <tr>
           <td>Lot Size</td>
-          <td><%= Property.eip('property', 'feat_lot_size', @property.id.to_s, @property.feat_lot_size.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_lot_size', :id => @property.id.to_s, :val => @property.feat_lot_size.to_s}) %></td>
         </tr>
         <tr>
           <td>Property Type</td>
-          <td><%= Property.eip('property', 'prop_type', @property.id.to_s, @property.prop_type.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'prop_type', :id => @property.id.to_s, :val => @property.prop_type.to_s}) %></td>
         </tr>
         <tr>
           <td>House Style</td>
-          <td><%= Property.eip('property', 'prop_style', @property.id.to_s, @property.prop_style.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'prop_style', :id => @property.id.to_s, :val => @property.prop_style.to_s}) %></td>
         </tr>
         <tr>
           <td>Built</td>
-          <td><%= Property.eip('property', 'year_built', @property.id.to_s, @property.year_built.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'year_built', :id => @property.id.to_s, :val => @property.year_built.to_s}) %></td>
         </tr>
         <tr>
           <td>Last Sold</td>
-          <td><%= Property.eip('property', 'last_sold', @property.id.to_s, @property.last_sold.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'last_sold', :id => @property.id.to_s, :val => @property.last_sold.to_s}) %></td>
         </tr>
         <tr>
           <td>Area</td>
-          <td><%= Property.eip('property', 'area', @property.id.to_s, @property.area.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'area', :id => @property.id.to_s, :val => @property.area.to_s}) %></td>
         </tr>
         <tr>
           <td>Zoning</td>
-          <td><%= Property.eip('property', 'zoning', @property.id.to_s, @property.zoning.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'zoning', :id => @property.id.to_s, :val => @property.zoning.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -240,43 +240,43 @@
       <table>
         <tr>
           <td>Floors</td>
-          <td><%= Property.eip('property', 'feat_floors', @property.id.to_s, @property.feat_floors.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_floors', :id => @property.id.to_s, :val => @property.feat_floors.to_s}) %></td>
         </tr>
         <tr>
           <td>Beds</td>
-          <td><%= Property.eip('property', 'feat_num_bedrooms', @property.id.to_s, @property.feat_num_bedrooms.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_num_bedrooms', :id => @property.id.to_s, :val => @property.feat_num_bedrooms.to_s}) %></td>
         </tr>
         <tr>
           <td>Baths</td>
-          <td><%= Property.eip('property', 'feat_num_bathrooms', @property.id.to_s, @property.feat_num_bathrooms.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_num_bathrooms', :id => @property.id.to_s, :val => @property.feat_num_bathrooms.to_s}) %></td>
         </tr>
         <tr>
           <td>Flooring</td>
-          <td><%= Property.eip('property', 'feat_flooring', @property.id.to_s, @property.feat_flooring.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_flooring', :id => @property.id.to_s, :val => @property.feat_flooring.to_s}) %></td>
         </tr>
         <tr>
           <td>Heating</td>
-          <td><%= Property.eip('property', 'feat_heating', @property.id.to_s, @property.feat_heating.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_heating', :id => @property.id.to_s, :val => @property.feat_heating.to_s}) %></td>
         </tr>
         <tr>
           <td>A/C</td>
-          <td><%= Property.eip('property', 'feat_a_c', @property.id.to_s, @property.feat_a_c.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_a_c', :id => @property.id.to_s, :val => @property.feat_a_c.to_s}) %></td>
         </tr>
         <tr>
           <td>Fireplace</td>
-          <td><%= Property.eip('property', 'feat_fireplace', @property.id.to_s, @property.feat_fireplace.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_fireplace', :id => @property.id.to_s, :val => @property.feat_fireplace.to_s}) %></td>
         </tr>
         <tr>
           <td>Basement</td>
-          <td><%= Property.eip('property', 'feat_basement', @property.id.to_s, @property.feat_basement.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_basement', :id => @property.id.to_s, :val => @property.feat_basement.to_s}) %></td>
         </tr>
         <tr>
           <td>Parking</td>
-          <td><%= Property.eip('property', 'feat_parking', @property.id.to_s, @property.feat_parking.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_parking', :id => @property.id.to_s, :val => @property.feat_parking.to_s}) %></td>
         </tr>
         <tr>
           <td>View</td>
-          <td><%= Property.eip('property', 'feat_view', @property.id.to_s, @property.feat_view.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'feat_view', :id => @property.id.to_s, :val => @property.feat_view.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -285,27 +285,27 @@
       <table>
         <tr>
           <td>Construction</td>
-          <td><%= Property.eip('property', 'mat_construction', @property.id.to_s, @property.mat_construction.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mat_construction', :id => @property.id.to_s, :val => @property.mat_construction.to_s}) %></td>
         </tr>
         <tr>
           <td>Exterior</td>
-          <td><%= Property.eip('property', 'mat_exterior', @property.id.to_s, @property.mat_exterior.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mat_exterior', :id => @property.id.to_s, :val => @property.mat_exterior.to_s}) %></td>
         </tr>
         <tr>
           <td>Roof</td>
-          <td><%= Property.eip('property', 'mat_roof', @property.id.to_s, @property.mat_roof.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mat_roof', :id => @property.id.to_s, :val => @property.mat_roof.to_s}) %></td>
         </tr>
         <tr>
           <td>Sewer</td>
-          <td><%= Property.eip('property', 'mat_sewer', @property.id.to_s, @property.mat_sewer.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mat_sewer', :id => @property.id.to_s, :val => @property.mat_sewer.to_s}) %></td>
         </tr>
         <tr>
           <td>Water</td>
-          <td><%= Property.eip('property', 'mat_water', @property.id.to_s, @property.mat_water.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mat_water', :id => @property.id.to_s, :val => @property.mat_water.to_s}) %></td>
         </tr>
         <tr>
           <td>Septic</td>
-          <td><%= Property.eip('property', 'mat_septic', @property.id.to_s, @property.mat_septic.to_s) %></td>
+          <td><%= eip({:model => 'property', :field => 'mat_septic', :id => @property.id.to_s, :val => @property.mat_septic.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -314,6 +314,5 @@
 
 <div id="form_bottom">
   <h3>Property Description</h3>
-  <%# Property.eip('property', 'description', @property.id.to_s, @property.description.to_s) %>
-  <%= text_area_tag(:description, "", :size => "93x5") %>
+  <%= eip({:model => 'property', :field => 'description', :id => @property.id.to_s, :val => @property.description.to_s, :rows => '5'}) %>
 </div>

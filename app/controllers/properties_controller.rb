@@ -68,8 +68,6 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :hoa_code_violations
   in_place_edit_for :property, :hoa_sign_complications
   in_place_edit_for :property, :hoa_gate_code
-  in_place_edit_for :property, :created_at
-  in_place_edit_for :property, :updated_at
 
   def index
     @recently_updated = Property.find(:all, :order => 'updated_at DESC', :limit => 10)
@@ -128,15 +126,6 @@ class PropertiesController < ApplicationController
     @results = Property.search(@query)
     sort = Property.parse_it(params['sort'])
     @sorted_properties = Property.paginate :conditions => ["street_num LIKE ? or street LIKE ? or city LIKE ? or state LIKE ? or zip LIKE ? or status LIKE ? or primary_seller LIKE ? or list_price LIKE ? or listing_date LIKE ? or closing_date LIKE ? or mls LIKE ? or reo LIKE ? or esc LIKE ?", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%"], :page => params[:page], :order => sort
-  end
-
-  
-  def update
-    @property = Property.find(params[:id])
-    @property.street_num = params[:value]
-    @property.save
-    @property.reload
-    render :text => @property.street_num
   end
 
 

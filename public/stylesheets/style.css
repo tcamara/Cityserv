@@ -37,7 +37,6 @@ html {
     background: #517e3a;
     background-image: url("../images/nav_gradient.png");
     background-repeat: repeat-x;
-    *padding-top: 0px;
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: -2px;
@@ -187,7 +186,6 @@ h1 a {
     margin-bottom: 0px;
     padding: 3px 0px;
     border: 1px solid black;
-    border-bottom: 0px;
 }
 
 #form_bottom textarea {
@@ -269,8 +267,6 @@ h1 a {
 #property_edit td td {
     padding-right: 5px;
 }
-
-
 
 .comment_listing {
     border: 1px solid black;

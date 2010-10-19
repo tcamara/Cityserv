@@ -1,0 +1,3 @@
+page.insert_html :bottom, 'notes', {:partial => 'note', :object => @note}
+
+page[:note_form].reset

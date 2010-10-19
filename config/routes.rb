@@ -43,14 +43,14 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'contacts/search', :controller => 'contacts', :action => 'search'
   map.connect 'properties/search', :controller => 'properties', :action => 'search'
   map.connect 'properties/list', :controller => 'properties', :action => 'list'
-  map.resources :contacts
+  map.resources :contacts, :has_many => :notes
   map.resources :users
+  
   map.resources :properties, :member => { :contacts => :get } do |property|
     property.resources :comments
-    
   end
+
   map.resource :session
-  #
   map.connect ':controller/:id/:action'
   map.connect ':controller/:action/:id.:format'
 end

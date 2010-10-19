@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100726181258) do
+ActiveRecord::Schema.define(:version => 20101019160656) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(:version => 20100726181258) do
   add_index "contacts_properties", ["contact_id", "property_id"], :name => "index_contacts_properties_on_contact_id_and_property_id", :unique => true
   add_index "contacts_properties", ["property_id"], :name => "index_contacts_properties_on_property_id"
 
+  create_table "notes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "contact_id"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "properties", :force => true do |t|
     t.string   "mls"
     t.integer  "reo"
@@ -65,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20100726181258) do
     t.integer  "list_price"
     t.integer  "commission"
     t.datetime "listing_date"
-    t.integer  "listing_term"
+    t.string   "listing_term"
     t.datetime "closing_date"
     t.integer  "year_built"
     t.string   "prop_id"
@@ -97,8 +105,7 @@ ActiveRecord::Schema.define(:version => 20100726181258) do
     t.string   "fin_tax_roll_num"
     t.integer  "fin_building_improvement"
     t.string   "fin_financial"
-    t.integer  "price_range_low"
-    t.integer  "price_range_high"
+    t.string   "price_range"
     t.integer  "sale_price"
     t.text     "description"
     t.string   "hoa_name"
@@ -113,6 +120,8 @@ ActiveRecord::Schema.define(:version => 20100726181258) do
     t.string   "hoa_code_violations"
     t.string   "hoa_sign_complications"
     t.string   "hoa_gate_code"
+    t.string   "lockbox"
+    t.integer  "purchase_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

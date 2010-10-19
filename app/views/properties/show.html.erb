@@ -37,6 +37,10 @@
           <td>Building</td>
           <td><%= eip({:model => 'property', :field => 'building', :id => @property.id.to_s, :val => @property.building.to_s}) %></td>
         </tr>
+        <tr>
+          <td>Lock Box Code</td>
+          <td><%= eip({:model => 'property', :field => 'lockbox', :id => @property.id.to_s, :val => @property.lockbox.to_s}) %></td>
+        </tr>
       </table>
       <br />
 
@@ -51,8 +55,12 @@
           <td><%= eip({:model => 'property', :field => 'sale_price', :id => @property.id.to_s, :val => @property.sale_price.to_s}) %></td>
         </tr>
         <tr>
+          <td>Purchase Price</td>
+          <td><%= eip({:model => 'property', :field => 'purchase_price', :id => @property.id.to_s, :val => @property.purchase_price.to_s}) %></td>
+        </tr>
+        <tr>
           <td>Price Range</td>
-          <td><%= eip({:model => 'property', :field => 'price_range_low', :id => @property.id.to_s, :val => @property.price_range_low.to_s}) %>-<%= eip({:model => 'property', :field => 'price_range_high', :id => @property.id.to_s, :val => @property.price_range_high.to_s}) %></td>
+          <td><%= eip({:model => 'property', :field => 'price_range', :id => @property.id.to_s, :val => @property.price_range.to_s}) %></td>
         </tr>
         <tr>
           <td>Commission</td>

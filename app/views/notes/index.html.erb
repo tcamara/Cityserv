@@ -1,0 +1,12 @@
+<% form_remote_for :note, :url => contact_notes_path(@contact), :html => { :id => 'note_form' } do |f| %>
+  <%= f.text_area :text, :rows => 5, :cols => 139 %><br />
+  <%= f.hidden_field :user_id, :value => @current_user.id %>
+  <%= f.hidden_field :contact_id, :value => @contact.id %>
+  <%= submit_tag 'Add Note' %>
+<% end %>
+
+<br /><br />
+
+<div id="comments">
+  <%= render :partial => 'note', :collection => @notes %>
+</div>

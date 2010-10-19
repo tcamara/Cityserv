@@ -58,6 +58,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    @notes = Note.find_all_by_contact_id(@contact.id)
   end
 
 

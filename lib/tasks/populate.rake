@@ -58,8 +58,7 @@ namespace :db do
       property.fin_tax_roll_num = 100000..999999
       property.fin_building_improvement = 1000..9000
       property.fin_financial = [2.1, 3.4, 3.5, 4.2, 5.5, 6.7]
-      property.price_range_low = 13000..250000
-      property.price_range_high = 250000..500000
+      property.price_range = 250000..500000
       property.sale_price = 13000..450000
       property.description = Populator.sentences(1..10)
       #property.hoa_name =

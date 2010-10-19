@@ -2,6 +2,7 @@ class Contact < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name
 
+  has_many :notes
   has_and_belongs_to_many :properties
 
   cattr_reader :per_page

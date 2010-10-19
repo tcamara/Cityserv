@@ -20,7 +20,7 @@ class CreateProperties < ActiveRecord::Migration
       t.integer :list_price
       t.integer :commission
       t.datetime :listing_date
-      t.integer :listing_term
+      t.string :listing_term
       t.datetime :closing_date
       t.integer :year_built
       t.string :prop_id
@@ -52,8 +52,7 @@ class CreateProperties < ActiveRecord::Migration
       t.string :fin_tax_roll_num
       t.integer :fin_building_improvement
       t.string :fin_financial
-      t.integer :price_range_low
-      t.integer :price_range_high
+      t.string :price_range
       t.integer :sale_price
       t.text :description
       t.string :hoa_name
@@ -68,6 +67,8 @@ class CreateProperties < ActiveRecord::Migration
       t.string :hoa_code_violations
       t.string :hoa_sign_complications
       t.string :hoa_gate_code
+      t.string :lockbox
+      t.integer :purchase_price
 
       t.timestamps
     end

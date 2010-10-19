@@ -52,8 +52,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :fin_tax_roll_num
   in_place_edit_for :property, :fin_building_improvement
   in_place_edit_for :property, :fin_financial
-  in_place_edit_for :property, :price_range_low
-  in_place_edit_for :property, :price_range_high
+  in_place_edit_for :property, :price_range
   in_place_edit_for :property, :sale_price
   in_place_edit_for :property, :description
   in_place_edit_for :property, :hoa_name

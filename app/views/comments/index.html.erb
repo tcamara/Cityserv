@@ -8,7 +8,7 @@
   <%= link_to_remote "Admin", :url => property_comments_path(@property, :type => 'Admin'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to_remote "Code Violations", :url => property_comments_path(@property, :type => 'Code_Violations'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to_remote "Escrow", :url => property_comments_path(@property, :type => 'Escrow'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <%= link_to_remote "Evictions", :url => property_comments_path(@property, :type => 'Evictions'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <%= link_to_remote "Relocations", :url => property_comments_path(@property, :type => 'Relocations'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to_remote "Offers", :url => property_comments_path(@property, :type => 'Offers'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to_remote "Repairs", :url => property_comments_path(@property, :type => 'Repairs'), :method => :get %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to_remote "Utilities", :url => property_comments_path(@property, :type => 'Utilities'), :method => :get %>
@@ -17,7 +17,7 @@
 <br /><br />
 
 <% form_remote_for :comment, :url => property_comments_path(@property), :html => { :id => 'comment_form' } do |f| %>
-  <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Evictions Offers Repairs Utilities) %><br />
+  <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Relocations Offers Repairs Utilities) %><br />
   <%= f.text_area :text, :rows => 5, :cols => 139 %><br />
   <%= f.hidden_field :user_id, :value => @current_user.id %>
   <%= f.hidden_field :property_id, :value => @property.id %>

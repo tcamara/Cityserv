@@ -39,6 +39,10 @@
           <td>Building</td>
           <td><%= text_field :property, :building, :size => '30' %></td>
         </tr>
+        <tr>
+          <td>Lock Box Code</td>
+          <td><%= text_field :property, :lockbox, :size => '30' %></td>
+        </tr>
       </table>
       <br />
 
@@ -53,8 +57,12 @@
           <td><%= text_field :property, :sale_price, :size => '30' %></td>
         </tr>
         <tr>
+          <td>Purchase Price</td>
+          <td><%= text_field :property, :purchase_price, :size => '30' %></td>
+        </tr>
+        <tr>
           <td>Price Range</td>
-          <td><%= text_field :property, :price_range_low, :size => '11' %>- <%= text_field :property, :price_range_high, :size => '11' %></td>
+          <td><%= text_field :property, :price_range, :size => '30' %></td>
         </tr>
         <tr>
           <td>Commission</td>
@@ -139,7 +147,7 @@
           <td><%= text_field :property, :hoa_code_violations, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Sign Posting Complications</td>
+          <td>Sign Complications</td>
           <td><%= text_field :property, :hoa_sign_complications, :size => '30' %></td>
         </tr>
         <tr>

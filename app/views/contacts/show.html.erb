@@ -42,7 +42,7 @@
   <table>
     <tr>
       <td>Preferred Method</td>
-      <td><%= @contact.preferred_method %></td>
+      <td><%= eip_select({:model => 'contact', :field => 'preferred_method', :id => @contact.id.to_s, :val => @contact.preferred_method.to_s, :collection => "['Cell', 'Email', 'Work', 'Fax', 'Home']"}) %></td>
     </tr>
     <tr>
       <td>Cell Phone</td>
@@ -66,5 +66,24 @@
     </tr>
   </table>
   <br />
+
+  <h3>Notes</h3>
+  <table id="notes">
+    <%= render :partial => 'notes/note', :collection => @notes %>
+  </table>
+
+  <table>
+    <tr>
+      <td class="top_border_less">
+        <% form_remote_for :note, :url => contact_notes_path(@contact), :html => { :id => 'note_form' } do |f| %>
+          <%= f.text_area :text, :rows => 4, :cols => 65 %><br />
+          <%= f.hidden_field :user_id, :value => @current_user.id %>
+          <%= f.hidden_field :contact_id, :value => @contact.id %>
+          <%= submit_tag 'Add Note' %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+
 </div>
 

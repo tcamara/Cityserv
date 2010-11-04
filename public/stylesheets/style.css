@@ -139,6 +139,10 @@ h1 a {
     width: 560px;
 }
 
+#contact_div {
+    width: 560px;
+}
+
 #property_div h3 {
     width: 558px;
     background-color: #517e3a;
@@ -151,37 +155,52 @@ h1 a {
     border-bottom: 0px;
 }
 
-#property_div table {
+#contact_div h3 {
+    width: 558px;
+    background-color: #517e3a;
+    background-image: url("../images/nav_gradient.png");
+    background-position: bottom;
+    color: white;
+    margin-bottom: 0px;
+    padding: 3px 0px;
+    border: 1px solid black;
+    border-bottom: 0px;
+}
+
+#property_div table, #contact_div table {
     width: 100%;
     border-collapse: collapse;
 }
 
-#property_div td {
+#property_div td, #contact_div td {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
-#property_div td.top_border_less {
+#property_div td.top_border_less, #contact_div td.top_border_less {
     border-top: 0px;
 }
 
-#property_div td:first-child {
+#property_div td:first-child, #contact_div td:first-child {
     width: 30%;
     padding-top: 6px;
     padding-bottom: 6px;
     border-left: 1px solid black;
 }
 
-#property_div td:last-child {
+#property_div td:last-child, #contact_div td:last-child {
     border-right: 1px solid black;
 }
 
-#property_div td img {
+#property_div td img, #contact_div td img {
     float: right;
     margin-right: 10px;
 }
 
-#form_bottom h3 {
+#form_bottom {
     clear: both;
+}
+
+#form_bottom h3 {
     background-color: #517e3a;
     background-image: url("../images/nav_gradient.png");
     background-position: bottom;

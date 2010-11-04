@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101019160656) do
+ActiveRecord::Schema.define(:version => 20101103223936) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -124,6 +124,26 @@ ActiveRecord::Schema.define(:version => 20101019160656) do
     t.integer  "purchase_price"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "property_documents", :force => true do |t|
+    t.integer  "property_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+  end
+
+  create_table "property_photos", :force => true do |t|
+    t.integer  "property_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "users", :force => true do |t|

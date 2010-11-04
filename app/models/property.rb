@@ -3,8 +3,10 @@ class Property < ActiveRecord::Base
   validates_presence_of :street_num, :street, :city, :state, :zip, :primary_seller
 
   has_many :comments
+  has_many :property_photos
+  has_many :property_documents
   has_and_belongs_to_many :contacts
-
+  
   cattr_reader :per_page
   @@per_page = 50
 

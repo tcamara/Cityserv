@@ -1,0 +1,20 @@
+<%= render :partial => "tab_header", :layout => false %>
+<br /><br /><br />
+
+<%= stylesheet_link_tag 'lightbox' %>
+<script type="text/javascript" src="/javascripts/scriptaculous.js?load=effects,builder"></script>
+<%= javascript_include_tag 'lightbox' %>
+
+
+<% @property_photos.each do |i| %>
+  <%= link_to image_tag(i.photo.url(:thumb), :border => 0), i.photo.url, :rel => 'lightbox[photos]' %>
+<% end %>
+
+<br />
+<br />
+
+<% form_for @property, :html => { :multipart => true } do |f| %>
+  <%= f.file_field :photo %>
+  <%= hidden_field_tag 'type', 'pho' %>
+  <%= submit_tag 'Upload' %>
+<% end %>

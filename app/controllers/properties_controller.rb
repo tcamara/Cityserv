@@ -128,21 +128,36 @@ class PropertiesController < ApplicationController
   end
 
 
-#  def update
-#    @property = Property.find(params[:id])
-#    @property.update_attributes(params[:property])
-#
-#    respond_to do |format|
-#      format.html {@property.update_attributes(params[:property])}
-#      format.js {render :partial => "edit_property", :layout => false}
-#      format.json { render :json => @property }
-#    end
-#  end
+  def update
+    @property = Property.find(params[:id])
+
+    if params[:type] == 'doc'
+      @property.property_documents.create(params[:property])
+      redirect_to :controller => 'properties', :action => 'documents', :id => @property
+    else
+      @property.property_photos.create(params[:property])
+      redirect_to :controller => 'properties', :action => 'photos', :id => @property
+    end
+
+    
+  end
 
 
   def contacts
     @property = Property.find(params[:id])
     @sorted_contacts = @property.contacts
+  end
+
+
+  def photos
+    @property = Property.find(params[:id])
+    @property_photos = @property.property_photos
+  end
+
+  
+  def documents
+    @property = Property.find(params[:id])
+    @property_documents = @property.property_documents
   end
 
 end

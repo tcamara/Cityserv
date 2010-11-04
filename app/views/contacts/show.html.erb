@@ -3,7 +3,7 @@
 <%= error_messages_for 'contact' %>
 
 
-<div id="property_div">
+<div id="property_div" class="float_left">
   <h3>Personal</h3>
   <table>
     <tr>
@@ -67,23 +67,29 @@
   </table>
   <br />
 
-  <h3>Notes</h3>
-  <table id="notes">
-    <%= render :partial => 'notes/note', :collection => @notes %>
-  </table>
-
-  <table>
-    <tr>
-      <td class="top_border_less">
-        <% form_remote_for :note, :url => contact_notes_path(@contact), :html => { :id => 'note_form' } do |f| %>
-          <%= f.text_area :text, :rows => 4, :cols => 65 %><br />
-          <%= f.hidden_field :user_id, :value => @current_user.id %>
-          <%= f.hidden_field :contact_id, :value => @contact.id %>
-          <%= submit_tag 'Add Note' %>
-        <% end %>
-      </td>
-    </tr>
-  </table>
 
 </div>
 
+  <div id="contact_div" class="float_right">
+    <h3>Notes</h3>
+    <table id="notes">
+      <%= render :partial => 'notes/note', :collection => @notes %>
+    </table>
+  
+    <table>
+      <tr>
+        <td class="top_border_less">
+          <% form_remote_for :note, :url => contact_notes_path(@contact), :html => { :id => 'note_form' } do |f| %>
+            <%= f.text_area :text, :rows => 4, :cols => 65 %><br />
+            <%= f.hidden_field :user_id, :value => @current_user.id %>
+            <%= f.hidden_field :contact_id, :value => @contact.id %>
+            <%= submit_tag 'Add Note' %>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+
+<div id="form_bottom"></div>

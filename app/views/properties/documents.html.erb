@@ -1,0 +1,15 @@
+<%= render :partial => "tab_header", :layout => false %>
+<br /><br /><br />
+
+<% @property_documents.each do |i| %>
+  <%= link_to i.document.original_filename, i.document.url %><br />
+<% end %>
+
+<br />
+<br />
+
+<% form_for @property, :html => { :multipart => true } do |f| %>
+  <%= f.file_field :document %>
+  <%= hidden_field_tag 'type', 'doc' %>
+  <%= submit_tag 'Upload' %>
+<% end %>

@@ -15,7 +15,6 @@ class NotesController < ApplicationController
   def destroy
     @note = Note.destroy(params[:id])
     @notes = Note.find_all_by_contact_id(params[:contact_id])
-    #render :partial => 'notes/note', :collection => @notes
     redirect_to contact_path(params[:contact_id])
   end
 

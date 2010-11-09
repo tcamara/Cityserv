@@ -1,19 +1,5 @@
 class ContactsController < ApplicationController
 
-  in_place_edit_for :contact, :street_num
-  in_place_edit_for :contact, :first_name
-  in_place_edit_for :contact, :last_name
-  in_place_edit_for :contact, :category
-  in_place_edit_for :contact, :company_name
-  in_place_edit_for :contact, :job_title
-  in_place_edit_for :contact, :company_address
-  in_place_edit_for :contact, :home_address
-  in_place_edit_for :contact, :home_phone
-  in_place_edit_for :contact, :work_phone
-  in_place_edit_for :contact, :cell_phone
-  in_place_edit_for :contact, :fax
-  in_place_edit_for :contact, :email
-  in_place_edit_for :contact, :preferred_method
 
   def index
     sort = Contact.parse_it(params['sort'])
@@ -28,21 +14,23 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @pid = params[:pid]
+    @type = params[:type]
   end
 
 
   def create
     @contact = Contact.new(params[:contact])
     if params[:pid] != ''
-      @pid = params[:pid]
-      Property.find(@pid).contacts.push(@contact)
-    end
-    if @contact.save
-      flash[:notice] = "Submission Accepted"
-      redirect_to contacts_path
+      @contact.save
+      redirect_to new_associated_path({:pid => params[:pid], :ctype => params[:type], :cid => @contact.id})
     else
-      flash[:notice] = "Submission Failed"
-      render :action => 'new'
+      if @contact.save
+        flash[:notice] = "Submission Accepted"
+        redirect_to contacts_path
+      else
+        flash[:notice] = "Submission Failed"
+        render :action => 'new'
+      end
     end
   end
 
@@ -80,6 +68,22 @@ class ContactsController < ApplicationController
       format.json { render :json => @contact }
     end
   end
+
+  
+  in_place_edit_for :contact, :street_num
+  in_place_edit_for :contact, :first_name
+  in_place_edit_for :contact, :last_name
+  in_place_edit_for :contact, :category
+  in_place_edit_for :contact, :company_name
+  in_place_edit_for :contact, :job_title
+  in_place_edit_for :contact, :company_address
+  in_place_edit_for :contact, :home_address
+  in_place_edit_for :contact, :home_phone
+  in_place_edit_for :contact, :work_phone
+  in_place_edit_for :contact, :cell_phone
+  in_place_edit_for :contact, :fax
+  in_place_edit_for :contact, :email
+  in_place_edit_for :contact, :preferred_method
 
   
 end

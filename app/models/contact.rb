@@ -3,7 +3,8 @@ class Contact < ActiveRecord::Base
   validates_presence_of :first_name, :last_name
 
   has_many :notes
-  has_and_belongs_to_many :properties
+  has_many :associateds
+  has_many :properties, :through => :associateds
 
   cattr_reader :per_page
   @@per_page = 50

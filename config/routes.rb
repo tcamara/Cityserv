@@ -45,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'properties/list', :controller => 'properties', :action => 'list'
   map.resources :contacts, :has_many => :notes
   map.resources :users
+  map.resources :associateds
   
   map.resources :properties, :member => { :contacts => :get } do |property|
     property.resources :comments

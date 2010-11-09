@@ -5,7 +5,8 @@ class Property < ActiveRecord::Base
   has_many :comments
   has_many :property_photos
   has_many :property_documents
-  has_and_belongs_to_many :contacts
+  has_many :associateds
+  has_many :contacts, :through => :associateds
   
   cattr_reader :per_page
   @@per_page = 50

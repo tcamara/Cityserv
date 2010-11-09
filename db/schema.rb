@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101105164432) do
+ActiveRecord::Schema.define(:version => 20101109204109) do
+
+  create_table "associateds", :force => true do |t|
+    t.integer  "property_id"
+    t.integer  "contact_id"
+    t.string   "ctype"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"

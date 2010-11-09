@@ -72,18 +72,9 @@ class CreateProperties < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    create_table :contacts_properties, :id => false do |t|
-      t.integer :contact_id
-      t.integer :property_id
-    end
-
-    add_index :contacts_properties, [:contact_id, :property_id], :unique => true
-    add_index :contacts_properties, :property_id, :unique => false
   end
 
   def self.down
     drop_table :properties
-    drop_table :contacts_properties
   end
 end

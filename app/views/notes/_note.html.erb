@@ -3,7 +3,6 @@
     <span class="bold"><%= User.find(note.user_id).first_name %></span> said on <%= note.updated_at.strftime('%m.%d.%y - %I:%M%p') %>
     <% if @current_user.id == note.user_id || @current_user.level == "Admin" %>
       <span class="float_right"><%= link_to 'Delete', contact_note_path(@contact, note.id), :confirm => 'Are you sure?', :method => :delete %></span>
-      <%# link_to_remote 'Delete', { :update => 'notes', :url => contact_note_path(@contact.id, note.id), :method => :delete } %>
     <% end %>
     <br />
     <p><%= note.text %></p>

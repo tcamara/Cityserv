@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  property_id: 
+  contact_id: 
+  type: MyString
+
+two:
+  property_id: 
+  contact_id: 
+  type: MyString

@@ -7,37 +7,37 @@
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false %>
   </div>
-  <br /><%= link_to 'Add City Contact', new_contact_path({ :pid => @property.id, :type => 'city' }) %><br /><br /><br />
+  <br /><%= link_to 'Add City Contact', new_contact_path({ :pid => @property.id, :ctype => 'city' }) %><br /><br /><br />
 
   <h2>Servicer</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false %>
   </div>
-  <br /><%= link_to 'Add Servicer Contact', new_contact_path({ :pid => @property.id, :type => 'servicer' }) %><br /><br /><br />
+  <br /><%= link_to 'Add Servicer Contact', new_contact_path({ :pid => @property.id, :ctype => 'servicer' }) %><br /><br /><br />
 
   <h2>Owner</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false %>
   </div>
-  <br /><%= link_to 'Add Owner Contact', new_contact_path({ :pid => @property.id, :type => 'owner' }) %><br /><br /><br />
+  <br /><%= link_to 'Add Owner Contact', new_contact_path({ :pid => @property.id, :ctype => 'owner' }) %><br /><br /><br />
 
   <h2>Noteholder</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false %>
   </div>
-  <br /><%= link_to 'Add Noteholder Contact', new_contact_path({ :pid => @property.id, :type => 'noteholder' }) %><br /><br /><br />
+  <br /><%= link_to 'Add Noteholder Contact', new_contact_path({ :pid => @property.id, :ctype => 'noteholder' }) %><br /><br /><br />
 
   <h2>Preservation Company</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false %>
   </div>
-  <br /><%= link_to 'Add Preservation Company Contact', new_contact_path({ :pid => @property.id, :type => 'preservation_company' }) %><br /><br /><br />
+  <br /><%= link_to 'Add Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }) %><br /><br /><br />
 
   <h2>Other</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false %>
   </div>
-  <br /><%= link_to 'Add Other Contact', new_contact_path({ :pid => @property.id, :type => 'other' }) %><br /><br /><br />
+  <br /><%= link_to 'Add Other Contact', new_contact_path({ :pid => @property.id, :ctype => 'other' }) %><br /><br /><br />
 </div>
 
 

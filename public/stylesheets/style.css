@@ -135,27 +135,11 @@ h1 a {
     text-decoration: none;
 }
 
-#property_div {
+#property_div, #contact_div, #contact_list {
     width: 560px;
 }
 
-#contact_div {
-    width: 560px;
-}
-
-#property_div h3 {
-    width: 558px;
-    background-color: #517e3a;
-    background-image: url("../images/nav_gradient.png");
-    background-position: bottom;
-    color: white;
-    margin-bottom: 0px;
-    padding: 3px 0px;
-    border: 1px solid black;
-    border-bottom: 0px;
-}
-
-#contact_div h3 {
+#property_div h3, #contact_div h3 {
     width: 558px;
     background-color: #517e3a;
     background-image: url("../images/nav_gradient.png");

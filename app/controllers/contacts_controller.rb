@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   in_place_edit_for :contact, :street_num
   in_place_edit_for :contact, :first_name
   in_place_edit_for :contact, :last_name
+  in_place_edit_for :contact, :category
   in_place_edit_for :contact, :company_name
   in_place_edit_for :contact, :job_title
   in_place_edit_for :contact, :company_address
@@ -66,7 +67,7 @@ class ContactsController < ApplicationController
     @query = params[:q]
     @results = Contact.search(@query)
     sort = Contact.parse_it(params['sort'])
-    @sorted_contacts = Contact.paginate :conditions => ["first_name LIKE ? or last_name LIKE ? or job_title LIKE ? or company_name LIKE ?", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%"], :page => params[:page], :order => sort
+    @sorted_contacts = Contact.paginate :conditions => ["first_name LIKE ? or last_name LIKE ? or category LIKE ? or job_title LIKE ? or company_name LIKE ?", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%", "%#{@query}%"], :page => params[:page], :order => sort
   end
 
 

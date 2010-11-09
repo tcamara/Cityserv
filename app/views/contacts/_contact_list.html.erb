@@ -7,6 +7,9 @@
       <th <%= sort_td_class_helper "last_name" %>>
         <%= sort_link_helper "Last Name", "last_name" %>
       </th>
+      <th <%= sort_td_class_helper "category" %>>
+        <%= sort_link_helper "Category", "category" %>
+      </th>
       <th <%= sort_td_class_helper "job_title" %>>
         <%= sort_link_helper "Job Title", "job_title" %>
       </th>
@@ -20,6 +23,7 @@
       <td class="noborder"><%= link_to 'View', contact_path(i.id) %></td>
       <td><%= i.first_name %></td>
       <td><%= i.last_name %></td>
+      <td><%= i.category %></td>
       <td><%= i.job_title %></td>
       <td><%= i.company_name %></td>
     </tr>

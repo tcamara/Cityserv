@@ -146,6 +146,10 @@ class PropertiesController < ApplicationController
   def contacts
     @property = Property.find(params[:id])
     @sorted_contacts = @property.contacts
+
+    @type = params[:type] || 'All'
+    @order = params[:order] || 'DESC'
+    @comments = Comment.order(@property, @type, @order)
   end
 
 

@@ -16,6 +16,10 @@
       <td>Last Name</td>
       <td><%= text_field :contact, :last_name, :size => '57' %></td>
     </tr>
+    <tr class="required">
+      <td>Category</td>
+      <td><%= select :contact, :category, %w(Attorney Bank City Contractor Escrow Title Trustee) %></td>
+    </tr>
     <tr>
       <td>Address</td>
       <td><%= text_field :contact, :home_address, :size => '57' %></td>

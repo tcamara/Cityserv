@@ -27,6 +27,7 @@
   <%= render :partial => 'comment', :collection => @comments %>
 </div>
 
+<br /><br />
 
 <% form_remote_for :comment, :url => property_comments_path(@property), :html => { :id => 'comment_form' } do |f| %>
   <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Relocations Offers Repairs Utilities) %><br />

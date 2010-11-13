@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     if params[:pid] != ''
       @contact.save
-      redirect_to new_associated_path({:pid => params[:pid], :ctype => params[:type], :cid => @contact.id})
+      redirect_to new_associated_path({:pid => params[:pid], :ctype => params[:ctype], :cid => @contact.id})
     else
       if @contact.save
         flash[:notice] = "Submission Accepted"

@@ -16,8 +16,8 @@
         </th>
 
       </tr>
-      <% @sorted_contacts.each do |i| %>
-      <tr class="<%= cycle("even","odd") %>">
+      <% coll.each do |i| %>
+      <tr>
         <td class="noborder"><%= link_to 'View', contact_path(i.id) %></td>
         <td><%= i.first_name %> <%= i.last_name %></td>
         <td><%= i.job_title %></td>

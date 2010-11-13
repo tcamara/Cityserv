@@ -7,6 +7,13 @@ class Property < ActiveRecord::Base
   has_many :property_documents
   has_many :associateds
   has_many :contacts, :through => :associateds
+
+  has_many :city_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'City'"
+  has_many :servicer_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'servicer'"
+  has_many :owner_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'owner'"
+  has_many :noteholder_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'noteholder'"
+  has_many :preservation_company_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'preservation_company'"
+  has_many :other_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'other'"
   
   cattr_reader :per_page
   @@per_page = 50

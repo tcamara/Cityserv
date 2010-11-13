@@ -71,14 +71,19 @@ class PropertiesController < ApplicationController
       @property.property_photos.create(params[:property])
       redirect_to :controller => 'properties', :action => 'photos', :id => @property
     end
-
-    
   end
 
 
   def contacts
     @property = Property.find(params[:id])
     @sorted_contacts = @property.contacts
+
+    @city_contacts = @property.city_contacts
+    @servicer_contacts = @property.servicer_contacts
+    @owner_contacts = @property.owner_contacts
+    @noteholder_contacts = @property.noteholder_contacts
+    @preservation_company_contacts = @property.preservation_company_contacts
+    @other_contacts = @property.other_contacts
 
     @type = params[:type] || 'All'
     @order = params[:order] || 'DESC'

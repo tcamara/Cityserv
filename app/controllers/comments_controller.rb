@@ -15,7 +15,8 @@ class CommentsController < ApplicationController
   
   def destroy
     @comment = Comment.destroy(params[:id])
-    @comments = Comment.find_all_by_property_id(params[:property_id])
+    @property = Property.find(params[:property_id])
+    @comments = Comment.order(@property, 'All', 'DESC')
     redirect_to contacts_property_path(@property)
   end
 

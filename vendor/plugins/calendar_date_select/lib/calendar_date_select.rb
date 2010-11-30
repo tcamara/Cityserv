@@ -190,7 +190,7 @@ class CalendarDateSelect
         
         out << image_tag(CalendarDateSelect.image, 
             :onclick => "new CalendarDateSelect( $(this).previous(), #{options_for_javascript(calendar_options)} );",
-            :style => 'border:0px; cursor:pointer;')
+            :style => 'border:0px; cursor:pointer; padding-top:5px;')
       end
       
       out

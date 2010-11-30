@@ -13,7 +13,7 @@
 
   </head>
   <body>
-    <div id="content">
+    <div id="head_content">
       <div id="login_area" class="float_right">
         <% if @current_user %>
           Welcome, <%= @current_user.first_name %> <%= @current_user.last_name %> <%= link_to "(Logout)", session_path, :method => :delete %>
@@ -21,8 +21,9 @@
           <%= link_to 'Login', new_session_path %>
         <% end %>
       </div>
-      <h1 class="center" id="title"><%= link_to image_tag("logo.png", :border => 0), properties_path %></h1>
+      <span id="title"><%= link_to image_tag("logo_white.png", :border => 0), properties_path %></span>
 
+      </div>  
       <div id="nav">
         <div id="nav_span">
           <%= link_to image_tag('browse_properties.png', :border => 0), :controller => 'properties', :action => 'list' %>
@@ -38,6 +39,8 @@
         <div id="notification"><%= flash[:notice] %></div>
       <% end %>
 
+      
+    <div id="content">
         <h2><%= yield(:title) %></h2>
       <%= yield(:content) or yield %>
     </div>

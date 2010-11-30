@@ -11,6 +11,17 @@ html {
     font-size: .8em;
 }
 
+#head_content {
+    width: 1142px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-bottom: 0px;
+    background: #72965e;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 #content {
     width: 1142px;
     margin-left: auto;
@@ -24,7 +35,10 @@ html {
     vertical-align: top;
 }
 
-#title {
+#title img {
+    padding: 0px;
+    margin: 0px;
+    margin-left: -15px;
     clear: both;
 }
 
@@ -34,28 +48,43 @@ html {
 }
 
 #nav {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 1142px;
+    border: 1px solid black;
+    border-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nav_span {
     background: #517e3a;
     background-image: url("../images/nav_gradient.png");
     background-repeat: repeat-x;
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: -2px;
-}
-
-#nav_span {
     padding-left: 20px;
 }
 
 #nav_span img {
-    padding-left: 18px;
-    padding-right: 83px;
+    padding-left: 62px;
+    padding-right: 62px;
     padding-top: 6px;
-    border-left: 1px solid #1a390a;
+    *border-left: 1px solid #1a390a;
+    border-right: 1px dashed black;
     margin-bottom: -3px;
 }
 
 #nav_span a:last-child img {
-    border-right: 1px solid #1a390a;
+    border-right: 0px;
+    padding-right: 0px;
+}
+
+#nav_span a:first-child img {
+    *border-right: 0px solid #1a390a;
+    padding-left: 0px;
 }
 
 #sub_nav {
@@ -80,11 +109,14 @@ html {
 }
 
 #login_area {
+    margin-top: 10px;
     text-align: right;
+    color: white;
 }
 
 #login_area a {
     text-decoration: none;
+    color: white;
 }
 
 #login_area a:hover {

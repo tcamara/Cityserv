@@ -27,6 +27,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
+    border-top: 0px;
     background: white;
     padding: 20px;
 }
@@ -36,7 +37,8 @@ html {
 }
 
 #title img {
-    padding: 0px;
+    padding: 10px;
+    padding-left: 0px;
     margin: 0px;
     margin-left: -15px;
     clear: both;
@@ -53,38 +55,28 @@ html {
 
     width: 1142px;
     border: 1px solid black;
+    border-bottom: 0px;
     border-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 #nav_span {
-    background: #517e3a;
-    background-image: url("../images/nav_gradient.png");
+    height: 96px;
+    background-image: url("../images/gradient.png");
     background-repeat: repeat-x;
     margin-left: -20px;
     margin-right: -20px;
-    margin-bottom: -2px;
     padding-left: 20px;
 }
 
 #nav_span img {
-    padding-left: 62px;
-    padding-right: 62px;
-    padding-top: 6px;
-    *border-left: 1px solid #1a390a;
-    border-right: 1px dashed black;
-    margin-bottom: -3px;
+    padding-top: 23px;
 }
 
-#nav_span a:last-child img {
-    border-right: 0px;
-    padding-right: 0px;
-}
-
-#nav_span a:first-child img {
-    *border-right: 0px solid #1a390a;
-    padding-left: 0px;
+#nav_span a {
+    padding-left: 39px;
+    padding-right: 39px;
 }
 
 #sub_nav {

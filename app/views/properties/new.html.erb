@@ -8,23 +8,23 @@
       <h3>Address</h3>
       <table>
         <tr class="required">
-          <td>#</td>
+          <td># *</td>
           <td><%= text_field :property, :street_num, :size => '30' %></td>
         </tr>
         <tr class="required">
-          <td>Street Name</td>
+          <td>Street Name *</td>
           <td><%= text_field :property, :street, :size => '30' %></td>
         </tr>
         <tr class="required">
-          <td>City</td>
+          <td>City *</td>
           <td><%= text_field :property, :city, :size => '30' %></td>
         </tr>
         <tr class="required">
-          <td>State</td>
+          <td>State *</td>
           <td><%= select :property, :state, %w(CA AL AK AS AZ AR CO CT DE DC FM FL GA GU HI ID IL IN IA KS KY LA ME MH MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND MP OH OK OR PW PA PR RI SC SD TN TX UT VT VI VA WA WV WI WY) %></td>
         </tr>
         <tr class="required">
-          <td>Zip</td>
+          <td>Zip *</td>
           <td><%= text_field :property, :zip, :size => '30' %></td>
         </tr>
         <tr>
@@ -183,7 +183,7 @@
           <td><%= select :property, :occupancy, %w(Occupied Vacant) %></td>
         </tr>
         <tr class="required">
-          <td>Primary Seller</td>
+          <td>Primary Seller *</td>
           <td><%= select :property, :primary_seller, %w(Seller1 Seller2 Seller3) %></td>
         </tr>
         <tr>

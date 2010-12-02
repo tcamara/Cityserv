@@ -7,7 +7,7 @@
 
 html {
     background: #737373;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: "Trebuchet MS";
     font-size: .8em;
 }
 
@@ -75,8 +75,8 @@ html {
 }
 
 #nav_span a {
-    padding-left: 39px;
-    padding-right: 39px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 #sub_nav {
@@ -115,8 +115,17 @@ html {
     text-decoration: underline;
 }
 
+#search_form {
+    text-align: center;
+}
+
+#search_form table {
+    text-align: left;
+}
+
 h2 {
     font-size: 1.6em;
+    color: gray;
 }
 
 h3 {
@@ -147,10 +156,6 @@ a, a:visited, a:active {
     color: black;
 }
 
-#q {
-    margin-right: 20px;
-}
-
 .in-place-editor input {
     margin-right: 10px;
 }
@@ -164,7 +169,7 @@ h1 a {
 }
 
 #property_div h3, #contact_div h3 {
-    width: 558px;
+    width: 548px;
     background-color: #517e3a;
     background-image: url("../images/nav_gradient.png");
     background-position: bottom;
@@ -173,6 +178,7 @@ h1 a {
     padding: 3px 0px;
     border: 1px solid black;
     border-bottom: 0px;
+    padding-left: 10px;
 }
 
 #property_div table, #contact_div table {
@@ -183,6 +189,7 @@ h1 a {
 #property_div td, #contact_div td {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    padding-left: 10px;
 }
 #property_div td.top_border_less, #contact_div td.top_border_less {
     border-top: 0px;
@@ -213,14 +220,15 @@ h1 a {
     background-image: url("../images/nav_gradient.png");
     background-position: bottom;
     color: white;
-    margin-bottom: 0px;
-    padding: 3px 0px;
+    margin-bottom: 10px;
+    padding: 3px 10px;
     border: 1px solid black;
 }
 
 #form_bottom textarea {
     border: 1px solid black;
-    margin: 0px;
+    border-top: 0px;
+    margin-top: -10px;
     width: 1136px;
 }
 
@@ -324,6 +332,18 @@ h1 a {
     background-color: #cc6666;
 }
 
+.Utilities {
+    background-color: #a755ff;
+}
+
+.Offers {
+    background-color: #83fffa;
+}
+
+.Relocations {
+    background-color: #ff9c68;
+}
+
 th.sortup a {
     background: url("../images/up-arrow.gif") center right no-repeat;
     padding-right: 25px;
@@ -340,5 +360,17 @@ input {
 }
 
 .required td {
-    background-color: #91be7a;
+    *background-color: #91be7a;
+    *background-color: #72965e;
+}
+
+#form_bottom_span {
+    border: 1px solid black;
+    border-top: 0px;
+    padding: 5px 10px;
+    margin-top: -10px;
+}
+
+#form_bottom_span img {
+    float: right;
 }

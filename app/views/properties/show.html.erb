@@ -193,7 +193,8 @@
         </tr>
         <tr>
           <td>Listing Date</td>
-          <td><%= calendar_date_select_tag "listing_date" %></td>
+          <td><%= eip_calendar({:model => 'property', :field => 'listing_date', :id => @property.id.to_s, :val => @property.listing_date.to_s}) %></td>
+          <!--td><%# calendar_date_select_tag "listing_date" %></td-->
           <!--<td><%# edit_in_place(@property, :listing_date) %></td>-->
         </tr>
         <tr>
@@ -202,7 +203,7 @@
         </tr>
         <tr>
           <td>Closing Date</td>
-          <td><%= eip({:model => 'property', :field => 'closing_date', :id => @property.id.to_s, :val => @property.closing_date.to_s}) %></td>
+          <td><%= eip_calendar({:model => 'property', :field => 'closing_date', :id => @property.id.to_s, :val => @property.closing_date.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -319,8 +320,10 @@
       <br />
 </div>
 
-
+  
 <div id="form_bottom">
   <h3>Property Description</h3>
+</div>
+<div id="form_bottom_span">
   <%= eip({:model => 'property', :field => 'description', :id => @property.id.to_s, :val => @property.description.to_s, :rows => '5'}) %>
 </div>

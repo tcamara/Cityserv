@@ -5,8 +5,8 @@ class PropertiesController < ApplicationController
     @recently_updated = Property.find(:all, :order => 'updated_at DESC', :limit => 10)
     @recently_created = Property.find(:all, :order => 'created_at DESC', :limit => 10)
 
-    @active_total = Property.find(:all, :conditions => ['status = ?', 'Active']).count
-    @total = Property.count
+    #@active_total = Property.find(:all, :conditions => ['status = ?', 'Active']).count
+    #@total = Property.count
   end
 
 

@@ -13,6 +13,12 @@
 
   </head>
   <body>
+
+    <% unless flash[:notice].blank? %>
+        <div id="notification"><%= flash[:notice] %></div>
+      <% end %>
+
+
     <div id="head_content">
       <div id="login_area" class="float_right">
         <% if @current_user %>
@@ -42,11 +48,6 @@
         </div>
       </div>
 
-      <% unless flash[:notice].blank? %>
-        <div id="notification"><%= flash[:notice] %></div>
-      <% end %>
-
-      
     <div id="content">
         <h2><%= yield(:title) %></h2>
       <%= yield(:content) or yield %>

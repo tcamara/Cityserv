@@ -9,15 +9,15 @@
   <h3>Personal</h3>
   <table>
     <tr class="required">
-      <td>First Name</td>
+      <td>First Name *</td>
       <td><%= text_field :contact, :first_name, :size => '57' %></td>
     </tr>
     <tr class="required">
-      <td>Last Name</td>
+      <td>Last Name *</td>
       <td><%= text_field :contact, :last_name, :size => '57' %></td>
     </tr>
     <tr class="required">
-      <td>Category</td>
+      <td>Category *</td>
       <td><%= select :contact, :category, %w(Attorney Bank City Contractor Escrow Title Trustee) %></td>
     </tr>
     <tr>

@@ -1,6 +1,6 @@
 <% title "Find Property" %>
 
-<%= form_tag( {:controller => 'properties', :action => 'search'}, :method => 'get' ) %>
+<%= form_tag( {:controller => 'properties', :action => 'search'}, :method => 'get', :id => 'search_form' ) %>
 
 <%= text_field_tag :q, params[:q] %>
 

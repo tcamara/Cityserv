@@ -84,7 +84,7 @@
       <tr>
         <td class="top_border_less">
           <% form_remote_for :note, :url => contact_notes_path(@contact), :html => { :id => 'note_form' } do |f| %>
-            <%= f.text_area :text, :rows => 4, :cols => 65 %><br />
+            <%= f.text_area :text, :rows => 4, :cols => 63 %><br />
             <%= f.hidden_field :user_id, :value => @current_user.id %>
             <%= f.hidden_field :contact_id, :value => @contact.id %>
             <%= submit_tag 'Add Note' %>

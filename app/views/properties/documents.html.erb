@@ -2,7 +2,7 @@
 <br /><br /><br />
 
 <% @property_documents.each do |i| %>
-  <%= link_to i.document.original_filename, i.document.url %><br />
+  <%= link_to i.document.original_filename, i.document.url %> <span class="gray_italic">Uploaded by <%= User.find(i.user_id).first_name %> <%= User.find(i.user_id).last_name %> on <%= i.created_at %></span> <br />
 <% end %>
 
 <br />
@@ -10,6 +10,8 @@
 
 <% form_for @property, :html => { :multipart => true } do |f| %>
   <%= f.file_field :document %>
+  <%= f.hidden_field :user_id, {:value => @current_user.id} %>
+  <%# f.text_field :desc %>
   <%= hidden_field_tag 'type', 'doc' %>
   <%= submit_tag 'Upload' %>
 <% end %>

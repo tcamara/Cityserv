@@ -180,11 +180,11 @@
         </tr>
         <tr>
           <td>Occupancy</td>
-          <td><%= select :property, :occupancy, %w(Occupied Vacant) %></td>
+          <td><%= select :property, :occupancy, %w(Occupied Personal_Property Vacant) %></td>
         </tr>
         <tr class="required">
           <td>Primary Seller *</td>
-          <td><%= select :property, :primary_seller, %w(Seller1 Seller2 Seller3) %></td>
+          <td><%= text_field :property, :primary_seller, :size => '30' %></td>
         </tr>
         <tr>
           <td>Listing Date</td>

@@ -5,6 +5,6 @@
       <span class="float_right"><%= link_to 'Delete', contact_note_path(@contact, note.id), :confirm => 'Are you sure?', :method => :delete %></span>
     <% end %>
     <br />
-    <p><%= note.text %></p>
+    <p><%= h(note.text).gsub(/\n/, '<br/>') %></p>
   </td>
 </tr>

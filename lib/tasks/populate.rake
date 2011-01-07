@@ -21,7 +21,7 @@ namespace :db do
       property.floor = 1..3
       #property.unit =
       #property.building =
-      property.primary_seller = ['Seller1', 'Seller2', 'Seller3']
+      property.primary_seller = ['Fannie Mae', 'Freddie Mac', 'LPS']
       property.status = ['Active', 'Closed', 'Pending']
       property.list_price = 15000..500000
       property.commission = 5000..15000
@@ -93,6 +93,17 @@ namespace :db do
       contact.fax = Faker::PhoneNumber.phone_number
       contact.email = Faker::Internet.email
       contact.preferred_method = ['Email', 'Cell', 'Work', 'Home', 'Fax']
+    end
+    
+    [User].each(&:delete_all)
+
+    User.populate 1 do |user|
+      user.first_name = ['Test']
+      user.last_name = ['User']
+      user.username = ['a']
+      user.password = ['a']
+      user.email = ['tim@desireepatno.com']
+      user.level = ['IT']
     end
 
 

@@ -8,5 +8,6 @@
   <br />
   <span class="italic">in <%= comment.level %><br />
   by <%= User.find(comment.user_id).first_name %></span>
-  <p><%= comment.text %></p>
+  
+  <p><%= h(comment.text).gsub(/\n/, '<br/>') %></p>
 </div>

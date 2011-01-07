@@ -77,4 +77,13 @@ class CreateProperties < ActiveRecord::Migration
   def self.down
     drop_table :properties
   end
+  
+  create_table "contacts_properties", :id => false, :force => true do |t|
+    t.integer "contact_id"
+    t.integer "property_id"
+  end
+
+  add_index "contacts_properties", ["contact_id", "property_id"], :name => "index_contacts_properties_on_contact_id_and_property_id", :unique => true
+  add_index "contacts_properties", ["property_id"], :name => "index_contacts_properties_on_property_id"
+  
 end

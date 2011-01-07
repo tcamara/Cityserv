@@ -137,6 +137,8 @@ ActiveRecord::Schema.define(:version => 20101109204109) do
 
   create_table "property_documents", :force => true do |t|
     t.integer  "property_id"
+    t.integer  "user_id"
+    t.string   "desc"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "document_file_name"
@@ -147,6 +149,7 @@ ActiveRecord::Schema.define(:version => 20101109204109) do
 
   create_table "property_photos", :force => true do |t|
     t.integer  "property_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

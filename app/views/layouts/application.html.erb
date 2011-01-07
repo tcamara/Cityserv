@@ -10,7 +10,6 @@
 
     <%= javascript_include_tag :defaults, :cache => 'all' %>
     <%= javascript_include_tag 'calendar_date_select/calendar_date_select' %>
-
   </head>
   <body>
 
@@ -49,7 +48,7 @@
       </div>
 
     <div id="content">
-        <h2><%= yield(:title) %></h2>
+      <h2><%= yield(:title) %></h2>
       <%= yield(:content) or yield %>
     </div>
   </body>

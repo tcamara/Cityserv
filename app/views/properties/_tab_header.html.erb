@@ -2,9 +2,8 @@
 
 <div id="sub_nav" class="center">
   <%= link_to "Property Details", property_path(@property) %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <%= link_to "Comments", property_comments_path(@property) %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <%= link_to "Contacts", contacts_property_path(@property) %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <%= link_to "Checklists", :url =>{ :action => :checklists } %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <%# link_to "Comments", property_comments_path(@property) %>
+  <%= link_to "Comments & Contacts", contacts_property_path(@property) %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to "Photos", :controller => 'properties', :action => 'photos', :id => @property %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to "Documents", :controller => 'properties', :action => 'documents', :id => @property %>&nbsp;&nbsp;&nbsp;
 </div>

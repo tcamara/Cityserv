@@ -7,37 +7,37 @@
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @city_contacts } %>
   </div>
-  <br /><%= link_to 'Add City Contact', new_contact_path({ :pid => @property.id, :ctype => 'city' }) %><br /><br /><br />
+  <br /><%= link_to 'Add New City Contact', new_contact_path({ :pid => @property.id, :ctype => 'city' }) %><br /><br /><br />
 
   <h2>Servicer</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @servicer_contacts } %>
   </div>
-  <br /><%= link_to 'Add Servicer Contact', new_contact_path({ :pid => @property.id, :ctype => 'servicer' }) %><br /><br /><br />
+  <br /><%= link_to 'Add New Servicer Contact', new_contact_path({ :pid => @property.id, :ctype => 'servicer' }) %><br /><br /><br />
 
   <h2>Owner</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @owner_contacts } %>
   </div>
-  <br /><%= link_to 'Add Owner Contact', new_contact_path({ :pid => @property.id, :ctype => 'owner' }) %><br /><br /><br />
+  <br /><%= link_to 'Add New Owner Contact', new_contact_path({ :pid => @property.id, :ctype => 'owner' }) %><br /><br /><br />
 
   <h2>Noteholder</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @noteholder_contacts } %>
   </div>
-  <br /><%= link_to 'Add Noteholder Contact', new_contact_path({ :pid => @property.id, :ctype => 'noteholder' }) %><br /><br /><br />
+  <br /><%= link_to 'Add New Noteholder Contact', new_contact_path({ :pid => @property.id, :ctype => 'noteholder' }) %><br /><br /><br />
 
   <h2>Preservation Company</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @preservation_company_contacts } %>
   </div>
-  <br /><%= link_to 'Add Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }) %><br /><br /><br />
+  <br /><%= link_to 'Add New Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }) %><br /><br /><br />
 
   <h2>Other</h2>
   <div id="browse_table">
     <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @other_contacts } %>
   </div>
-  <br /><%= link_to 'Add Other Contact', new_contact_path({ :pid => @property.id, :ctype => 'other' }) %><br /><br /><br />
+  <br /><%= link_to 'Add New Other Contact', new_contact_path({ :pid => @property.id, :ctype => 'other' }) %><br /><br /><br />
 </div>
 
 
@@ -69,7 +69,7 @@
 
     <% form_remote_for :comment, :url => property_comments_path(@property), :html => { :id => 'comment_form' } do |f| %>
       <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Relocations Offers Repairs Utilities) %><br />
-      <%= f.text_area :text, :rows => 5, :cols => 66 %><br />
+      <%= f.text_area :text, :rows => 5, :cols => 66, :id => 'editor' %><br />
       <%= f.hidden_field :user_id, :value => @current_user.id %>
       <%= f.hidden_field :property_id, :value => @property.id %>
       <%= submit_tag 'Comment' %>

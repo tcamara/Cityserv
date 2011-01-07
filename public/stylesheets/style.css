@@ -3,7 +3,7 @@
 /* BG Grey - #8C8681 */
 /* Grey Stripes - #ccdcdc */
 /* Grey Header - #666A73 */
-
+/* Background: #737373;*/
 
 html {
     background: #737373;
@@ -28,7 +28,7 @@ html {
     margin-right: auto;
     border: 1px solid black;
     border-top: 0px;
-    background: white;
+    background-color: white;
     padding: 20px;
 }
 
@@ -306,42 +306,42 @@ h1 a {
     padding-right: 5px;
 }
 
-.comment_listing {
+.comment_listing, .note_listing td {
     border: 1px solid black;
     margin-bottom: -1px;
     padding: 12px 10px 0px 5px;
 }
 
 .Accounting {
-    background-color: #ffff99;
+    background-color: #8ce87f;
 }
 
 .Code_Violations {
-    background-color: #ffccff;
+    background-color: #e8e47f;
 }
 
 .Escrow {
-    background-color: #99cc99;
+    background-color: #7fe8da;
 }
 
 .Repairs {
-    background-color: #6699ff;
+    background-color: #e8b87f;
 }
 
 .Admin {
-    background-color: #cc6666;
+    background-color: #df6464;
 }
 
 .Utilities {
-    background-color: #a755ff;
+    background-color: #827fe8;
 }
 
 .Offers {
-    background-color: #83fffa;
+    background-color: #7fb6e8;
 }
 
 .Relocations {
-    background-color: #ff9c68;
+    background-color: #e87fd8;
 }
 
 th.sortup a {
@@ -359,11 +359,6 @@ input {
     margin-right: auto;
 }
 
-.required td {
-    *background-color: #91be7a;
-    *background-color: #72965e;
-}
-
 #form_bottom_span {
     border: 1px solid black;
     border-top: 0px;
@@ -373,4 +368,9 @@ input {
 
 #form_bottom_span img {
     float: right;
+}
+
+.gray_italic {
+    color: gray;
+    font-style: italic;
 }

@@ -2,8 +2,8 @@ class CreateProperties < ActiveRecord::Migration
   def self.up
     create_table :properties do |t|
       t.string :mls
-      t.integer :reo
-      t.integer :esc
+      t.string :reo
+      t.string :esc
       t.string :occupancy
       t.string :prop_type
       t.string :prop_style
@@ -17,14 +17,14 @@ class CreateProperties < ActiveRecord::Migration
       t.string :building
       t.string :primary_seller
       t.string :status
-      t.integer :list_price
-      t.integer :commission
-      t.datetime :listing_date
+      t.string :list_price
+      t.string :commission
+      t.string :listing_date
       t.string :listing_term
-      t.datetime :closing_date
+      t.string :closing_date
       t.integer :year_built
       t.string :prop_id
-      t.datetime :last_sold
+      t.string :last_sold
       t.string :area
       t.string :zoning
       t.string :feat_lot_size
@@ -45,30 +45,30 @@ class CreateProperties < ActiveRecord::Migration
       t.string :mat_sewer
       t.string :mat_water
       t.string :mat_septic
-      t.integer :fin_taxes
-      t.integer :fin_tax_year
-      t.integer :fin_tax_assessment
-      t.integer :fin_land_assessment
+      t.string :fin_taxes
+      t.string :fin_tax_year
+      t.string :fin_tax_assessment
+      t.string :fin_land_assessment
       t.string :fin_tax_roll_num
-      t.integer :fin_building_improvement
+      t.string :fin_building_improvement
       t.string :fin_financial
       t.string :price_range
-      t.integer :sale_price
+      t.string :sale_price
       t.text :description
       t.string :hoa_name
       t.string :hoa_contact_person
       t.string :hoa_phone
       t.string :hoa_address
-      t.integer :hoa_monthly_fee
-      t.datetime :hoa_last_payment
-      t.integer :hoa_payments_due
+      t.string :hoa_monthly_fee
+      t.string :hoa_last_payment
+      t.string :hoa_payments_due
       t.string :hoa_services_included
       t.string :hoa_supplements
       t.string :hoa_code_violations
       t.string :hoa_sign_complications
       t.string :hoa_gate_code
       t.string :lockbox
-      t.integer :purchase_price
+      t.string :purchase_price
 
       t.timestamps
     end

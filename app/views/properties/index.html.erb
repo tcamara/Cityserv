@@ -56,7 +56,7 @@
   <tbody>
     <% @recently_created.each do |i| %>
     <tr class="<%= cycle("even","odd") %>">
-      <td class="noborder"><%= link_to 'View', edit_property_path(i.id) %></td>
+      <td class="noborder"><%= link_to 'View', property_path(i.id) %></td>
       <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
       <td><%= i.status %></td>
       <td><%= i.primary_seller %></td>

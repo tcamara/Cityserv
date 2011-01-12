@@ -1,6 +1,6 @@
 <% title "Login" %>
 
-<% form_tag session_path do %>
+<% form_tag session_path, :id => 'login' do %>
 
 <label>Username</label>
 <%= text_field_tag 'login' %>

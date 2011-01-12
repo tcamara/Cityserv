@@ -23,10 +23,8 @@
       <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
       <td><%= i.status %></td>
       <td><%= i.primary_seller %></td>
-      <td><%= if i.listing_date
-                 i.listing_date.strftime('%m.%d.%y') end %></td>
-      <td><%= if i.closing_date
-                 i.closing_date.strftime('%m.%d.%y') end %></td>
+      <td><%= i.listing_date %></td>
+      <td><%= i.closing_date %></td>
       <td><%= i.mls %></td>
       <td><%= i.updated_at.strftime('%m.%d.%y') %></td>
       <td><%= i.created_at.strftime('%m.%d.%y') %></td>
@@ -60,10 +58,8 @@
       <td><%= i.street_num %> <%= i.street %> <%= i.city %> <%= i.state %>, <%= i.zip %></td>
       <td><%= i.status %></td>
       <td><%= i.primary_seller %></td>
-      <td><%= if i.listing_date
-                i.listing_date.strftime('%m.%d.%y') end %></td>
-      <td><%= if i.closing_date
-                i.closing_date.strftime('%m.%d.%y') end %></td>
+      <td><%= i.listing_date %></td>
+      <td><%= i.closing_date %></td>
       <td><%= i.mls %></td>
       <td><%= i.updated_at.strftime('%m.%d.%y') %></td>
       <td><%= i.created_at.strftime('%m.%d.%y') %></td>

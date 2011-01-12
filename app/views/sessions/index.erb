@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>CityServ - Welcome</title>
+    <%= stylesheet_link_tag 'style' %>
+  </head>
+  <body>
+
+    <% unless flash[:notice].blank? %>
+      <div id="notification"><%= flash[:notice] %></div>
+    <% end %>
+
+    <div id="head_content">
+      <span id="title"><%= image_tag("logo_white.png", :border => 0) %></span>
+    </div>  
+      
+
+    <div id="content">
+      
+      
+      <h2>Welcome to CityServ, please login to get started:</h2>
+
+      <div id="index">
+        
+        <% form_tag session_path, :id => 'index_login' do %>
+
+        <label>Username</label>
+        <%= text_field_tag 'login' %>
+        <br />
+
+        <label>Password</label>
+        <%= password_field_tag 'password' %>
+        <br />
+
+        <%= submit_tag 'login' %>
+        <% end %>
+        
+      </div>
+    </div>
+  </body>
+</html>

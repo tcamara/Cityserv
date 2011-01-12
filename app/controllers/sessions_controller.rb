@@ -2,6 +2,11 @@ class SessionsController < ApplicationController
 
   def new
   end
+  
+  
+  def index
+    render :layout => false
+  end
 
   
   def create

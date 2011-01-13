@@ -192,6 +192,10 @@
           <td><%= eip({:model => 'property', :field => 'primary_seller', :id => @property.id.to_s, :val => @property.primary_seller.to_s}) %></td>
         </tr>
         <tr>
+          <td>Primary Sales Rep</td>
+          <td><%= eip({:model => 'property', :field => 'seller_name', :id => @property.id.to_s, :val => @property.seller_name.to_s}) %></td>
+        </tr>
+        <tr>
           <td>Listing Date</td>
           <td><%= eip_calendar({:model => 'property', :field => 'listing_date', :id => @property.id.to_s, :val => @property.listing_date.to_s}) %></td>
           <!--td><%# calendar_date_select_tag "listing_date" %></td-->

@@ -118,6 +118,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :unit
   in_place_edit_for :property, :building
   in_place_edit_for :property, :primary_seller
+  in_place_edit_for :property, :seller_name
   in_place_edit_for :property, :status
   in_place_edit_for :property, :list_price
   in_place_edit_for :property, :commission

@@ -18,6 +18,13 @@
   <%= link_to_remote "Utilities", :url => property_comments_path(@property, :type => 'Utilities'), :method => :get %>
 </div>
 
+<!--div id="" class="center">
+  Filter By:<br />
+  <%# select_tag "filter", options_for_select(["", "Accounting", "Admin", "Code_Violations", "Escrow", "Relocations", "Offers", "Repairs", "Utilities"]) %>
+  <%# observe_field :filter, :url => { :action => 'index' }, :method => :get, :update => :comments, :with => 'type' %>
+  
+</div-->
+
 <br /><br />
 
 <%= link_to_remote "Sort by Most Recent", :url => property_comments_path(@property, :type => @type, :order => 'DESC'), :method => :get %><br />
@@ -30,7 +37,11 @@
 <br /><br />
 
 <% form_remote_for :comment, :url => property_comments_path(@property), :html => { :id => 'comment_form' } do |f| %>
-  <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Relocations Offers Repairs Utilities) %><br />
+  <% if @current_user.level == 'Admin' %>
+    <%= f.select :level, %w(Accounting Admin Code_Violations Escrow Relocations Offers Repairs Utilities) %>
+  <% else %>
+    <%= f.select :level, %w(Accounting Code_Violations Escrow Relocations Offers Repairs Utilities) %>
+  <% end %><br />
   <%= f.text_area :text, :rows => 5, :cols => 139 %><br />
   <%= f.hidden_field :user_id, :value => @current_user.id %>
   <%= f.hidden_field :property_id, :value => @property.id %>

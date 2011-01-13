@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
 
+  def authorize
+    
+  end
+  
   def new
   end
   
@@ -14,14 +18,10 @@ class SessionsController < ApplicationController
 
     if @current_user
       session[:user_id] = @current_user.id
-      if session[:return_to]
-        redirect_to session[:return_to]
-        session[:return_to] = nil
-      else
-        redirect_to properties_path
-      end
+      redirect_to properties_path
     else
-      render :action => 'new'
+      flash[:notice] = "Unable to authenticate your information, please try again."
+      redirect_to :controller => 'sessions', :action => 'index'
     end
   end
 

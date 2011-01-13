@@ -391,7 +391,7 @@ input {
     margin-right: auto;
 }
 
-#content h2 {
+#content h2.login {
     width: 465px;
     margin-left: auto;
     margin-right: auto;

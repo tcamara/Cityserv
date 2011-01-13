@@ -176,15 +176,19 @@
         </tr>
         <tr>
           <td>Status</td>
-          <td><%= select :property, :status, %w(Active Closed Pending) %></td>
+          <td><%= select :property, :status, %w(Active Closed Pending Rented) %></td>
         </tr>
         <tr>
           <td>Occupancy</td>
-          <td><%= select :property, :occupancy, %w(Occupied Personal_Property Vacant) %></td>
+          <td><%= select :property, :occupancy, ["Occupied", "Personal Property", "Vacant"] %></td>
         </tr>
         <tr class="required">
           <td>Primary Seller *</td>
           <td><%= text_field :property, :primary_seller, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Primary Sales Rep</td>
+          <td><%= text_field :property, :seller_name, :size => '30' %></td>
         </tr>
         <tr>
           <td>Listing Date</td>

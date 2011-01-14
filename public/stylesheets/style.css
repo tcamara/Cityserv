@@ -316,7 +316,7 @@ h1 a {
     background-color: #8ce87f;
 }
 
-.Code_Violations {
+.Violations, .Code_Violations {
     background-color: #e8e47f;
 }
 

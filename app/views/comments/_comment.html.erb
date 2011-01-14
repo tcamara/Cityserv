@@ -1,5 +1,5 @@
 <div class="comment_listing <%= comment.level %>">
-  <span class="bold"><%= comment.updated_at.strftime('%m.%d.%y - %I:%M%p') %></span>
+  <span class="bold"><%= comment.created_at.strftime('%m.%d.%y - %I:%M%p') %></span>
 
   <% if @current_user.id == comment.user_id || @current_user.level == "Admin" %>
     <span class="float_right"><%= link_to 'Delete', property_comment_path(@property, comment.id), :confirm => 'Are you sure?', :method => :delete %></span>

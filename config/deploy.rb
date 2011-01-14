@@ -28,4 +28,16 @@ role :db,  domain
    task :restart, :roles => :app, :except => { :no_release => true } do
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
+   
+  task :chmod_public_files do
+    run "#{try_sudo} chmod 777 #{current_path}/public/images"
+    run "#{try_sudo} chmod 777 #{current_path}/public/javascripts"
+    run "#{try_sudo} chmod 777 #{current_path}/public/stylesheets"
+    run "#{try_sudo} chmod 777 #{current_path}/public/system"
+  end
+  
+  
  end
+ 
+
+after 'deploy:update_code', 'deploy:chmod_public_files'

@@ -102,6 +102,7 @@ class PropertiesController < ApplicationController
     @property_documents = @property.property_documents
   end
   
+  
   in_place_edit_for :property, :street_num
   in_place_edit_for :property, :mls
   in_place_edit_for :property, :reo

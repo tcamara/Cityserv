@@ -39,3 +39,5 @@ Thumbs.db
 public/system/*
 rawk1.2.rb
 nbproject/*
+nbproject/private/rake-d.txt
+logs/*

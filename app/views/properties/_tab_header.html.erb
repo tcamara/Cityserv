@@ -1,4 +1,4 @@
-<% title "#{@property.street_num} #{@property.street} #{@property.city} &nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; #{@property.primary_seller} &nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; #{@property.seller_name} &nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp; #{@property.reo}" %>
+<% title "#{@property.primary_seller} &nbsp; - &nbsp; #{@property.reo} &nbsp; - &nbsp; #{@property.seller_name} &nbsp; - &nbsp; #{@property.street_num} #{@property.street} #{@property.city}, #{@property.state} #{@property.zip}" %>
 
 <div id="sub_nav" class="center">
   <%= link_to "Property Details", property_path(@property) %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

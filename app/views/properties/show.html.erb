@@ -10,6 +10,10 @@
           <td><%= eip({:model => 'property', :field => 'street_num', :id => @property.id.to_s, :val => @property.street_num.to_s}) %></td>
         </tr>
         <tr>
+          <td>Direction</td>
+          <td><%= eip({:model => 'property', :field => 'direction', :id => @property.id.to_s, :val => @property.direction.to_s}) %></td>
+        </tr>
+        <tr>
           <td>Street Name</td>
           <td><%= eip({:model => 'property', :field => 'street', :id => @property.id.to_s, :val => @property.street.to_s}) %></td>
         </tr>
@@ -65,6 +69,10 @@
         <tr>
           <td>Commission</td>
           <td><%= eip({:model => 'property', :field => 'commission', :id => @property.id.to_s, :val => @property.commission.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Terms</td>
+          <td><%= eip({:model => 'property', :field => 'terms', :id => @property.id.to_s, :val => @property.terms.to_s}) %></td>
         </tr>
       </table>
       <br />
@@ -202,12 +210,16 @@
           <!--<td><%# edit_in_place(@property, :listing_date) %></td>-->
         </tr>
         <tr>
-          <td>Listing Term</td>
+          <td>Listing Expiration</td>
           <td><%= eip({:model => 'property', :field => 'listing_term', :id => @property.id.to_s, :val => @property.listing_term.to_s}) %></td>
         </tr>
         <tr>
           <td>Closing Date</td>
           <td><%= eip_calendar({:model => 'property', :field => 'closing_date', :id => @property.id.to_s, :val => @property.closing_date.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Showing Instructions</td>
+          <td><%= eip({:model => 'property', :field => 'showing_instructions', :id => @property.id.to_s, :val => @property.showing_instructions.to_s}) %></td>
         </tr>
       </table>
       <br />

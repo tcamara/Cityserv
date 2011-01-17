@@ -11,6 +11,10 @@
           <td># *</td>
           <td><%= text_field :property, :street_num, :size => '30' %></td>
         </tr>
+        <tr>
+          <td>Direction</td>
+          <td><%= text_field :property, :direction, :size => '30' %></td>
+        </tr>
         <tr class="required">
           <td>Street Name *</td>
           <td><%= text_field :property, :street, :size => '30' %></td>
@@ -67,6 +71,10 @@
         <tr>
           <td>Commission</td>
           <td><%= text_field :property, :commission, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Terms</td>
+          <td><%= text_field :property, :terms, :size => '30' %></td>
         </tr>
       </table>
       <br />
@@ -195,12 +203,16 @@
           <td><%= text_field :property, :listing_date, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Listing Term</td>
+          <td>Listing Expiration</td>
           <td><%= text_field :property, :listing_term, :size => '30' %></td>
         </tr>
         <tr>
           <td>Closing Date</td>
           <td><%= text_field :property, :closing_date, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Showing Instructions</td>
+          <td><%= text_field :property, :showing_instructions, :size => '30' %></td>
         </tr>
       </table>
       <br />

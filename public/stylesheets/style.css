@@ -344,6 +344,22 @@ h1 a {
     background-color: #e87fd8;
 }
 
+.IT {
+    background-color: white;
+}
+
+.BPO {
+    background-color: white;
+}
+
+.Listings {
+    background-color: white;
+}
+
+.Management {
+    background-color: white;
+}
+
 th.sortup a {
     background: url("../images/up-arrow.gif") center right no-repeat;
     padding-right: 25px;

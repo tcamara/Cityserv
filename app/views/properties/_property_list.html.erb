@@ -4,6 +4,9 @@
       <th <%= sort_td_class_helper "street_num" %>>
         <%= sort_link_helper "#", "street_num" %>
       </th>
+      <th <%= sort_td_class_helper "direction" %>>
+        <%= sort_link_helper "+", "direction" %>
+      </th>
       <th <%= sort_td_class_helper "address" %>>
         <%= sort_link_helper "Address", "address" %>
       </th>
@@ -19,6 +22,9 @@
       <th <%= sort_td_class_helper "status" %>>
         <%= sort_link_helper "Status", "status" %>
       </th>
+      <th <%= sort_td_class_helper "occupancy" %>>
+        <%= sort_link_helper "Occupancy", "occupancy" %>
+      </th>
       <th <%= sort_td_class_helper "seller" %>>
         <%= sort_link_helper "Seller", "seller" %>
       </th>
@@ -31,9 +37,6 @@
       <th <%= sort_td_class_helper "closing_date" %>>
         <%= sort_link_helper "Closing", "closing_date" %>
       </th>
-      <th <%= sort_td_class_helper "mls" %>>
-        <%= sort_link_helper "MLS #", "mls" %>
-      </th>
       <th <%= sort_td_class_helper "reo" %>>
         <%= sort_link_helper "REO #", "reo" %>
       </th>
@@ -45,16 +48,17 @@
     <tr class="<%= cycle("even","odd") %>">
       <td class="noborder"><%= link_to 'View', property_path(i.id) %></td>
       <td><%= i.street_num %></td>
+      <td><%= i.direction %></td>
       <td><%= i.street %></td>
       <td><%= i.city %></td>
       <td><%= i.state %></td>
       <td><%= i.zip %></td>
       <td><%= i.status %></td>
+      <td><%= i.occupancy %></td>
       <td><%= i.primary_seller %></td>
       <td><%= number_to_currency(i.list_price, :precision => 0) %></td>
       <td><%= i.listing_date %></td>
       <td><%= i.closing_date %></td>
-      <td><%= i.mls %></td>
       <td><%= i.reo %></td>
       <td><%= i.esc %></td>
     </tr>

@@ -45,7 +45,7 @@ class PropertiesController < ApplicationController
 
   def list
     sort = Property.parse_it(params['sort'])
-    @sorted_properties = Property.paginate :page => params[:page], :order => sort
+    @sorted_properties = Property.paginate :conditions => "status != 'Closed'", :page => params[:page], :order => sort
 
     if request.xml_http_request?
       render :partial => "property_list", :layout => false
@@ -110,6 +110,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :prop_type
   in_place_edit_for :property, :prop_style
   in_place_edit_for :property, :street_num
+  in_place_edit_for :property, :direction
   in_place_edit_for :property, :street
   in_place_edit_for :property, :city
   in_place_edit_for :property, :state
@@ -122,9 +123,11 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :status
   in_place_edit_for :property, :list_price
   in_place_edit_for :property, :commission
+  in_place_edit_for :property, :terms
   in_place_edit_for :property, :listing_date
   in_place_edit_for :property, :listing_term
   in_place_edit_for :property, :closing_date
+  in_place_edit_for :property, :showing_instructions
   in_place_edit_for :property, :year_built
   in_place_edit_for :property, :prop_id
   in_place_edit_for :property, :last_sold

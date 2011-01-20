@@ -43,74 +43,92 @@
           <td>Building</td>
           <td><%= text_field :property, :building, :size => '30' %></td>
         </tr>
+      </table>
+      <br />
+      
+      <h3>Property Details</h3>
+      <table>
         <tr>
-          <td>Lock Box Code</td>
-          <td><%= text_field :property, :lockbox, :size => '30' %></td>
+          <td>Sq. Ft.</td>
+          <td><%= text_field :property, :feat_sq_ft, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Lot Size</td>
+          <td><%= text_field :property, :feat_lot_size, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Property Type</td>
+          <td><%= text_field :property, :prop_type, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>House Style</td>
+          <td><%= text_field :property, :prop_style, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Built</td>
+          <td><%= text_field :property, :year_built, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Last Sold</td>
+          <td><%= text_field :property, :last_sold, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Area</td>
+          <td><%= text_field :property, :area, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Zoning</td>
+          <td><%= text_field :property, :zoning, :size => '30' %></td>
+        </tr>
+      </table>
+      <br />
+      
+      <h3>Features</h3>
+      <table>
+        <tr>
+          <td>Floors</td>
+          <td><%= text_field :property, :feat_floors, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Beds</td>
+          <td><%= text_field :property, :feat_num_bedrooms, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Baths</td>
+          <td><%= text_field :property, :feat_num_bathrooms, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Flooring</td>
+          <td><%= text_field :property, :feat_flooring, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Heating</td>
+          <td><%= text_field :property, :feat_heating, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>A/C</td>
+          <td><%= text_field :property, :feat_a_c, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Fireplace</td>
+          <td><%= text_field :property, :feat_fireplace, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Basement</td>
+          <td><%= text_field :property, :feat_basement, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Parking</td>
+          <td><%= text_field :property, :feat_parking, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>View</td>
+          <td><%= text_field :property, :feat_view, :size => '30' %></td>
         </tr>
       </table>
       <br />
 
-      <h3>Pricing</h3>
-      <table>
-        <tr>
-          <td>List Price</td>
-          <td><%= text_field :property, :list_price, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Sale Price</td>
-          <td><%= text_field :property, :sale_price, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Purchase Price</td>
-          <td><%= text_field :property, :purchase_price, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Price Range</td>
-          <td><%= text_field :property, :price_range, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Commission</td>
-          <td><%= text_field :property, :commission, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Terms</td>
-          <td><%= text_field :property, :terms, :size => '30' %></td>
-        </tr>
-      </table>
-      <br />
-
-      <h3>Financial</h3>
-      <table>
-        <tr>
-          <td>Tax Roll #</td>
-          <td><%= text_field :property, :fin_tax_roll_num, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Taxes</td>
-          <td><%= text_field :property, :fin_taxes, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Tax Year</td>
-          <td><%= text_field :property, :fin_tax_year, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Tax Assessment</td>
-          <td><%= text_field :property, :fin_tax_assessment, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Land Assessment</td>
-          <td><%= text_field :property, :fin_land_assessment, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Building Improvement</td>
-          <td><%= text_field :property, :fin_building_improvement, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Financing</td>
-          <td><%= text_field :property, :fin_financial, :size => '30' %></td>
-        </tr>
-      </table>
-      <br />
+      
 
       <h3>HOA</h3>
       <table>
@@ -188,7 +206,7 @@
         </tr>
         <tr>
           <td>Occupancy</td>
-          <td><%= select :property, :occupancy, ["Occupied", "Personal Property", "Vacant"] %></td>
+          <td><%= select :property, :occupancy, ["Occupied", "PP", "Vacant"] %></td>
         </tr>
         <tr class="required">
           <td>Primary Seller *</td>
@@ -217,84 +235,93 @@
       </table>
       <br />
 
-      <h3>Property Details</h3>
+      <h3>Pricing</h3>
       <table>
         <tr>
-          <td>Sq. Ft.</td>
-          <td><%= text_field :property, :feat_sq_ft, :size => '30' %></td>
+          <td>List Price</td>
+          <td><%= text_field :property, :list_price, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Lot Size</td>
-          <td><%= text_field :property, :feat_lot_size, :size => '30' %></td>
+          <td>Sale Price</td>
+          <td><%= text_field :property, :sale_price, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Property Type</td>
-          <td><%= text_field :property, :prop_type, :size => '30' %></td>
+          <td>Purchase Price</td>
+          <td><%= text_field :property, :purchase_price, :size => '30' %></td>
         </tr>
         <tr>
-          <td>House Style</td>
-          <td><%= text_field :property, :prop_style, :size => '30' %></td>
+          <td>Price Range</td>
+          <td><%= text_field :property, :price_range, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Built</td>
-          <td><%= text_field :property, :year_built, :size => '30' %></td>
+          <td>Commission</td>
+          <td><%= text_field :property, :commission, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Last Sold</td>
-          <td><%= text_field :property, :last_sold, :size => '30' %></td>
+          <td>Terms</td>
+          <td><%= text_field :property, :terms, :size => '30' %></td>
+        </tr>
+      </table>
+      <br />
+      
+      <h3>Selling</h3>
+      <table>
+        <tr>
+          <td>Listing Date</td>
+          <td><%= text_field :property, :listing_date, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Area</td>
-          <td><%= text_field :property, :area, :size => '30' %></td>
+          <td>Listing Expiration</td>
+          <td><%= text_field :property, :listing_term, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Zoning</td>
-          <td><%= text_field :property, :zoning, :size => '30' %></td>
+          <td>Closing Date</td>
+          <td><%= text_field :property, :closing_date, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Showing Instructions</td>
+          <td><%= text_field :property, :showing_instructions, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>Lock Box Code</td>
+          <td><%= text_field :property, :lockbox, :size => '30' %></td>
+        </tr>
+        <tr>
+          <td>MMR Date</td>
+          <td><%= text_field :property, :mmr, :size => '30' %></td>
         </tr>
       </table>
       <br />
 
-      <h3>Features</h3>
+      <h3>Financial</h3>
       <table>
         <tr>
-          <td>Floors</td>
-          <td><%= text_field :property, :feat_floors, :size => '30' %></td>
+          <td>Tax Roll #</td>
+          <td><%= text_field :property, :fin_tax_roll_num, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Beds</td>
-          <td><%= text_field :property, :feat_num_bedrooms, :size => '30' %></td>
+          <td>Taxes</td>
+          <td><%= text_field :property, :fin_taxes, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Baths</td>
-          <td><%= text_field :property, :feat_num_bathrooms, :size => '30' %></td>
+          <td>Tax Year</td>
+          <td><%= text_field :property, :fin_tax_year, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Flooring</td>
-          <td><%= text_field :property, :feat_flooring, :size => '30' %></td>
+          <td>Tax Assessment</td>
+          <td><%= text_field :property, :fin_tax_assessment, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Heating</td>
-          <td><%= text_field :property, :feat_heating, :size => '30' %></td>
+          <td>Land Assessment</td>
+          <td><%= text_field :property, :fin_land_assessment, :size => '30' %></td>
         </tr>
         <tr>
-          <td>A/C</td>
-          <td><%= text_field :property, :feat_a_c, :size => '30' %></td>
+          <td>Building Improvement</td>
+          <td><%= text_field :property, :fin_building_improvement, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Fireplace</td>
-          <td><%= text_field :property, :feat_fireplace, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Basement</td>
-          <td><%= text_field :property, :feat_basement, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Parking</td>
-          <td><%= text_field :property, :feat_parking, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>View</td>
-          <td><%= text_field :property, :feat_view, :size => '30' %></td>
+          <td>Financing</td>
+          <td><%= text_field :property, :fin_financial, :size => '30' %></td>
         </tr>
       </table>
       <br />

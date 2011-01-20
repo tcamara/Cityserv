@@ -41,93 +41,93 @@
           <td>Building</td>
           <td><%= eip({:model => 'property', :field => 'building', :id => @property.id.to_s, :val => @property.building.to_s}) %></td>
         </tr>
-        <tr>
-          <td>Lock Box Code</td>
-          <td><%= eip({:model => 'property', :field => 'lockbox', :id => @property.id.to_s, :val => @property.lockbox.to_s}) %></td>
-        </tr>
       </table>
       <br />
 
-      <h3>Pricing</h3>
+      <h3>Property Details</h3>
       <table>
         <tr>
-          <td>List Price</td>
-          <td><%= eip({:model => 'property', :field => 'list_price', :id => @property.id.to_s, :val => @property.list_price.to_s}) %></td>
+          <td>Sq. Ft.</td>
+          <td><%= eip({:model => 'property', :field => 'feat_sq_ft', :id => @property.id.to_s, :val => @property.feat_sq_ft.to_s}) %></td>
         </tr>
         <tr>
-          <td>Sale Price</td>
-          <td><%= eip({:model => 'property', :field => 'sale_price', :id => @property.id.to_s, :val => @property.sale_price.to_s}) %></td>
+          <td>Lot Size</td>
+          <td><%= eip({:model => 'property', :field => 'feat_lot_size', :id => @property.id.to_s, :val => @property.feat_lot_size.to_s}) %></td>
         </tr>
         <tr>
-          <td>Purchase Price</td>
-          <td><%= eip({:model => 'property', :field => 'purchase_price', :id => @property.id.to_s, :val => @property.purchase_price.to_s}) %></td>
+          <td>Property Type</td>
+          <td><%= eip({:model => 'property', :field => 'prop_type', :id => @property.id.to_s, :val => @property.prop_type.to_s}) %></td>
         </tr>
         <tr>
-          <td>Price Range</td>
-          <td><%= eip({:model => 'property', :field => 'price_range', :id => @property.id.to_s, :val => @property.price_range.to_s}) %></td>
+          <td>House Style</td>
+          <td><%= eip({:model => 'property', :field => 'prop_style', :id => @property.id.to_s, :val => @property.prop_style.to_s}) %></td>
         </tr>
         <tr>
-          <td>Commission</td>
-          <td><%= eip({:model => 'property', :field => 'commission', :id => @property.id.to_s, :val => @property.commission.to_s}) %></td>
+          <td>Built</td>
+          <td><%= eip({:model => 'property', :field => 'year_built', :id => @property.id.to_s, :val => @property.year_built.to_s}) %></td>
         </tr>
         <tr>
-          <td>Terms</td>
-          <td><%= eip({:model => 'property', :field => 'terms', :id => @property.id.to_s, :val => @property.terms.to_s}) %></td>
+          <td>Last Sold</td>
+          <td><%= eip({:model => 'property', :field => 'last_sold', :id => @property.id.to_s, :val => @property.last_sold.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Area</td>
+          <td><%= eip({:model => 'property', :field => 'area', :id => @property.id.to_s, :val => @property.area.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Zoning</td>
+          <td><%= eip({:model => 'property', :field => 'zoning', :id => @property.id.to_s, :val => @property.zoning.to_s}) %></td>
         </tr>
       </table>
       <br />
-
-      <h3>Financial</h3>
+      
+      <h3>Features</h3>
       <table>
         <tr>
-          <td>Tax Roll #</td>
-          <td><%= eip({:model => 'property', :field => 'fin_tax_roll_num', :id => @property.id.to_s, :val => @property.fin_tax_roll_num.to_s}) %></td>
+          <td>Floors</td>
+          <td><%= eip({:model => 'property', :field => 'feat_floors', :id => @property.id.to_s, :val => @property.feat_floors.to_s}) %></td>
         </tr>
         <tr>
-          <td>Taxes</td>
-          <td><%= eip({:model => 'property', :field => 'fin_taxes', :id => @property.id.to_s, :val => @property.fin_taxes.to_s}) %></td>
+          <td>Beds</td>
+          <td><%= eip({:model => 'property', :field => 'feat_num_bedrooms', :id => @property.id.to_s, :val => @property.feat_num_bedrooms.to_s}) %></td>
         </tr>
         <tr>
-          <td>Tax Year</td>
-          <td><%= eip({:model => 'property', :field => 'fin_tax_year', :id => @property.id.to_s, :val => @property.fin_tax_year.to_s}) %></td>
+          <td>Baths</td>
+          <td><%= eip({:model => 'property', :field => 'feat_num_bathrooms', :id => @property.id.to_s, :val => @property.feat_num_bathrooms.to_s}) %></td>
         </tr>
         <tr>
-          <td>Tax Assessment</td>
-          <td><%= eip({:model => 'property', :field => 'fin_tax_assessment', :id => @property.id.to_s, :val => @property.fin_tax_assessment.to_s}) %></td>
+          <td>Flooring</td>
+          <td><%= eip({:model => 'property', :field => 'feat_flooring', :id => @property.id.to_s, :val => @property.feat_flooring.to_s}) %></td>
         </tr>
         <tr>
-          <td>Land Assessment</td>
-          <td><%= eip({:model => 'property', :field => 'fin_land_assessment', :id => @property.id.to_s, :val => @property.fin_land_assessment.to_s}) %></td>
+          <td>Heating</td>
+          <td><%= eip({:model => 'property', :field => 'feat_heating', :id => @property.id.to_s, :val => @property.feat_heating.to_s}) %></td>
         </tr>
         <tr>
-          <td>Building Improvement</td>
-          <td><%= eip({:model => 'property', :field => 'fin_building_improvement', :id => @property.id.to_s, :val => @property.fin_building_improvement.to_s}) %></td>
+          <td>A/C</td>
+          <td><%= eip({:model => 'property', :field => 'feat_a_c', :id => @property.id.to_s, :val => @property.feat_a_c.to_s}) %></td>
         </tr>
         <tr>
-          <td>Financing</td>
-          <td><%= eip({:model => 'property', :field => 'fin_financial', :id => @property.id.to_s, :val => @property.fin_financial.to_s}) %></td>
+          <td>Fireplace</td>
+          <td><%= eip({:model => 'property', :field => 'feat_fireplace', :id => @property.id.to_s, :val => @property.feat_fireplace.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Basement</td>
+          <td><%= eip({:model => 'property', :field => 'feat_basement', :id => @property.id.to_s, :val => @property.feat_basement.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Parking</td>
+          <td><%= eip({:model => 'property', :field => 'feat_parking', :id => @property.id.to_s, :val => @property.feat_parking.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>View</td>
+          <td><%= eip({:model => 'property', :field => 'feat_view', :id => @property.id.to_s, :val => @property.feat_view.to_s}) %></td>
         </tr>
       </table>
       <br />
 
       <h3>HOA</h3>
       <table>
-        <tr>
-          <td>HOA Name</td>
-          <td><%= eip({:model => 'property', :field => 'hoa_name', :id => @property.id.to_s, :val => @property.hoa_name.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Contact Person</td>
-          <td><%= eip({:model => 'property', :field => 'hoa_contact_person', :id => @property.id.to_s, :val => @property.hoa_contact_person.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Phone Number</td>
-          <td><%= eip({:model => 'property', :field => 'hoa_phone', :id => @property.id.to_s, :val => @property.hoa_phone.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Address</td>
-          <td><%= eip({:model => 'property', :field => 'hoa_address', :id => @property.id.to_s, :val => @property.hoa_address.to_s}) %></td>
-        </tr>
         <tr>
           <td>Monthly Fee</td>
           <td><%= eip({:model => 'property', :field => 'hoa_monthly_fee', :id => @property.id.to_s, :val => @property.hoa_monthly_fee.to_s}) %></td>
@@ -193,7 +193,7 @@
         </tr>
         <tr>
           <td>Occupancy</td>
-          <td><%= eip_select({:model => 'property', :field => 'occupancy', :id => @property.id.to_s, :val => @property.occupancy.to_s, :collection => "['Occupied', 'Personal Property', 'Vacant']"}) %></td>
+          <td><%= eip_select({:model => 'property', :field => 'occupancy', :id => @property.id.to_s, :val => @property.occupancy.to_s, :collection => "['Occupied', 'PP', 'Vacant']"}) %></td>
         </tr>
         <tr>
           <td>Primary Seller</td>
@@ -203,6 +203,40 @@
           <td>Primary Sales Rep</td>
           <td><%= eip({:model => 'property', :field => 'seller_name', :id => @property.id.to_s, :val => @property.seller_name.to_s}) %></td>
         </tr>
+      </table>
+      <br />
+
+      <h3>Pricing</h3>
+      <table>
+        <tr>
+          <td>List Price</td>
+          <td><%= eip({:model => 'property', :field => 'list_price', :id => @property.id.to_s, :val => @property.list_price.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Sale Price</td>
+          <td><%= eip({:model => 'property', :field => 'sale_price', :id => @property.id.to_s, :val => @property.sale_price.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Purchase Price</td>
+          <td><%= eip({:model => 'property', :field => 'purchase_price', :id => @property.id.to_s, :val => @property.purchase_price.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Price Range</td>
+          <td><%= eip({:model => 'property', :field => 'price_range', :id => @property.id.to_s, :val => @property.price_range.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Commission</td>
+          <td><%= eip({:model => 'property', :field => 'commission', :id => @property.id.to_s, :val => @property.commission.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>Terms</td>
+          <td><%= eip({:model => 'property', :field => 'terms', :id => @property.id.to_s, :val => @property.terms.to_s}) %></td>
+        </tr>
+      </table>
+      <br />
+
+      <h3>Selling</h3>
+      <table>
         <tr>
           <td>Listing Date</td>
           <td><%= eip_calendar({:model => 'property', :field => 'listing_date', :id => @property.id.to_s, :val => @property.listing_date.to_s}) %></td>
@@ -221,87 +255,46 @@
           <td>Showing Instructions</td>
           <td><%= eip({:model => 'property', :field => 'showing_instructions', :id => @property.id.to_s, :val => @property.showing_instructions.to_s}) %></td>
         </tr>
-      </table>
-      <br />
-
-      <h3>Property Details</h3>
-      <table>
         <tr>
-          <td>Sq. Ft.</td>
-          <td><%= eip({:model => 'property', :field => 'feat_sq_ft', :id => @property.id.to_s, :val => @property.feat_sq_ft.to_s}) %></td>
+          <td>Lock Box Code</td>
+          <td><%= eip({:model => 'property', :field => 'lockbox', :id => @property.id.to_s, :val => @property.lockbox.to_s}) %></td>
         </tr>
         <tr>
-          <td>Lot Size</td>
-          <td><%= eip({:model => 'property', :field => 'feat_lot_size', :id => @property.id.to_s, :val => @property.feat_lot_size.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Property Type</td>
-          <td><%= eip({:model => 'property', :field => 'prop_type', :id => @property.id.to_s, :val => @property.prop_type.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>House Style</td>
-          <td><%= eip({:model => 'property', :field => 'prop_style', :id => @property.id.to_s, :val => @property.prop_style.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Built</td>
-          <td><%= eip({:model => 'property', :field => 'year_built', :id => @property.id.to_s, :val => @property.year_built.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Last Sold</td>
-          <td><%= eip({:model => 'property', :field => 'last_sold', :id => @property.id.to_s, :val => @property.last_sold.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Area</td>
-          <td><%= eip({:model => 'property', :field => 'area', :id => @property.id.to_s, :val => @property.area.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Zoning</td>
-          <td><%= eip({:model => 'property', :field => 'zoning', :id => @property.id.to_s, :val => @property.zoning.to_s}) %></td>
+          <td>MMR Date</td>
+          <td><%= eip_calendar({:model => 'property', :field => 'mmr', :id => @property.id.to_s, :val => @property.mmr.to_s}) %></td>
         </tr>
       </table>
       <br />
 
-      <h3>Features</h3>
+      <h3>Financial</h3>
       <table>
         <tr>
-          <td>Floors</td>
-          <td><%= eip({:model => 'property', :field => 'feat_floors', :id => @property.id.to_s, :val => @property.feat_floors.to_s}) %></td>
+          <td>Tax Roll #</td>
+          <td><%= eip({:model => 'property', :field => 'fin_tax_roll_num', :id => @property.id.to_s, :val => @property.fin_tax_roll_num.to_s}) %></td>
         </tr>
         <tr>
-          <td>Beds</td>
-          <td><%= eip({:model => 'property', :field => 'feat_num_bedrooms', :id => @property.id.to_s, :val => @property.feat_num_bedrooms.to_s}) %></td>
+          <td>Taxes</td>
+          <td><%= eip({:model => 'property', :field => 'fin_taxes', :id => @property.id.to_s, :val => @property.fin_taxes.to_s}) %></td>
         </tr>
         <tr>
-          <td>Baths</td>
-          <td><%= eip({:model => 'property', :field => 'feat_num_bathrooms', :id => @property.id.to_s, :val => @property.feat_num_bathrooms.to_s}) %></td>
+          <td>Tax Year</td>
+          <td><%= eip({:model => 'property', :field => 'fin_tax_year', :id => @property.id.to_s, :val => @property.fin_tax_year.to_s}) %></td>
         </tr>
         <tr>
-          <td>Flooring</td>
-          <td><%= eip({:model => 'property', :field => 'feat_flooring', :id => @property.id.to_s, :val => @property.feat_flooring.to_s}) %></td>
+          <td>Tax Assessment</td>
+          <td><%= eip({:model => 'property', :field => 'fin_tax_assessment', :id => @property.id.to_s, :val => @property.fin_tax_assessment.to_s}) %></td>
         </tr>
         <tr>
-          <td>Heating</td>
-          <td><%= eip({:model => 'property', :field => 'feat_heating', :id => @property.id.to_s, :val => @property.feat_heating.to_s}) %></td>
+          <td>Land Assessment</td>
+          <td><%= eip({:model => 'property', :field => 'fin_land_assessment', :id => @property.id.to_s, :val => @property.fin_land_assessment.to_s}) %></td>
         </tr>
         <tr>
-          <td>A/C</td>
-          <td><%= eip({:model => 'property', :field => 'feat_a_c', :id => @property.id.to_s, :val => @property.feat_a_c.to_s}) %></td>
+          <td>Building Improvement</td>
+          <td><%= eip({:model => 'property', :field => 'fin_building_improvement', :id => @property.id.to_s, :val => @property.fin_building_improvement.to_s}) %></td>
         </tr>
         <tr>
-          <td>Fireplace</td>
-          <td><%= eip({:model => 'property', :field => 'feat_fireplace', :id => @property.id.to_s, :val => @property.feat_fireplace.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Basement</td>
-          <td><%= eip({:model => 'property', :field => 'feat_basement', :id => @property.id.to_s, :val => @property.feat_basement.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>Parking</td>
-          <td><%= eip({:model => 'property', :field => 'feat_parking', :id => @property.id.to_s, :val => @property.feat_parking.to_s}) %></td>
-        </tr>
-        <tr>
-          <td>View</td>
-          <td><%= eip({:model => 'property', :field => 'feat_view', :id => @property.id.to_s, :val => @property.feat_view.to_s}) %></td>
+          <td>Financing</td>
+          <td><%= eip({:model => 'property', :field => 'fin_financial', :id => @property.id.to_s, :val => @property.fin_financial.to_s}) %></td>
         </tr>
       </table>
       <br />

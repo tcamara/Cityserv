@@ -174,6 +174,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :hoa_code_violations
   in_place_edit_for :property, :hoa_sign_complications
   in_place_edit_for :property, :hoa_gate_code
+  in_place_edit_for :property, :lockbox
 
 
 end

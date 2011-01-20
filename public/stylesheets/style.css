@@ -313,51 +313,55 @@ h1 a {
 }
 
 .Accounting {
-    background-color: #8ce87f;
+    background-color: #cff3ca;
 }
 
 .Violations, .Code_Violations {
-    background-color: #e8e47f;
+    background-color: #fffdb9;
 }
 
-.Escrow {
-    background-color: #7fe8da;
+.Escrow, .Escrows {
+    background-color: #bbf0e9;
 }
 
 .Repairs {
-    background-color: #e8b87f;
+    background-color: #ffb351;
 }
 
 .Admin {
-    background-color: #df6464;
+    background-color: #edabab;
 }
 
 .Utilities {
-    background-color: #827fe8;
+    background-color: #f9d0b2;
 }
 
 .Offers {
-    background-color: #7fb6e8;
+    background-color: #b4d2ed;
 }
 
 .Relocations {
-    background-color: #e87fd8;
+    background-color: #f2c3eb;
 }
 
 .IT {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .BPO {
-    background-color: white;
+    background-color: #a4b3a5;
 }
 
 .Listings {
-    background-color: white;
+    background-color: #acb7de;
 }
 
 .Management {
-    background-color: white;
+    background-color: #d5d5d5;
+}
+
+.NAWRB {
+    background-color: #d6b839;
 }
 
 th.sortup a {

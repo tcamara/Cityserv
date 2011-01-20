@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td>Category</td>
-      <td><%= eip_select({:model => 'contact', :field => 'category', :id => @contact.id.to_s, :val => @contact.category.to_s, :collection => "['Attorney', 'Bank', 'City', 'Contractor', 'Escrow', 'Title', 'Trustee']"}) %></td>
+      <td><%= eip_select({:model => 'contact', :field => 'category', :id => @contact.id.to_s, :val => @contact.category.to_s, :collection => "['Attorney', 'Bank', 'City', 'Contractor', 'Escrow', 'Outsourcer', 'Title', 'Trustee', 'NAWRB Member', 'NAWRB Financial', 'NAWRB Media', 'NAWRB Government', 'NAWRB Professional Organization', 'NAWRB Other']"}) %></td>
     </tr>
     <tr>
       <td>Address</td>

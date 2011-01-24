@@ -13,6 +13,15 @@ class Property < ActiveRecord::Base
   has_many :owner_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'owner'"
   has_many :noteholder_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'noteholder'"
   has_many :preservation_company_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'preservation_company'"
+  has_many :escrow_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'escrow'"
+  has_many :buyers_agent_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'buyers_agent'"
+  has_many :buyer_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'buyer'"
+  has_many :hoa_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'hoa'"
+  has_many :property_manager_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'property_manager'"
+  has_many :selling_agent_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'selling_agent'"
+  has_many :capital_bid_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'capital_bid'"
+  has_many :lender_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'lender'"
+  has_many :contractors_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'contractors'"
   has_many :other_contacts, :through => :associateds, :source => :contact, :conditions => "ctype = 'other'"
   
   cattr_reader :per_page

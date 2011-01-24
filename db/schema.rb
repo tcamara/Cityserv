@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110120160319) do
+ActiveRecord::Schema.define(:version => 20110124163846) do
 
   create_table "associateds", :force => true do |t|
     t.integer  "property_id"
@@ -138,6 +138,8 @@ ActiveRecord::Schema.define(:version => 20110120160319) do
     t.string   "terms"
     t.string   "showing_instructions"
     t.string   "mmr"
+    t.string   "feat_pool"
+    t.string   "pp_exp"
   end
 
   create_table "property_documents", :force => true do |t|

@@ -32,6 +32,60 @@
 </div>
 <br /><%= link_to 'Add New Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }) %><br /><br /><br />
 
+<h2>Escrow</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @escrow_contacts } %>
+</div>
+<br /><%= link_to 'Add New Escrow Contact', new_contact_path({ :pid => @property.id, :ctype => 'escrow' }) %><br /><br /><br />
+
+<h2>Buyer's Agent</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyers_agent_contacts } %>
+</div>
+<br /><%= link_to "Add New Buyer's Agent Contact", new_contact_path({ :pid => @property.id, :ctype => 'buyers_agent' }) %><br /><br /><br />
+
+<h2>Buyer</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyer_contacts } %>
+</div>
+<br /><%= link_to 'Add New Buyer Contact', new_contact_path({ :pid => @property.id, :ctype => 'buyer' }) %><br /><br /><br />
+
+<h2>HOA</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @hoa_contacts } %>
+</div>
+<br /><%= link_to 'Add New HOA Contact', new_contact_path({ :pid => @property.id, :ctype => 'hoa' }) %><br /><br /><br />
+
+<h2>Property Manager</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @property_manager_contacts } %>
+</div>
+<br /><%= link_to 'Add New Property Manager Contact', new_contact_path({ :pid => @property.id, :ctype => 'property_manager' }) %><br /><br /><br />
+
+<h2>Selling Agent</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @selling_agent_contacts } %>
+</div>
+<br /><%= link_to 'Add New Selling Agent Contact', new_contact_path({ :pid => @property.id, :ctype => 'selling_agent' }) %><br /><br /><br />
+
+<h2>Capital Bid</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @capital_bid_contacts } %>
+</div>
+<br /><%= link_to 'Add New Capital Bid Contact', new_contact_path({ :pid => @property.id, :ctype => 'capital_bid' }) %><br /><br /><br />
+
+<h2>Lender</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @lender_contacts } %>
+</div>
+<br /><%= link_to 'Add New Lender Contact', new_contact_path({ :pid => @property.id, :ctype => 'lender' }) %><br /><br /><br />
+
+<h2>Contractors</h2>
+<div id="browse_table">
+  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @contractors_contacts } %>
+</div>
+<br /><%= link_to 'Add New Contractors Contact', new_contact_path({ :pid => @property.id, :ctype => 'contractors' }) %><br /><br /><br />
+
 <h2>Other</h2>
 <div id="browse_table">
   <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @other_contacts } %>

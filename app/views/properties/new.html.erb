@@ -118,6 +118,10 @@
           <td><%= text_field :property, :feat_basement, :size => '30' %></td>
         </tr>
         <tr>
+          <td>Pool</td>
+          <td><%= text_field :property, :feat_pool, :size => '30' %></td>
+        </tr>
+        <tr>
           <td>Parking</td>
           <td><%= text_field :property, :feat_parking, :size => '30' %></td>
         </tr>
@@ -132,22 +136,6 @@
 
       <h3>HOA</h3>
       <table>
-        <tr>
-          <td>HOA Name</td>
-          <td><%= text_field :property, :hoa_name, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Contact Person</td>
-          <td><%= text_field :property, :hoa_contact_person, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Phone Number</td>
-          <td><%= text_field :property, :hoa_phone, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Address</td>
-          <td><%= text_field :property, :hoa_address, :size => '30' %></td>
-        </tr>
         <tr>
           <td>Monthly Fee</td>
           <td><%= text_field :property, :hoa_monthly_fee, :size => '30' %></td>
@@ -217,20 +205,8 @@
           <td><%= text_field :property, :seller_name, :size => '30' %></td>
         </tr>
         <tr>
-          <td>Listing Date</td>
-          <td><%= text_field :property, :listing_date, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Listing Expiration</td>
-          <td><%= text_field :property, :listing_term, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Closing Date</td>
-          <td><%= text_field :property, :closing_date, :size => '30' %></td>
-        </tr>
-        <tr>
-          <td>Showing Instructions</td>
-          <td><%= text_field :property, :showing_instructions, :size => '30' %></td>
+          <td>PP Hold Expiration</td>
+          <td><%= text_field :property, :pp_exp, :size => '30' %></td>
         </tr>
       </table>
       <br />

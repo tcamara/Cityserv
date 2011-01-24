@@ -7,7 +7,7 @@
 
 html {
     background: #737373;
-    font-family: "Trebuchet MS";
+    font-family: "Trebuchet MS", sans-serif;
     font-size: .8em;
 }
 
@@ -425,4 +425,9 @@ input {
     width: 50px;
     margin: 20px auto 0px auto;
     display: block;
+}
+
+.cal input {
+    border: 0px solid black;
+    font-family: "Trebuchet MS", sans-serif;
 }

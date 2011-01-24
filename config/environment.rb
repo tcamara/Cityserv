@@ -43,7 +43,5 @@ Rails::Initializer.run do |config|
           :lib => 'will_paginate',
           :source => 'http://gems.github.com',
           :version => '~> 2.3.6'
-
-  
   
 end

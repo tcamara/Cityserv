@@ -45,7 +45,7 @@ class CalendarDateSelect
   @@image = "calendar_date_select/calendar.gif"
   
   cattr_reader :format
-  @@format = FORMATS[:natural]
+  @@format = FORMATS[:american]
   
   class << self
     def format=(format)

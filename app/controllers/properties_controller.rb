@@ -5,8 +5,11 @@ class PropertiesController < ApplicationController
     @recently_updated = Property.find(:all, :order => 'updated_at DESC', :limit => 10)
     @recently_created = Property.find(:all, :order => 'created_at DESC', :limit => 10)
 
-    #@active_total = Property.find(:all, :conditions => ['status = ?', 'Active']).count
-    #@total = Property.count
+    @closed_total = Property.find(:all, :conditions => ['status = ?', 'Closed']).count
+    @rented_total = Property.find(:all, :conditions => ['status = ?', 'Rented']).count
+    @pending_total = Property.find(:all, :conditions => ['status = ?', 'Pending']).count
+    @active_total = Property.find(:all, :conditions => ['status = ?', 'Active']).count
+    @total = Property.count
   end
 
 
@@ -32,7 +35,7 @@ class PropertiesController < ApplicationController
 
     respond_to do |format|
       format.html {@property.update_attributes(params[:property])}
-      format.js {render :partial => "edit_property", :layout => false}
+      format.js {@property.update_attributes(params[:property])}
       format.json { render :json => @property }
     end
   end
@@ -83,6 +86,15 @@ class PropertiesController < ApplicationController
     @owner_contacts = @property.owner_contacts
     @noteholder_contacts = @property.noteholder_contacts
     @preservation_company_contacts = @property.preservation_company_contacts
+    @escrow_contacts = @property.escrow_contacts
+    @buyers_agent_contacts = @property.buyers_agent_contacts
+    @buyer_contacts = @property.buyer_contacts
+    @hoa_contacts = @property.hoa_contacts
+    @property_manager_contacts = @property.property_manager_contacts
+    @selling_agent_contacts = @property.selling_agent_contacts
+    @capital_bid_contacts = @property.capital_bid_contacts
+    @lender_contacts = @property.lender_contacts
+    @contractors_contacts = @property.contractors_contacts
     @other_contacts = @property.other_contacts
 
     @type = params[:type] || 'All'
@@ -144,6 +156,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :feat_a_c
   in_place_edit_for :property, :feat_fireplace
   in_place_edit_for :property, :feat_basement
+  in_place_edit_for :property, :feat_pool
   in_place_edit_for :property, :feat_parking
   in_place_edit_for :property, :feat_view
   in_place_edit_for :property, :mat_construction
@@ -176,6 +189,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :hoa_gate_code
   in_place_edit_for :property, :lockbox
   in_place_edit_for :property, :mmr
+  in_place_edit_for :property, :pp_exp
 
 
 end

@@ -116,6 +116,10 @@
           <td><%= eip({:model => 'property', :field => 'feat_basement', :id => @property.id.to_s, :val => @property.feat_basement.to_s}) %></td>
         </tr>
         <tr>
+          <td>Pool</td>
+          <td><%= eip({:model => 'property', :field => 'feat_pool', :id => @property.id.to_s, :val => @property.feat_pool.to_s}) %></td>
+        </tr>
+        <tr>
           <td>Parking</td>
           <td><%= eip({:model => 'property', :field => 'feat_parking', :id => @property.id.to_s, :val => @property.feat_parking.to_s}) %></td>
         </tr>
@@ -203,6 +207,10 @@
           <td>Primary Sales Rep</td>
           <td><%= eip({:model => 'property', :field => 'seller_name', :id => @property.id.to_s, :val => @property.seller_name.to_s}) %></td>
         </tr>
+        <tr>
+          <td>PP Hold Expiration</td>
+          <td class="cal"><%= eip_calendar({:model => 'property', :field => 'pp_exp', :id => @property.id.to_s, :val => @property.pp_exp.to_s}) %></td>
+        </tr>
       </table>
       <br />
 
@@ -239,9 +247,7 @@
       <table>
         <tr>
           <td>Listing Date</td>
-          <td><%= eip_calendar({:model => 'property', :field => 'listing_date', :id => @property.id.to_s, :val => @property.listing_date.to_s}) %></td>
-          <!--td><%# calendar_date_select_tag "listing_date" %></td-->
-          <!--<td><%# edit_in_place(@property, :listing_date) %></td>-->
+          <td class="cal"><%= eip_calendar({:model => 'property', :field => 'listing_date', :id => @property.id.to_s, :val => @property.listing_date.to_s}) %></td>
         </tr>
         <tr>
           <td>Listing Expiration</td>
@@ -249,7 +255,7 @@
         </tr>
         <tr>
           <td>Closing Date</td>
-          <td><%= eip_calendar({:model => 'property', :field => 'closing_date', :id => @property.id.to_s, :val => @property.closing_date.to_s}) %></td>
+          <td class="cal"><%= eip_calendar({:model => 'property', :field => 'closing_date', :id => @property.id.to_s, :val => @property.closing_date.to_s}) %></td>
         </tr>
         <tr>
           <td>Showing Instructions</td>
@@ -261,7 +267,7 @@
         </tr>
         <tr>
           <td>MMR Date</td>
-          <td><%= eip_calendar({:model => 'property', :field => 'mmr', :id => @property.id.to_s, :val => @property.mmr.to_s}) %></td>
+          <td class="cal"><%= eip_calendar({:model => 'property', :field => 'mmr', :id => @property.id.to_s, :val => @property.mmr.to_s}) %></td>
         </tr>
       </table>
       <br />

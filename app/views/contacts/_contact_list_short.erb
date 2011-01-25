@@ -29,7 +29,7 @@
         <td><%= i.company_name %></td>
         <td><%= i.job_title %></td>
         <td><%= i.work_phone %></td>
-        <td><%= i.email %></td>
+        <td><a href="mailto:<%= i.email.to_s %>" class="email_icon"><%= image_tag "email.png" %></a><%= i.email %></td>
         <td><%= i.company_address %></td>
       </tr>
       <% end %>

@@ -302,6 +302,10 @@
           <td>Financing</td>
           <td><%= eip({:model => 'property', :field => 'fin_financial', :id => @property.id.to_s, :val => @property.fin_financial.to_s}) %></td>
         </tr>
+        <tr>
+          <td>Loan Number</td>
+          <td><%= eip({:model => 'property', :field => 'loan_number', :id => @property.id.to_s, :val => @property.loan_number.to_s}) %></td>
+        </tr>
       </table>
       <br />
 

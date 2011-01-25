@@ -32,6 +32,7 @@ class ContactsController < ApplicationController
         render :action => 'new'
       end
     end
+    
   end
 
 

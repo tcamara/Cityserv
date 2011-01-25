@@ -188,6 +188,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :lockbox
   in_place_edit_for :property, :mmr
   in_place_edit_for :property, :pp_exp
+  in_place_edit_for :property, :loan_number
 
 
 end

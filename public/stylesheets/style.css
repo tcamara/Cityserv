@@ -338,7 +338,7 @@ h1 a {
     width: 100%;
 }
 
-#contact_area a {
+#contact_area a.noborder {
     float: right;
 }
 
@@ -480,4 +480,9 @@ input {
 .cal input {
     border: 0px solid black;
     font-family: "Trebuchet MS", sans-serif;
+}
+
+.email_icon {
+    float: left;
+    margin-right: 5px;
 }

@@ -29,6 +29,7 @@ class AssociatedsController < ApplicationController
       end
     end
         
+    redirect_to contacts_property_path(assoc.property_id)
   end
 
 

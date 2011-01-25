@@ -1,93 +1,160 @@
 <%= render :partial => "tab_header", :layout => false %>
-<br /><br /><br />
+   
 
-
-<h2>City</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @city_contacts } %>
-</div>
-<br /><%= link_to 'Add New City Contact', new_contact_path({ :pid => @property.id, :ctype => 'city' }) %><br /><br /><br />
-
-<h2>Servicer</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @servicer_contacts } %>
-</div>
-<br /><%= link_to 'Add New Servicer Contact', new_contact_path({ :pid => @property.id, :ctype => 'servicer' }) %><br /><br /><br />
-
-<h2>Owner</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @owner_contacts } %>
-</div>
-<br /><%= link_to 'Add New Owner Contact', new_contact_path({ :pid => @property.id, :ctype => 'owner' }) %><br /><br /><br />
-
-<h2>Noteholder</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @noteholder_contacts } %>
-</div>
-<br /><%= link_to 'Add New Noteholder Contact', new_contact_path({ :pid => @property.id, :ctype => 'noteholder' }) %><br /><br /><br />
-
-<h2>Preservation Company</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @preservation_company_contacts } %>
-</div>
-<br /><%= link_to 'Add New Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }) %><br /><br /><br />
-
-<h2>Escrow</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @escrow_contacts } %>
-</div>
-<br /><%= link_to 'Add New Escrow Contact', new_contact_path({ :pid => @property.id, :ctype => 'escrow' }) %><br /><br /><br />
-
-<h2>Buyer's Agent</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyers_agent_contacts } %>
-</div>
-<br /><%= link_to "Add New Buyer's Agent Contact", new_contact_path({ :pid => @property.id, :ctype => 'buyers_agent' }) %><br /><br /><br />
+<div id="contact_area">
 
 <h2>Buyer</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyer_contacts } %>
-</div>
-<br /><%= link_to 'Add New Buyer Contact', new_contact_path({ :pid => @property.id, :ctype => 'buyer' }) %><br /><br /><br />
-
-<h2>HOA</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @hoa_contacts } %>
-</div>
-<br /><%= link_to 'Add New HOA Contact', new_contact_path({ :pid => @property.id, :ctype => 'hoa' }) %><br /><br /><br />
-
-<h2>Property Manager</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @property_manager_contacts } %>
-</div>
-<br /><%= link_to 'Add New Property Manager Contact', new_contact_path({ :pid => @property.id, :ctype => 'property_manager' }) %><br /><br /><br />
-
-<h2>Selling Agent</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @selling_agent_contacts } %>
-</div>
-<br /><%= link_to 'Add New Selling Agent Contact', new_contact_path({ :pid => @property.id, :ctype => 'selling_agent' }) %><br /><br /><br />
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyer_contacts } %>
+<%= link_to 'Add New Buyer Contact', new_contact_path({ :pid => @property.id, :ctype => 'buyer' }) %>
+  
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %>
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'buyer' %>
+  <%= submit_tag 'Add Buyer Contact by Name' %>
+<% end %>
 
 <h2>Capital Bid</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @capital_bid_contacts } %>
-</div>
-<br /><%= link_to 'Add New Capital Bid Contact', new_contact_path({ :pid => @property.id, :ctype => 'capital_bid' }) %><br /><br /><br />
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @capital_bid_contacts } %>
+<%= link_to 'Add New Capital Bid Contact', new_contact_path({ :pid => @property.id, :ctype => 'capital_bid' }) %>
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %>
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'capital_bid' %>
+  <%= submit_tag 'Add Capital Bid Contact by Name' %>
+<% end %>
 
-<h2>Lender</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @lender_contacts } %>
-</div>
-<br /><%= link_to 'Add New Lender Contact', new_contact_path({ :pid => @property.id, :ctype => 'lender' }) %><br /><br /><br />
+<h2>City</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @city_contacts } %> 
+<%= link_to 'Add New City Contact', new_contact_path({ :pid => @property.id, :ctype => 'city' }) %>   
+  
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'city' %>
+  <%= submit_tag 'Add City Contact by Name' %>
+<% end %>
 
 <h2>Contractors</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @contractors_contacts } %>
-</div>
-<br /><%= link_to 'Add New Contractors Contact', new_contact_path({ :pid => @property.id, :ctype => 'contractors' }) %><br /><br /><br />
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @contractors_contacts } %> 
+<%= link_to 'Add New Contractors Contact', new_contact_path({ :pid => @property.id, :ctype => 'contractors' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'contractors' %>
+  <%= submit_tag 'Add Contractor Contact by Name' %>
+<% end %>
+
+<h2>Escrow</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @escrow_contacts } %> 
+<%= link_to 'Add New Escrow Contact', new_contact_path({ :pid => @property.id, :ctype => 'escrow' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'escrow' %>
+  <%= submit_tag 'Add Escrow Contact by Name' %>
+<% end %>
+
+<h2>HOA</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @hoa_contacts } %> 
+<%= link_to 'Add New HOA Contact', new_contact_path({ :pid => @property.id, :ctype => 'hoa' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'hoa' %>
+  <%= submit_tag 'Add HOA Contact by Name' %>
+<% end %>
+
+<h2>Lender</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @lender_contacts } %> 
+<%= link_to 'Add New Lender Contact', new_contact_path({ :pid => @property.id, :ctype => 'lender' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'lender' %>
+  <%= submit_tag 'Add Lender Contact by Name' %>
+<% end %>
+
+<h2>Noteholder</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @noteholder_contacts } %> 
+<%= link_to 'Add New Noteholder Contact', new_contact_path({ :pid => @property.id, :ctype => 'noteholder' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'noteholder' %>
+  <%= submit_tag 'Add Noteholder Contact by Name' %>
+<% end %>
+
+<h2>Owner</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @owner_contacts } %> 
+<%= link_to 'Add New Owner Contact', new_contact_path({ :pid => @property.id, :ctype => 'owner' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'owner' %>
+  <%= submit_tag 'Add Owner Contact by Name' %>
+<% end %>
+
+<h2>Preservation Company</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @preservation_company_contacts } %> 
+<%= link_to 'Add New Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'preservation_company' %>
+  <%= submit_tag 'Add Preservation Company Contact by Name' %>
+<% end %>
+
+<h2>Property Manager</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @property_manager_contacts } %> 
+<%= link_to 'Add New Property Manager Contact', new_contact_path({ :pid => @property.id, :ctype => 'property_manager' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'property_manager' %>
+  <%= submit_tag 'Add Property Manager Contact by Name' %>
+<% end %>
+
+<h2>Selling Agent</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @selling_agent_contacts } %> 
+<%= link_to 'Add New Selling Agent Contact', new_contact_path({ :pid => @property.id, :ctype => 'selling_agent' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'selling_agent' %>
+  <%= submit_tag 'Add Selling Agent Contact by Name' %>
+<% end %>
+
+<h2>Servicer</h2>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @servicer_contacts } %> 
+<%= link_to 'Add New Servicer Contact', new_contact_path({ :pid => @property.id, :ctype => 'servicer' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'servicer' %>
+  <%= submit_tag 'Add Servicer Contact by Name' %>
+<% end %>
 
 <h2>Other</h2>
-<div id="browse_table">
-  <%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @other_contacts } %>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @other_contacts } %> 
+<%= link_to 'Add New Other Contact', new_contact_path({ :pid => @property.id, :ctype => 'other' }) %>   
+ 
+<% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
+  <%= text_field_tag :name %> 
+  <%= hidden_field_tag :pid, @property.id.to_s %>
+  <%= hidden_field_tag :ctype, 'other' %>
+  <%= submit_tag 'Add Other Contact by Name' %>
+<% end %>
+
 </div>
-<br /><%= link_to 'Add New Other Contact', new_contact_path({ :pid => @property.id, :ctype => 'other' }) %><br /><br /><br />

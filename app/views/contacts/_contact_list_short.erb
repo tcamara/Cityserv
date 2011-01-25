@@ -1,9 +1,12 @@
-<div id="contact_list">
+<div class="contact_list">
   <table cellpadding="0" cellspacing="0">
       <tr>
         <th></th>
         <th>
           Name
+        </th>
+        <th>
+          Company
         </th>
         <th>
           Job
@@ -14,15 +17,20 @@
         <th>
           Email
         </th>
+        <th>
+          Address
+        </th>
 
       </tr>
       <% coll.each do |i| %>
-      <tr>
+      <tr class="<%= cycle("even","odd") %>">
         <td class="noborder"><%= link_to 'View', contact_path(i.id) %></td>
         <td><%= i.first_name %> <%= i.last_name %></td>
+        <td><%= i.company_name %></td>
         <td><%= i.job_title %></td>
         <td><%= i.work_phone %></td>
         <td><%= i.email %></td>
+        <td><%= i.company_address %></td>
       </tr>
       <% end %>
   </table>

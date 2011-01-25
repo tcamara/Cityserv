@@ -164,7 +164,7 @@ h1 a {
     text-decoration: none;
 }
 
-#property_div, #contact_div, #contact_list {
+#property_div, #contact_div {
     width: 560px;
 }
 
@@ -292,6 +292,56 @@ h1 a {
     text-decoration: none;
     color: white;
 }
+
+
+.contact_list table {
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.contact_list caption {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact_list td {
+    border: 0px dotted black;
+    padding-right: 15px;
+    margin: 0px;
+}
+
+.contact_list td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.contact_list td.noborder {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.contact_list th {
+    text-align: left;
+    padding-right: 10px;
+    background-image: url("../images/nav_gradient.png");
+    background-position: bottom;
+    padding-bottom: 3px;
+    padding-top: 2px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: white;
+}
+
+.contact_list tr.odd {
+    background: #dcdfdc;
+    width: 100%;
+}
+
+#contact_area a {
+    float: right;
+}
+
 
 #property_edit {
     width: 100%;

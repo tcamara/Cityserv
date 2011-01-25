@@ -54,7 +54,7 @@
     </tr>
     <tr>
       <td>Email</td>
-      <td><%= eip({:model => 'contact', :field => 'email', :id => @contact.id.to_s, :val => @contact.email.to_s}) %></td>
+      <td><%= eip({:model => 'contact', :field => 'email', :id => @contact.id.to_s, :val => @contact.email.to_s}) %><a href="mailto:<%= @contact.email.to_s %>"><%= image_tag("email.png") %></a></td>
     </tr>
     <tr>
       <td>Work Phone</td>

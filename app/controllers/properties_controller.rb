@@ -87,7 +87,6 @@ class PropertiesController < ApplicationController
     @noteholder_contacts = @property.noteholder_contacts
     @preservation_company_contacts = @property.preservation_company_contacts
     @escrow_contacts = @property.escrow_contacts
-    @buyers_agent_contacts = @property.buyers_agent_contacts
     @buyer_contacts = @property.buyer_contacts
     @hoa_contacts = @property.hoa_contacts
     @property_manager_contacts = @property.property_manager_contacts
@@ -113,7 +112,6 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
     @property_documents = @property.property_documents
   end
-  
   
   in_place_edit_for :property, :street_num
   in_place_edit_for :property, :mls

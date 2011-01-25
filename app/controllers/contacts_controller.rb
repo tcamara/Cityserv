@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   def index
     sort = Contact.parse_it(params['sort'])
     @sorted_contacts = Contact.paginate :page => params[:page], :order => sort
-
+    
     if request.xml_http_request?
       render :partial => "contact_list", :layout => false
     end
@@ -69,6 +69,14 @@ class ContactsController < ApplicationController
     end
   end
 
+  def auto_complete_belongs_to_for_contact_city_contact_first_name
+    @contacts = Contact.find(
+      :all,
+      :conditions => ['LOWER(first_name) LIKE ?', "%#{params[contacts][:first_name]}"],
+      :limit => 10
+    )
+  end
+  
   
   in_place_edit_for :contact, :street_num
   in_place_edit_for :contact, :first_name
@@ -85,5 +93,6 @@ class ContactsController < ApplicationController
   in_place_edit_for :contact, :email
   in_place_edit_for :contact, :preferred_method
 
+  
   
 end

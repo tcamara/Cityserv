@@ -486,3 +486,21 @@ input {
     float: left;
     margin-right: 5px;
 }
+
+#quick_contact th {
+    font-size: 1.1em;
+}
+
+#quick_contact {
+    margin: 0px auto;
+}
+
+#quick_contact td, #quick_contact th {
+    padding: 0px 40px;
+    text-align: left;
+}
+
+#closing_tag {
+    margin: 0px auto;
+    text-align: center;
+}

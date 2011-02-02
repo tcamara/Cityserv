@@ -7,3 +7,59 @@
   <%= link_to "Photos", :controller => 'properties', :action => 'photos', :id => @property %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <%= link_to "Documents", :controller => 'properties', :action => 'documents', :id => @property %>&nbsp;&nbsp;&nbsp;
 </div>
+
+<div id="closing_tag">
+  Closing Date:<br />
+  <% if !@property.closing_date.nil? %>
+      <%= @property.closing_date %>
+  <% else %>
+      <span class="italic">No Closing Date Yet</span>
+  <% end %>
+</div><br /><br />
+
+<table id="quick_contact">
+  <tr>
+    <th>
+      Escrow
+    </th>
+    <th>
+      Selling Agent
+    </th>
+    <th>
+      Capital Bid
+    </th>
+    <th>
+      Lender
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <% if !@hc_escrow.nil? %>
+      <%= @hc_escrow.first_name %> <%= @hc_escrow.last_name %><br />
+      <%= @hc_escrow.email %><br />
+      <%= @hc_escrow.work_phone %><br />
+      <% end %>
+    </td>
+    <td>
+      <% if !@hc_selling_agent.nil? %>
+      <%= @hc_selling_agent.first_name %> <%= @hc_selling_agent.last_name %><br />
+      <%= @hc_selling_agent.email %><br />
+      <%= @hc_selling_agent.work_phone %><br />
+      <% end %>
+    </td>
+    <td>
+      <% if !@hc_capital_bid.nil? %>
+      <%= @hc_capital_bid.first_name %> <%= @hc_capital_bid.last_name %><br />
+      <%= @hc_capital_bid.email %><br />
+      <%= @hc_capital_bid.work_phone %><br />
+      <% end %>
+    </td>
+    <td>
+      <% if !@hc_lender.nil? %>
+      <%= @hc_lender.first_name %> <%= @hc_lender.last_name %><br />
+      <%= @hc_lender.email %><br />
+      <%= @hc_lender.work_phone %><br />
+      <% end %>
+    </td>
+  </tr>
+</table>

@@ -43,6 +43,11 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+    
+    @hc_escrow = @property.escrow_contacts.find(:first)
+    @hc_selling_agent = @property.selling_agent_contacts.find(:first)
+    @hc_capital_bid = @property.capital_bid_contacts.find(:first)
+    @hc_lender = @property.lender_contacts.find(:first)
   end
 
 
@@ -99,18 +104,33 @@ class PropertiesController < ApplicationController
     @type = params[:type] || 'All'
     @order = params[:order] || 'DESC'
     @comments = Comment.order(@property, @type, @order)
+    
+    @hc_escrow = @property.escrow_contacts.find(:first)
+    @hc_selling_agent = @property.selling_agent_contacts.find(:first)
+    @hc_capital_bid = @property.capital_bid_contacts.find(:first)
+    @hc_lender = @property.lender_contacts.find(:first)
   end
 
 
   def photos
     @property = Property.find(params[:id])
     @property_photos = @property.property_photos
+    
+    @hc_escrow = @property.escrow_contacts.find(:first)
+    @hc_selling_agent = @property.selling_agent_contacts.find(:first)
+    @hc_capital_bid = @property.capital_bid_contacts.find(:first)
+    @hc_lender = @property.lender_contacts.find(:first)
   end
 
   
   def documents
     @property = Property.find(params[:id])
     @property_documents = @property.property_documents
+    
+    @hc_escrow = @property.escrow_contacts.find(:first)
+    @hc_selling_agent = @property.selling_agent_contacts.find(:first)
+    @hc_capital_bid = @property.capital_bid_contacts.find(:first)
+    @hc_lender = @property.lender_contacts.find(:first)
   end
   
   in_place_edit_for :property, :street_num

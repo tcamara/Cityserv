@@ -5,6 +5,11 @@ class CommentsController < ApplicationController
     @order = params[:order] || 'DESC'
     @comments = Comment.order(@property, @type, @order)
     @categories = [@current_user.level, "Accounting", "BPO", "Code Violations", "Escrow", "Listings", "NAWRB", "Offers", "Property Management", "Relocations", "Repairs", "Utilities"].uniq
+    
+    @hc_escrow = @property.escrow_contacts.find(:first)
+    @hc_selling_agent = @property.selling_agent_contacts.find(:first)
+    @hc_capital_bid = @property.capital_bid_contacts.find(:first)
+    @hc_lender = @property.lender_contacts.find(:first)
   end
 
 

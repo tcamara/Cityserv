@@ -4,7 +4,7 @@
 <div id="contact_area">
 
 <h2>Buyer</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyer_contacts } %>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @buyer_contacts, :ctype => "buyer" } %>
 <%= link_to 'Add New Buyer Contact', new_contact_path({ :pid => @property.id, :ctype => 'buyer' }), :class => 'add_new' %>
   
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -15,7 +15,7 @@
 <% end %>
 
 <h2>Capital Bid</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @capital_bid_contacts } %>
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @capital_bid_contacts, :ctype => "capital_bid" } %>
 <%= link_to 'Add New Capital Bid Contact', new_contact_path({ :pid => @property.id, :ctype => 'capital_bid' }), :class => 'add_new' %>
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -26,7 +26,7 @@
 <% end %>
 
 <h2>City</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @city_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @city_contacts, :ctype => "city" } %> 
 <%= link_to 'Add New City Contact', new_contact_path({ :pid => @property.id, :ctype => 'city' }), :class => 'add_new' %>   
   
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -37,7 +37,7 @@
 <% end %>
 
 <h2>Contractors</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @contractors_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @contractors_contacts, :ctype => "contractors" } %> 
 <%= link_to 'Add New Contractors Contact', new_contact_path({ :pid => @property.id, :ctype => 'contractors' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -48,7 +48,7 @@
 <% end %>
 
 <h2>Escrow</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @escrow_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @escrow_contacts, :ctype => "escrow" } %> 
 <%= link_to 'Add New Escrow Contact', new_contact_path({ :pid => @property.id, :ctype => 'escrow' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -59,7 +59,7 @@
 <% end %>
 
 <h2>HOA</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @hoa_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @hoa_contacts, :ctype => "hoa" } %> 
 <%= link_to 'Add New HOA Contact', new_contact_path({ :pid => @property.id, :ctype => 'hoa' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -70,7 +70,7 @@
 <% end %>
 
 <h2>Lender</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @lender_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @lender_contacts, :ctype => "lender" } %> 
 <%= link_to 'Add New Lender Contact', new_contact_path({ :pid => @property.id, :ctype => 'lender' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -81,7 +81,7 @@
 <% end %>
 
 <h2>Noteholder</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @noteholder_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @noteholder_contacts, :ctype => "noteholder" } %> 
 <%= link_to 'Add New Noteholder Contact', new_contact_path({ :pid => @property.id, :ctype => 'noteholder' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -92,7 +92,7 @@
 <% end %>
 
 <h2>Owner</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @owner_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @owner_contacts, :ctype => "owner" } %> 
 <%= link_to 'Add New Owner Contact', new_contact_path({ :pid => @property.id, :ctype => 'owner' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -103,7 +103,7 @@
 <% end %>
 
 <h2>Preservation Company</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @preservation_company_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @preservation_company_contacts, :ctype => "preservation_company" } %> 
 <%= link_to 'Add New Preservation Company Contact', new_contact_path({ :pid => @property.id, :ctype => 'preservation_company' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -114,7 +114,7 @@
 <% end %>
 
 <h2>Property Manager</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @property_manager_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @property_manager_contacts, :ctype => "property_manager" } %> 
 <%= link_to 'Add New Property Manager Contact', new_contact_path({ :pid => @property.id, :ctype => 'property_manager' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -125,7 +125,7 @@
 <% end %>
 
 <h2>Selling Agent</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @selling_agent_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @selling_agent_contacts, :ctype => "selling_agent" } %> 
 <%= link_to 'Add New Selling Agent Contact', new_contact_path({ :pid => @property.id, :ctype => 'selling_agent' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -136,7 +136,7 @@
 <% end %>
 
 <h2>Servicer</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @servicer_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @servicer_contacts, :ctype => "servicer" } %> 
 <%= link_to 'Add New Servicer Contact', new_contact_path({ :pid => @property.id, :ctype => 'servicer' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>
@@ -147,7 +147,7 @@
 <% end %>
 
 <h2>Other</h2>
-<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @other_contacts } %> 
+<%= render :partial => "contacts/contact_list_short", :layout => false, :locals => { :coll => @other_contacts, :ctype => "other" } %> 
 <%= link_to 'Add New Other Contact', new_contact_path({ :pid => @property.id, :ctype => 'other' }), :class => 'add_new' %>   
  
 <% form_remote_tag :url => new_associated_path, :html => { :class => 'associated_contact_form' }, :update => "browse_table" do %>

@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td>Category</td>
-      <td><%= eip_select({:model => 'contact', :field => 'category', :id => @contact.id.to_s, :val => @contact.category.to_s, :collection => "['Attorney', 'Bank', 'City', 'Contractor', 'Escrow', 'Outsourcer', 'Title', 'Trustee', 'NAWRB Member', 'NAWRB Financial', 'NAWRB Media', 'NAWRB Government', 'NAWRB Professional Organization', 'NAWRB Other']"}) %></td>
+      <td><%= eip_select({:model => 'contact', :field => 'category', :id => @contact.id.to_s, :val => @contact.category.to_s, :collection => "['Attorney', 'Bank', 'Buyer', 'Capital Bid', 'City', 'Contractor', 'Escrow', 'HOA', 'Lender', 'Noteholder', 'Other', 'Outsourcer', 'Owner', 'Preservation Company', 'Property Manager', 'Selling Agent', 'Servicer', 'Title', 'Trustee', 'NAWRB Member', 'NAWRB Financial', 'NAWRB Media', 'NAWRB Government', 'NAWRB Professional Organization', 'NAWRB Other']"}) %></td>
     </tr>
     <tr>
       <td>Address</td>
@@ -96,4 +96,6 @@
 
 
 
-<div id="form_bottom"></div>
+<div id="form_bottom">  
+  <%= button_to "Delete Contact", { :action => "delete", :id => @contact.id }, :confirm => "Are you sure?", :method => :delete %>
+</div>

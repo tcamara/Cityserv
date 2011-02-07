@@ -132,6 +132,10 @@ h3 {
     font-size: 1.3em;
 }
 
+img {
+    border: 0px;
+}
+
 .bold {
     font-weight: bold;
 }

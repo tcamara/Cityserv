@@ -22,6 +22,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     if params[:pid] != ''
       @contact.save
+      #temp_name = params[:first_name] + params[:last_name]
       redirect_to new_associated_path({:pid => params[:pid], :ctype => params[:ctype], :cid => @contact.id})
     else
       if @contact.save
@@ -69,13 +70,24 @@ class ContactsController < ApplicationController
       format.json { render :json => @contact }
     end
   end
-
-  def auto_complete_belongs_to_for_contact_city_contact_first_name
-    @contacts = Contact.find(
-      :all,
-      :conditions => ['LOWER(first_name) LIKE ?', "%#{params[contacts][:first_name]}"],
-      :limit => 10
-    )
+  
+  
+  def delete
+    @contact = Contact.find(params[:id])
+    @contact.delete
+    
+    Associated.delete_all(:contact_id => params[:id])
+    
+    redirect_to contacts_path
+  end
+  
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.delete
+    
+    Associated.delete_all(:contact_id => params[:id])
+    
+    redirect_to :action => 'index'
   end
   
   

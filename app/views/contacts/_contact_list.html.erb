@@ -16,6 +16,7 @@
       <th <%= sort_td_class_helper "company_name" %>>
         <%= sort_link_helper "Company", "company_name" %>
       </th>
+      <th> </th>
 
     </tr>
     <% @sorted_contacts.each do |i| %>
@@ -26,6 +27,9 @@
       <td><%= i.category %></td>
       <td><%= i.job_title %></td>
       <td><%= i.company_name %></td>
+      <td>
+          <%= link_to image_tag("delete.png"), contact_path(i.id), :confirm => "Are you sure?", :method => :delete %>
+        </td>
     </tr>
     <% end %>
 </table>

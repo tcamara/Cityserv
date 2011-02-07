@@ -508,3 +508,23 @@ input {
     margin: 0px auto;
     text-align: center;
 }
+
+#footer {
+    width: 1182px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+}
+
+#footer a, #footer a:active, #footer a:visited {
+    color: white;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

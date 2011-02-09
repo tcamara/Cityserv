@@ -148,6 +148,12 @@ img {
     text-align: center;
 }
 
+#center_align {
+    text-align: center;
+    width: 600px;
+    margin: 0px auto;
+}
+
 .float_left {
     float: left;
 }

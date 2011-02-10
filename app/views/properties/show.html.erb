@@ -193,7 +193,7 @@
         </tr>
         <tr>
           <td>Status</td>
-          <td><%= eip_select({:model => 'property', :field => 'status', :id => @property.id.to_s, :val => @property.status.to_s, :collection => "['Active', 'Closed', 'Pending', 'Rented']"}) %></td>
+          <td><%= eip_select({:model => 'property', :field => 'status', :id => @property.id.to_s, :val => @property.status.to_s, :collection => "['Active', 'Cancelled', 'Closed', 'Pending', 'Rented']"}) %></td>
         </tr>
         <tr>
           <td>Occupancy</td>

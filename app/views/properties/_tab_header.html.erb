@@ -66,6 +66,8 @@
 <br />
 <div id="center_align">
   Email Subject:<br />
-  <%= eip({:model => 'property', :field => 'email_header', :id => @property.id.to_s, :val => @property.email_header.to_s}) %>
+  <span id="email_header"><%= @property.email_header.to_s %></span>
+  <img alt="Edit" border="0" id="email_header_edit" src="/images/edit_icon.png" />
+  <script type="text/javascript"> new Ajax.InPlaceEditor('email_header', '/properties/<%= @property.id.to_s %>/set_property_email_header', { okControl:'button', cancelControl:'button', okText:'Submit', cancelText:'Cancel', savingText:'Saving', clickToEditText:'Click here to edit this field', externalControl:'email_header_edit', externalControlOnly:true, rows:'1', cols:'37', highlightColor:'#FFFFFF', highlightEndColor:'#FFFFFF', formClassName:'eip_form'}); </script>
 </div>
 <br />

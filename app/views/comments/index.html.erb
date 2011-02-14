@@ -2,7 +2,7 @@
 
 <div id="" class="center">
   Filter By:<br />
-  <%= select_tag "filter", options_for_select(["", "All", "Admin", "Accounting", "BPO", "Code Violations", "Escrow", "IT", "Listings", "NAWRB", "Offers", "Property Management", "Relocations", "Repairs", "Utilities"]) %>
+  <%= select_tag "filter", options_for_select(["", "All", "Admin", "Accounting", "BPO", "Code Violations", "Escrow", "Field Inspectors", "IT", "Listings", "NAWRB", "Offers", "Property Management", "Relocations", "Repairs", "Utilities"]) %>
   <%= observe_field :filter, :url => { :action => 'index' }, :method => :get, :with => 'type' %><br /><br />
   
   <%= link_to_remote "Sort by Most Recent", :url => property_comments_path(@property, :type => @type, :order => 'DESC'), :method => :get %><br />

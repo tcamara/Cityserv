@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @type = params[:type] || 'All'
     @order = params[:order] || 'DESC'
     @comments = Comment.order(@property, @type, @order)
-    @categories = [@current_user.level, "Accounting", "BPO", "Code Violations", "Escrow", "Listings", "NAWRB", "Offers", "Property Management", "Relocations", "Repairs", "Utilities"].uniq
+    @categories = [@current_user.level, "Accounting", "BPO", "Code Violations", "Escrow", "Field Inspectors", "Listings", "NAWRB", "Offers", "Property Management", "Relocations", "Repairs", "Utilities"].uniq
     
     @hc_escrow = @property.escrow_contacts.find(:first)
     @hc_selling_agent = @property.selling_agent_contacts.find(:first)

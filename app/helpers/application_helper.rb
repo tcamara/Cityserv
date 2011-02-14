@@ -27,6 +27,6 @@ module ApplicationHelper
   end
 
   def eip_calendar(options)
-    calendar_date_select_tag 'property['+options[:field]+']', options[:val], :time => false, :buttons => true, :after_close => remote_function(:url => {:action => 'set_property_' + options[:field]}, :with => "'value='+$F(this)" )
+    calendar_date_select_tag 'property['+options[:field]+']', options[:val], :popup => :force, :time => false, :buttons => true, :after_close => remote_function(:url => {:action => 'set_property_' + options[:field]}, :with => "'value='+$F(this)" )
   end
 end

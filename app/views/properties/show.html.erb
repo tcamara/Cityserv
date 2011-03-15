@@ -78,6 +78,10 @@
           <td>Zoning</td>
           <td><%= eip({:model => 'property', :field => 'zoning', :id => @property.id.to_s, :val => @property.zoning.to_s}) %></td>
         </tr>
+        <tr>
+          <td>TG Number</td>
+          <td><%= eip({:model => 'property', :field => 'tgno', :id => @property.id.to_s, :val => @property.tgno.to_s}) %></td>
+        </tr>
       </table>
       <br />
       
@@ -268,6 +272,10 @@
         <tr>
           <td>MMR Date</td>
           <td class="cal"><%= eip_calendar({:model => 'property', :field => 'mmr', :id => @property.id.to_s, :val => @property.mmr.to_s}) %></td>
+        </tr>
+        <tr>
+          <td>First Look Date</td>
+          <td class="cal"><%= eip_calendar({:model => 'property', :field => 'first_look', :id => @property.id.to_s, :val => @property.first_look.to_s}) %></td>
         </tr>
       </table>
       <br />

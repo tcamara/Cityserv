@@ -210,6 +210,7 @@ class PropertiesController < ApplicationController
   in_place_edit_for :property, :pp_exp
   in_place_edit_for :property, :loan_number
   in_place_edit_for :property, :email_header
-  
+  in_place_edit_for :property, :first_look
+  in_place_edit_for :property, :tgno
 
 end

@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
@@ -11,11 +10,9 @@
     <%= calendar_date_select_includes %>
   </head>
   <body>
-
     <% unless flash[:notice].blank? %>
-        <div id="notification"><%= flash[:notice] %></div>
-      <% end %>
-
+      <div id="notification"><%= flash[:notice] %></div>
+    <% end %>
 
     <div id="head_content">
       <div id="login_area" class="float_right">
@@ -26,39 +23,35 @@
         <% end %>
       </div>
       <span id="title"><%= link_to image_tag("logo_white.png", :border => 0), properties_path %></span>
-
-      </div>  
-      <div id="nav">
-        <div id="nav_span">
-          <%= image_tag "line.png", :alt => '|' %>
-          <%= link_to image_tag('browse_properties.png', :border => 0), :controller => 'properties', :action => 'list' %>
-          <%= image_tag "line.png", :alt => '|' %>
-          <%= link_to image_tag('find_properties.png', :border => 0), :controller => 'properties', :action => 'search' %>
-          <%= image_tag "line.png", :alt => '|' %>
-          <%= link_to image_tag('add_properties.png', :border => 0), new_property_path %>
-          <%= image_tag "line.png", :alt => '|' %>
-          <%= link_to image_tag('browse_contacts.png', :border => 0), contacts_path %>
-          <%= image_tag "line.png", :alt => '|' %>
-          <%= link_to image_tag('find_contacts.png', :border => 0), :controller => 'contacts', :action => 'search' %>
-          <%= image_tag "line.png", :alt => '|' %>
-          <%= link_to image_tag('add_contacts.png', :border => 0), new_contact_path %>
-          <%= image_tag "line.png", :alt => '|' %>
-        </div>
+    </div> 
+        
+    <div id="nav">
+      <div id="nav_span">
+        <%= image_tag "line.png", :alt => '|' %>
+        <%= link_to image_tag('browse_properties.png', :border => 0), :controller => 'properties', :action => 'list' %>
+        <%= image_tag "line.png", :alt => '|' %>
+        <%= link_to image_tag('find_properties.png', :border => 0), :controller => 'properties', :action => 'search' %>
+        <%= image_tag "line.png", :alt => '|' %>
+        <%= link_to image_tag('add_properties.png', :border => 0), new_property_path %>
+        <%= image_tag "line.png", :alt => '|' %>
+        <%= link_to image_tag('browse_contacts.png', :border => 0), contacts_path %>
+        <%= image_tag "line.png", :alt => '|' %>
+        <%= link_to image_tag('find_contacts.png', :border => 0), :controller => 'contacts', :action => 'search' %>
+        <%= image_tag "line.png", :alt => '|' %>
+        <%= link_to image_tag('add_contacts.png', :border => 0), new_contact_path %>
+        <%= image_tag "line.png", :alt => '|' %>
       </div>
+    </div>
 
     <div id="content">
       <h2><%= yield(:title) %></h2>
       <%= yield(:content) or yield %>
     </div>  
+      
     <div id="footer">
       &copy; 2010 <a href="http://www.nawrb.com">NAWRB</a>
-      
-      <span class="left">CityServ v. 1.3.4</span>
-      
+      <span class="left">CityServ v. 1.4</span>
       <span class="right">Built by <a href="http://timcamara.com">Tim Camara</a></span>
-    
     </div>
   </body>
 </html>
-
-
